@@ -78,11 +78,8 @@
             background: #64B6AC !important;
         }
 
-        #header .header-nav-main:not(.header-nav-main-mobile-dark) nav>ul>li>a.active,
-        #header .header-nav.header-nav-links nav>ul:not(:hover)>li>a.active,
         .text-color-hover-primary:hover,
-        .text-hover-primary:hover,
-        #header .header-nav.header-nav-links nav>ul li:hover>a {
+        .text-hover-primary:hover {
             background: #64B6AC !important;
             color: white !important;
         }
@@ -95,6 +92,13 @@
         @media (max-width: 991px) {
             #header .header-nav-main:not(.header-nav-main-mobile-dark) nav>ul>li>a {
                 color: #64B6AC !important;
+            }
+
+            #header .header-nav-main:not(.header-nav-main-mobile-dark) nav>ul>li>a.active,
+            #header .header-nav.header-nav-links nav>ul:not(:hover)>li>a.active,
+            #header .header-nav.header-nav-links nav>ul li:hover>a {
+                background: #64B6AC !important;
+                color: white !important;
             }
         }
 

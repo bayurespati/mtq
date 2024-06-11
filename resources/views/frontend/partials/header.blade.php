@@ -63,7 +63,7 @@
                                             </a>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="{{ request()->is('profil/*') ? 'nav-link dropdown-toggle active' : 'nav-link dropdown-toggle' }}">
+                                            <a class="{{ request()->is('profil/*') ? 'dropdown-item dropdown-toggle active' : 'dropdown-item dropdown-toggle' }}">
                                                 Profil
                                             </a>
                                             <ul class="dropdown-menu">
@@ -76,7 +76,7 @@
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="{{ request()->is('artikel/*') ? 'nav-link dropdown-toggle active' : 'nav-link dropdown-toggle' }}">
+                                            <a class="{{ request()->is('artikel/*') ? 'dropdown-item dropdown-toggle active' : 'dropdown-item dropdown-toggle' }}">
                                                 Artikel
                                             </a>
                                             <ul class="dropdown-menu">
@@ -89,7 +89,7 @@
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a class="{{ request()->is('media/*') ? 'nav-link dropdown-toggle active' : 'nav-link dropdown-toggle' }}">
+                                            <a class="{{ request()->is('media/*') ? 'dropdown-item dropdown-toggle active' : 'dropdown-item dropdown-toggle' }}">
                                                 Media
                                             </a>
                                             <ul class="dropdown-menu">

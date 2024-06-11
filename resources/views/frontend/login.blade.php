@@ -46,7 +46,7 @@
                                             Login
                                         </a>
                                     </div>
-                                    <a href="#" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" data-hash data-hash-offset="0" data-hash-offset-lg="100" class="appear-animation ms-2 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms" style="text-decoration: underline;">
+                                    <a href="#" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" data-hash data-hash-offset="0" data-hash-offset-lg="100" class="appear-animation ms-2 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms" style="text-decoration: underline; color: #64B6AC;">
                                         Lupa Password
                                     </a>
                                 </div>

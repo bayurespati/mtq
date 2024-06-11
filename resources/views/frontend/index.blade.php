@@ -343,12 +343,12 @@
                 </div> -->
 
                 <div class="row d-flex align-items-center text-center mt-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                    <img src="img/peserta 1.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
-                    <img src="img/peserta 2.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
-                    <img src="img/peserta 3.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
-                    <img src="img/peserta 4.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
-                    <img src="img/peserta 5.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
-                    <img src="img/peserta 6.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
+                    <img src="img/Peserta 1.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
+                    <img src="img/Peserta 2.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
+                    <img src="img/Peserta 3.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
+                    <img src="img/Peserta 4.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
+                    <img src="img/Peserta 5.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
+                    <img src="img/Peserta 6.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
                 </div>
 
                 <div class="row">

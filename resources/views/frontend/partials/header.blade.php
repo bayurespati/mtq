@@ -8,13 +8,13 @@
                             <nav class="header-nav-top">
                                 <ul class="nav nav-pills">
                                     <li class="nav-item py-2 d-none d-sm-inline-flex pe-2">
-                                        <span class="ps-0 font-weight-semibold text-color-default text-2-5">Kompleks Ibu Kota Nusantara (IKN) dan Samarinda</span>
+                                        <span class="ps-0 font-weight-semibold text-color-default text-2-5">Kota Samarinda</span>
                                     </li>
                                     <li class="nav-item py-2 pe-2">
                                         <a href="tel:0541-733-333" class="text-color-default text-2-5 text-color-hover-primary font-weight-semibold">0541-733-333</a>
                                     </li>
                                     <li class="nav-item py-2 d-none d-md-inline-flex">
-                                        <a href="mailto:biroadpim@kaltimprov.go.id" class="text-color-default text-2-5 text-color-hover-primary font-weight-semibold">biroadpim@kaltimprov.go.id</a>
+                                        <a href="mailto:diskominfo@kaltimprov.go.id" class="text-color-default text-2-5 text-color-hover-primary font-weight-semibold">diskominfo@kaltimprov.go.id</a>
                                     </li>
                                 </ul>
                             </nav>

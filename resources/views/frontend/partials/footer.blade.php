@@ -5,7 +5,7 @@
                 <a href="{{ route('beranda') }}" class="text-decoration-none">
                     <img src="/img/Logo MTQ White.png" width="180" height="100%" class="img-fluid mb-4" alt="logo" />
                 </a>
-                <p class="text-3-5 font-weight-medium pe-lg-2">Kompleks Ibu Kota Nusantara (IKN) dan Samarinda</p>
+                <p class="text-3-5 font-weight-medium pe-lg-2">Kota Samarinda</p>
                 <ul class="list list-unstyled">
                     <li class="d-flex align-items-center mb-4">
                         <i class="icon icon-phone text-color-light text-5 font-weight-bold position-relative top-1 me-3-5"></i>
@@ -13,7 +13,7 @@
                     </li>
                     <li class="d-flex align-items-center mb-4">
                         <i class="icon icon-envelope text-color-light text-5 font-weight-bold position-relative top-1 me-3-5"></i>
-                        <a href="mailto:biroadpim@kaltimprov.go.id" class="d-inline-flex align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5">biroadpim@kaltimprov.go.id</a>
+                        <a href="mailto:diskominfo@kaltimprov.go.id" class="d-inline-flex align-items-center text-decoration-none text-color-light text-color-hover-primary font-weight-semibold text-4-5">diskominfo@kaltimprov.go.id</a>
                     </li>
                 </ul>
                 <ul class="social-icons social-icons-clean social-icons-medium">

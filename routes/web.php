@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -77,3 +78,16 @@ Route::get('/admin-view/dewan-majelis', function () {
 Route::get('/admin-view/panitia-mtq', function () {
     return view('admin.panitia-mtq');
 })->name('panitia-mtq');
+
+
+Route::post('/login', [AuthController::class, 'login'])->name('auth-login');
+Route::get('/login', [AuthController::class, 'index'])->name('login');
+
+Route::middleware('auth')->group(function () {
+
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    // Route::get('/admin-view', function () {
+    //     return view('admin.index');
+    // })->name('admin-page');
+});

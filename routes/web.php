@@ -19,6 +19,10 @@ Route::get('/artikel/berita', function () {
     return view('frontend.berita');
 })->name('berita');
 
+Route::get('/artikel/berita/example', function () {
+    return view('frontend.berita-example');
+})->name('berita-example');
+
 Route::get('/artikel/pengumuman', function () {
     return view('frontend.pengumuman');
 })->name('pengumuman');

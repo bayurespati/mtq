@@ -23,6 +23,10 @@ Route::get('/artikel/pengumuman', function () {
     return view('frontend.pengumuman');
 })->name('pengumuman');
 
+Route::get('/artikel/pengumuman/example', function () {
+    return view('frontend.pengumuman-example');
+})->name('pengumuman-example');
+
 Route::get('/media/foto', function () {
     return view('frontend.foto');
 })->name('foto');

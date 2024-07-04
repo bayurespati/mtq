@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
                 'role_id' => 1,
                 'email' => 'superadmin@mtq.co.id',
                 'phone' => '081281803746',
-                'password' => bcrypt('superadminMTQ#123'),
+                'password' => bcrypt('12345678'),
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],

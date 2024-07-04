@@ -30,26 +30,33 @@
                                         Login E-MTQ
                                     </h2>
                                 </div>
-                                <h1 class="text-color-dark font-weight-bold text-9 pb-2 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-                                    Username
-                                </h1>
-                                <input class="form-control form-control-lg mb-4 appear-animation" type="text" placeholder="" aria-label=".form-control-lg example" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" >
+                                <form action="/login" method="POST">
+                                    @csrf
+                                    <h1 class="text-color-dark font-weight-bold text-9 pb-2 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+                                        Username
+                                    </h1>
+                                    <input name="email" class="form-control form-control-lg mb-4 appear-animation" type="text" placeholder="" aria-label=".form-control-lg example" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
 
-                                <h1 class="text-color-dark font-weight-bold text-9 pb-2 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-                                    Password
-                                </h1>
-                                <input class="form-control form-control-lg mb-4 appear-animation" type="password" placeholder="" aria-label=".form-control-lg example" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" >
-
-                                <div class="d-flex">
-                                    <div class="d-block appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                                        <a href="{{ route('admin-page') }}" data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms">
-                                            Login
+                                    <h1 class="text-color-dark font-weight-bold text-9 pb-2 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+                                        Password
+                                    </h1>
+                                    <input name="password" class="form-control form-control-lg mb-4 appear-animation" type="password" placeholder="" aria-label=".form-control-lg example" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+                                    @error('email')
+                                    <div style="color: red !important; margin-bottom: 10px;">
+                                        <p style="color: red">* Alamat email atau password anda salah</p>
+                                    </div>
+                                    @enderror('email')
+                                    <div class="d-flex">
+                                        <div class="d-block appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+                                            <button data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms" type="submit">
+                                                Login
+                                            </button>
+                                        </div>
+                                        <a href="#" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" data-hash data-hash-offset="0" data-hash-offset-lg="100" class="appear-animation ms-2 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms" style="text-decoration: underline; color: #64B6AC;">
+                                            Lupa Password
                                         </a>
                                     </div>
-                                    <a href="#" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" data-hash data-hash-offset="0" data-hash-offset-lg="100" class="appear-animation ms-2 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms" style="text-decoration: underline; color: #64B6AC;">
-                                        Lupa Password
-                                    </a>
-                                </div>
+                                </form>
                             </div>
                             <div class="col-12 col-lg-6 p-relative text-end">
 

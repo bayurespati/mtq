@@ -47,13 +47,12 @@ Route::get('/hubungi-kami', function () {
     return view('frontend.hubungi-kami');
 })->name('hubungi-kami');
 
-Route::get('/login', function () {
-    return view('frontend.login');
-})->name('login');
-
-Route::get('/admin-view', function () {
-    return view('admin.index');
-})->name('admin-page');
+// Route::get('/login', function () {
+//     return view('frontend.login');
+// })->name('login');
+// Route::get('/admin-view', function () {
+//     return view('admin.index');
+// })->name('admin-page');
 
 Route::get('/admin-view/tema-mtq', function () {
     return view('admin.tema-mtq');
@@ -88,14 +87,14 @@ Route::get('/admin-view/panitia-mtq', function () {
 })->name('panitia-mtq');
 
 
-Route::post('/login', [AuthController::class, 'login'])->name('auth-login');
+Route::post('/login', [AuthController::class, 'login']);
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 
 Route::middleware('auth')->group(function () {
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    // Route::get('/admin-view', function () {
-    //     return view('admin.index');
-    // })->name('admin-page');
+    Route::get('/admin-view', function () {
+        return view('admin.index');
+    })->name('admin-page');
 });

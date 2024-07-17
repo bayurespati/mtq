@@ -210,7 +210,7 @@
 
                 <div class="row py-5 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
                     <div class="col-md-12 mb-4 mb-md-0">
-                        <div class="card card-border card-border-top card-border-hover bg-color-light border-0 box-shadow-6 box-shadow-hover anim-hover-translate-top-10px transition-3ms anim-hover-inner-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('img/berau14.jpg'); height: 745px; background-size:cover;">
+                        <div class="card card-border card-border-top card-border-hover bg-color-light border-0 box-shadow-6 box-shadow-hover anim-hover-translate-top-10px transition-3ms anim-hover-inner-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('img/berau14.JPG'); height: 745px; background-size:cover;">
                             <div class="card-body p-relative zindex-1 p-5 text-center d-flex justify-content-center align-items-center">
                                 <div class="anim-hover-inner-translate-top-20px transition-3ms">
                                     <h1 class="card-title mt-4 mb-2 font-weight-bold" style="color: white;">SUKSESKAN MTQ NASIONAL XXX TAHUN 2024</h1>

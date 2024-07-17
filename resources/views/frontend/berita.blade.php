@@ -37,6 +37,24 @@
                         </div>
                     </article>
 
+                    <article class="mb-5">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body p-0 z-index-1">
+                                <a href="{{ route('berita-example-2') }}" data-cursor-effect-hover="plus">
+                                    <img class="card-img-top rounded-0 mb-2" src="/img/berita2.jpg" alt="Card Image">
+                                </a>
+                                <p class="text-uppercase text-color-default text-1 my-2">
+                                    <time pubdate datetime="2024-06-9">Now 19, 2024</time>
+                                </p>
+                                <div class="card-body p-0">
+                                    <h4 class="card-title text-5 font-weight-bold pb-1 mb-2"><a class="text-color-dark text-color-hover-primary text-decoration-none" href="{{ route('berita-example-2') }}">Logo MTQN XXX Kaltim Resmi Dilaunching</a></h4>
+                                    <p class="card-text mb-2">Gubernur Kaltim Buka Secara Resmi MTQ Ke-30 Tahun 2024</p>
+                                    <a href="{{ route('berita-example-2') }}" class="read-more text-color-primary font-weight-semibold mt-0 text-2">Selengkapnya <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
                     <ul class="pagination pagination-rounded pagination-md justify-content-center">
                         <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-left"></i></a></li>
                         <li class="page-item active"><a class="page-link" href="#" data-cursor-effect-hover="fit">1</a></li>

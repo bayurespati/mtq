@@ -19,7 +19,11 @@
             <!-- start: page -->
             <div class="row">
                 <div class="col-12">
-                    JADWAL PESERTA ADMIN CONTENT
+                    @if(auth()->user()->role_id == 3)
+                    Profil Peserta
+                    @else
+                    JADWAL PESERTA CONTENT
+                    @endif
                 </div>
             </div>
             <!-- end: page -->

@@ -101,11 +101,13 @@
                                                 </li>
                                             </ul>
                                         </li>
+                                        @if(Auth::user())
                                         <li>
                                             <a href="{{ route('musabaqadah-center') }}" class="{{ request()->is('musabaqadah-center') ? 'nav-link active' : 'nav-link' }}">
                                                 Musabaqadah Center
                                             </a>
                                         </li>
+                                        @endif
                                         <li>
                                             <a href="{{ route('hubungi-kami') }}" class="{{ request()->is('hubungi-kami') ? 'nav-link active' : 'nav-link' }}">
                                                 Hubungi Kami

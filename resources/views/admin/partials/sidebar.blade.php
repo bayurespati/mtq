@@ -13,6 +13,7 @@
         <div class="nano-content">
             <nav id="menu" class="nav-main" role="navigation">
 
+                @if(auth()->user()->role_id != 3)
                 <ul class="nav nav-main">
                     <li class="d-flex justify-content-center align-items-center">
                         <img src="/img/Logo MTQ White.png" width="180" height="100%" class="img-fluid mb-4" alt="logo" />
@@ -86,6 +87,41 @@
                             </li>
                         </ul>
                     </li>
+                </ul>
+                @else
+                <ul class="nav nav-main">
+                    <li class="d-flex justify-content-center align-items-center">
+                        <img src="/img/Logo MTQ White.png" width="180" height="100%" class="img-fluid mb-4" alt="logo" />
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">
+                            <span>Profil</span>
+                        </a>
+                    </li>
+                    <li class="nav-parent">
+                        <a class="nav-link" href="#">
+                            <!-- <i class="bx bx-cart-alt" aria-hidden="true"></i> -->
+                            <span>Pusat Informasi</span>
+                        </a>
+                        <ul class="nav nav-children">
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-page') }}">
+                                    Hotel
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('tema-mtq') }}">
+                                    Mobil
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('hasil-individu') }}">
+                                    Supir
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    @endif
                 </ul>
             </nav>
         </div>

@@ -210,7 +210,7 @@
 
                 <div class="row py-5 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
                     <div class="col-md-12 mb-4 mb-md-0">
-                        <div class="card card-border card-border-top card-border-hover bg-color-light border-0 box-shadow-6 box-shadow-hover anim-hover-translate-top-10px transition-3ms anim-hover-inner-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('img/teaching-muslim-kid-read-quran.jpg'); height: 745px; background-size:cover;">
+                        <div class="card card-border card-border-top card-border-hover bg-color-light border-0 box-shadow-6 box-shadow-hover anim-hover-translate-top-10px transition-3ms anim-hover-inner-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('img/berau14.jpg'); height: 745px; background-size:cover;">
                             <div class="card-body p-relative zindex-1 p-5 text-center d-flex justify-content-center align-items-center">
                                 <div class="anim-hover-inner-translate-top-20px transition-3ms">
                                     <h1 class="card-title mt-4 mb-2 font-weight-bold" style="color: white;">SUKSESKAN MTQ NASIONAL XXX TAHUN 2024</h1>
@@ -223,7 +223,7 @@
             </div>
         </section>
 
-        <section class="section border-0 bg-dark m-0 p-relative" style="background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('img/side-view-islamic-boarding-school-students-are-reading-koran-courtyard-mosque.jpg'); background-size:cover;">
+        <section class="section border-0 bg-dark m-0 p-relative" style="background: url('img/sunset_mesjid_baru.png'); background-size:cover;">
             <div class="particles-wrapper z-index-1">
                 <div id="particles-1"></div>
             </div>
@@ -275,7 +275,7 @@
             </div>
         </section>
 
-        <section class="section border-0 bg-quaternary m-0">
+        <!-- <section class="section border-0 bg-quaternary m-0">
             <div class="container py-5">
                 <div class="row justify-content-center">
                     <div class="col col-lg-9 text-center">
@@ -283,15 +283,15 @@
                         <div class="divider divider-small divider-small-lg mt-0 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="0">
                             <hr class="bg-primary border-radius m-auto">
                         </div>
-                        <div class="overflow-hidden mb-1">
-                            <!-- <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">What They Say About Us</h3> -->
-                        </div>
+                        <div class="overflow-hidden mb-1"> -->
+        <!-- <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">What They Say About Us</h3> -->
+        <!-- </div>
                         <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">Peserta MTQ</h2>
 
                     </div>
-                </div>
+                </div> -->
 
-                <!-- <div class="row mt-4">
+        <!-- <div class="row mt-4">
                     <div class="col appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
 
                         <div class="owl-carousel owl-theme stage-margin rounded-nav nav-dark nav-icon-1 nav-size-md mb-0" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 2}, '1199': {'items': 2}}, 'margin': 0, 'loop': true, 'nav': true, 'dots': false, 'stagePadding': 40}">
@@ -342,7 +342,7 @@
                     </div>
                 </div> -->
 
-                <div class="row d-flex align-items-center text-center mt-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+        <!-- <div class="row d-flex align-items-center text-center mt-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                     <img src="img/Peserta 1.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
                     <img src="img/Peserta 2.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
                     <img src="img/Peserta 3.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
@@ -358,9 +358,8 @@
                         </a>
                     </div>
                 </div>
-
             </div>
-        </section>
+        </section> -->
 
         <section class="section border-0 bg-light m-0">
             <div class="container py-5">
@@ -475,22 +474,22 @@
 
                 <div class="row justify-content-center appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
                     <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <a href="demo-business-consulting-4-blog-post.html" class="text-decoration-none">
+                        <a href="/artikel/berita/example-2" class="text-decoration-none">
                             <div class="card border-0 bg-transparent">
                                 <div class="card-img-top position-relative overlay overflow-hidden border-radius">
                                     <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
                                         <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
                                             <span class="position-relative text-6 z-index-2">
-                                                18
-                                                <span class="d-block text-0 positive-ls-2 px-1">FEB</span>
+                                                19
+                                                <span class="d-block text-0 positive-ls-2 px-1">NOV</span>
                                             </span>
                                         </span>
                                     </div>
-                                    <img src="img/frontend/demos/business-consulting-4/blog/post-thumb-1.jpg" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                                    <img src="img/berita2.jpg" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
                                 </div>
                                 <div class="card-body py-4 px-0">
                                     <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
-                                        Riau dan Banten Juarai Fahmil Quran MTQ Tingkat Nasional
+                                        Gubernur Kaltim Buka Secara Resmi MTQ Ke-30 Tahun 2024
                                     </h4>
                                     <span class="d-block text-color-grey font-weight-semibold positive-ls-2 text-2">
                                         Perhelatan Fahmil Qur'an Beregu pada Musabaqoh Tilawatil Qur'an Nasional berakhir, beregu putra..
@@ -501,7 +500,7 @@
                         </a>
                     </div>
                     <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <a href="demo-business-consulting-4-blog-post.html" class="text-decoration-none">
+                        <a href="/artikel/berita/example" class="text-decoration-none">
                             <div class="card border-0 bg-transparent">
                                 <div class="card-img-top position-relative overlay overflow-hidden border-radius">
                                     <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
@@ -512,7 +511,7 @@
                                             </span>
                                         </span>
                                     </div>
-                                    <img src="img/frontend/demos/business-consulting-4/blog/post-thumb-2.jpg" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                                    <img src="/img/frontend/blog/blog-example.jpeg" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
                                 </div>
                                 <div class="card-body py-4 px-0">
                                     <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">

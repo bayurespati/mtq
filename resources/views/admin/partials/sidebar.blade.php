@@ -87,6 +87,23 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-parent">
+                        <a class="nav-link" href="#">
+                            <span>Artikel</span>
+                        </a>
+                        <ul class="nav nav-children">
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-berita-index') }}">
+                                    Berita
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('dewan-majelis') }}">
+                                    Pengumuman
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
                 @else
                 <ul class="nav nav-main">

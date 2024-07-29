@@ -41,7 +41,7 @@
 
     <style>
         .inner-wrapper {
-            padding-top: 60px !important;
+            padding-top: 57px !important;
         }
 
         .sidebar-left {
@@ -54,6 +54,10 @@
         }
 
         .userbox .dropdown-menu a:hover {
+            background: #64B6AC !important;
+        }
+
+        .header .header-right {
             background: #64B6AC !important;
         }
     </style>

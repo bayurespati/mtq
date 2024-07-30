@@ -104,11 +104,30 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-parent">
+                        <a class="nav-link" href="#">
+                            <span>Media</span>
+                        </a>
+                        <ul class="nav nav-children">
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-foto-index') }}">
+                                    Foto
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-foto-index') }}">
+                                    Vidio
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
                 @else
                 <ul class="nav nav-main">
                     <li class="d-flex justify-content-center align-items-center">
-                        <img src="/img/Logo MTQ White.png" width="180" height="100%" class="img-fluid mb-4" alt="logo" />
+                        <a href="/">
+                            <img src="/img/Logo MTQ White.png" width="180" height="100%" class="img-fluid mb-4" alt="logo" />
+                        </a>
                     </li>
                     <li>
                         <a class="nav-link" href="#">

@@ -35,13 +35,36 @@
                         </h2>
                     </div>
 
-                    <div class="row d-flex justify-content-center align-items-center">
-                        <img src="/img/table1.png" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
-                    </div>
+                    <section class="card">
+                        <header class="card-header" style="background: #64B6AC;  color: white">
+                            <div class="card-actions">
+                                <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+                                <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
+                            </div>
 
-                    <div class="row d-flex justify-content-center align-items-center mt-5">
-                        <img src="/img/table2.png" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
-                    </div>
+                            <h2 class="card-title">Daftar Lokasi Lomba</h2>
+                        </header>
+                        <div class="card-body">
+                            <table class="table table-responsive-md table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>CABANG LOMBA</th>
+                                        <th>TEMPAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($data as $key => $item)
+                                    <tr>
+                                        <td>{{$key+1}}</td>
+                                        <td>{{$item[0]}}</td>
+                                        <td>{{$item[1]}}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
                 </div>
             </div>
         </section>

@@ -116,9 +116,15 @@
                                     </ul>
                                 </nav>
                             </div>
+                            @if(Auth::user())
+                            <a href="/admin-view" class="{{ request()->is('login') ? 'btn btn-modern btn-primary btn-outline btn-arrow-effect-1 text-capitalize text-2-5 ms-3 me-2 d-block d-md-none d-xl-block anim-hover-translate-right-5px transition-2ms active' : 'btn btn-modern btn-primary btn-outline btn-arrow-effect-1 text-capitalize text-2-5 ms-3 me-2 d-block d-md-none d-xl-block anim-hover-translate-right-5px transition-2ms' }}">
+                                E-MTQ
+                            </a>
+                            @else
                             <a href="{{ route('login') }}" class="{{ request()->is('login') ? 'btn btn-modern btn-primary btn-outline btn-arrow-effect-1 text-capitalize text-2-5 ms-3 me-2 d-block d-md-none d-xl-block anim-hover-translate-right-5px transition-2ms active' : 'btn btn-modern btn-primary btn-outline btn-arrow-effect-1 text-capitalize text-2-5 ms-3 me-2 d-block d-md-none d-xl-block anim-hover-translate-right-5px transition-2ms' }}">
                                 E-MTQ
                             </a>
+                            @endif
                             <button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
                                 <i class="fas fa-bars"></i>
                             </button>

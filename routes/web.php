@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\FotoController;
 use App\Http\Controllers\FrontViewController;
 use Illuminate\Support\Facades\Route;
 
@@ -67,5 +68,14 @@ Route::middleware('auth')->group(function () {
         Route::post('store', [BeritaController::class, 'store'])->name('admin-berita-store');
         Route::post('update/{berita}', [BeritaController::class, 'update'])->name('admin-berita-update');
         Route::get('delete/{berita}', [BeritaController::class, 'destroy'])->name('admin-berita-delete');
+    });
+
+    Route::group(['prefix' => 'foto'], function () {
+        Route::get('', [FotoController::class, 'index'])->name('admin-foto-index');
+        Route::get('create', [FotoController::class, 'create'])->name('admin-foto-create');
+        Route::get('edit/{foto}', [FotoController::class, 'edit'])->name('admin-foto-edit');
+        Route::post('store', [FotoController::class, 'store'])->name('admin-foto-store');
+        Route::post('update/{foto}', [FotoController::class, 'update'])->name('admin-foto-update');
+        Route::get('delete/{foto}', [FotoController::class, 'destroy'])->name('admin-foto-delete');
     });
 });

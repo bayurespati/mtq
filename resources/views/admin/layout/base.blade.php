@@ -144,6 +144,9 @@
     <script src="/admin/vendor/bootstrap-maxlength/bootstrap-maxlength.js"></script>
     <script src="/admin/vendor/ios7-switch/ios7-switch.js"></script>
 
+    <!-- Specific Page Vendor -->
+    <script src="/admin/vendor/isotope/isotope.js"></script>
+
     <!-- Theme Base, Components and Settings -->
     <script src="/admin/js/theme.js"></script>
 
@@ -158,6 +161,7 @@
     <script src="/admin/js/examples/examples.datatables.row.with.details.js"></script>
     <script src="/admin/js/examples/examples.datatables.tabletools.js"></script>
     <script src="/admin/js/examples/examples.dashboard.js"></script>
+    <script src="/admin/js/examples/examples.mediagallery.js"></script>
 
     @stack('additional_js')
 </body>

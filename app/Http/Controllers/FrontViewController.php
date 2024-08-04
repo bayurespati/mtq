@@ -68,11 +68,7 @@ class FrontViewController extends Controller
                 "Aula Islamic Centre / Masjid Baitul Muttaqin"
             ],
             [
-                "KHAT AL-QUR'AN GOL. NASKAH DAN HIASAN MUSHAF",
-                "Gedung Serbaguna GOR Kadrie Gening"
-            ],
-            [
-                "KHAT AL-QUR'AN GOL. DEKORASI DAN LUKIS KONTEMPORER",
+                "KHAT AL-QUR'AN GOL. NASKAH DAN HIASAN MUSHAF dan GOL. DEKORASI DAN LUKIS KONTEMPORER",
                 "Gedung Serbaguna GOR Kadrie Oening"
             ],
             [
@@ -105,11 +101,7 @@ class FrontViewController extends Controller
             ],
             [
                 "KARYA TULIS ILMIAH AL QUR'AN",
-                "Ruang Assessment Center Kantor Korpri BKD Prov. Kaltim"
-            ],
-            [
-                "FINAL PRESENTASI MKTIQ",
-                "BPKAD PROVINSI"
+                "Ruang Assessment Center Kantor Korpri BKD Prov. Kaltim, BPKAD PROVINSI"
             ],
             [
                 "TAFSIR BHS. INDONESIA DAN BHS. INGGRIS",

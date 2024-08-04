@@ -10,6 +10,7 @@ use App\Http\Controllers\MobilController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProvinsiController;
 use App\Http\Controllers\SkpdController;
+use App\Http\Controllers\SopirController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontViewController::class, 'beranda'])->name('beranda');
@@ -122,12 +123,12 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::group(['prefix' => 'sopir'], function () {
-        Route::get('', [JadwalController::class, 'index'])->name('admin-sopir-index');
-        Route::get('create', [JadwalController::class, 'create'])->name('admin-sopir-create');
-        Route::get('edit/{sopir}', [JadwalController::class, 'edit'])->name('admin-sopir-edit');
-        Route::post('store', [JadwalController::class, 'store'])->name('admin-sopir-store');
-        Route::post('update/{sopir}', [JadwalController::class, 'update'])->name('admin-sopir-update');
-        Route::get('delete/{sopir}', [JadwalController::class, 'destroy'])->name('admin-sopir-delete');
+        Route::get('', [SopirController::class, 'index'])->name('admin-sopir-index');
+        Route::get('create', [SopirController::class, 'create'])->name('admin-sopir-create');
+        Route::get('edit/{sopir}', [SopirController::class, 'edit'])->name('admin-sopir-edit');
+        Route::post('store', [SopirController::class, 'store'])->name('admin-sopir-store');
+        Route::post('update/{sopir}', [SopirController::class, 'update'])->name('admin-sopir-update');
+        Route::get('delete/{sopir}', [SopirController::class, 'destroy'])->name('admin-sopir-delete');
     });
 
     Route::group(['prefix' => 'mobil'], function () {

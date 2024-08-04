@@ -50,7 +50,7 @@ class PesertaController extends Controller
             $model->save();
         });
 
-        return redirect()->route('admin-peserta-index')->with(['success' => 'Berhasil input data Provinsi']);
+        return redirect()->route('admin-peserta-index')->with(['success' => 'Berhasil input data Peserta']);
     }
 
     /**

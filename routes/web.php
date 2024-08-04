@@ -6,6 +6,7 @@ use App\Http\Controllers\FotoController;
 use App\Http\Controllers\FrontViewController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\LoController;
+use App\Http\Controllers\ProvinsiController;
 use App\Http\Controllers\SkpdController;
 use Illuminate\Support\Facades\Route;
 
@@ -101,12 +102,12 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::group(['prefix' => 'provinsi'], function () {
-        Route::get('', [JadwalController::class, 'index'])->name('admin-provinsi-index');
-        Route::get('create', [JadwalController::class, 'create'])->name('admin-provinsi-create');
-        Route::get('edit/{provinsi}', [JadwalController::class, 'edit'])->name('admin-provinsi-edit');
-        Route::post('store', [JadwalController::class, 'store'])->name('admin-provinsi-store');
-        Route::post('update/{provinsi}', [JadwalController::class, 'update'])->name('admin-provinsi-update');
-        Route::get('delete/{provinsi}', [JadwalController::class, 'destroy'])->name('admin-provinsi-delete');
+        Route::get('', [ProvinsiController::class, 'index'])->name('admin-provinsi-index');
+        Route::get('create', [ProvinsiController::class, 'create'])->name('admin-provinsi-create');
+        Route::get('edit/{provinsi}', [ProvinsiController::class, 'edit'])->name('admin-provinsi-edit');
+        Route::post('store', [ProvinsiController::class, 'store'])->name('admin-provinsi-store');
+        Route::post('update/{provinsi}', [ProvinsiController::class, 'update'])->name('admin-provinsi-update');
+        Route::get('delete/{provinsi}', [ProvinsiController::class, 'destroy'])->name('admin-provinsi-delete');
     });
 
     Route::group(['prefix' => 'peserta'], function () {

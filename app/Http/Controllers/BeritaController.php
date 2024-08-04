@@ -42,14 +42,6 @@ class BeritaController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(Berita $berita)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(Berita $berita)
@@ -78,6 +70,6 @@ class BeritaController extends Controller
     public function destroy(Berita $berita)
     {
         $berita->delete();
-        return redirect()->route('admin.berita.index')->with(['success' => "Berhasil delete data berita"]);
+        return redirect()->route('admin-berita-index')->with(['success' => "Berhasil delete data berita"]);
     }
 }

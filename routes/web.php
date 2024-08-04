@@ -5,6 +5,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\FotoController;
 use App\Http\Controllers\FrontViewController;
 use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\LoController;
 use App\Http\Controllers\SkpdController;
 use Illuminate\Support\Facades\Route;
 
@@ -91,12 +92,12 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::group(['prefix' => 'lo'], function () {
-        Route::get('', [JadwalController::class, 'index'])->name('admin-lo-index');
-        Route::get('create', [JadwalController::class, 'create'])->name('admin-lo-create');
-        Route::get('edit/{lo}', [JadwalController::class, 'edit'])->name('admin-lo-edit');
-        Route::post('store', [JadwalController::class, 'store'])->name('admin-lo-store');
-        Route::post('update/{lo}', [JadwalController::class, 'update'])->name('admin-lo-update');
-        Route::get('delete/{lo}', [JadwalController::class, 'destroy'])->name('admin-lo-delete');
+        Route::get('', [LoController::class, 'index'])->name('admin-lo-index');
+        Route::get('create', [LoController::class, 'create'])->name('admin-lo-create');
+        Route::get('edit/{lo}', [LoController::class, 'edit'])->name('admin-lo-edit');
+        Route::post('store', [LoController::class, 'store'])->name('admin-lo-store');
+        Route::post('update/{lo}', [LoController::class, 'update'])->name('admin-lo-update');
+        Route::get('delete/{lo}', [LoController::class, 'destroy'])->name('admin-lo-delete');
     });
 
     Route::group(['prefix' => 'provinsi'], function () {

@@ -6,6 +6,7 @@ use App\Http\Controllers\FotoController;
 use App\Http\Controllers\FrontViewController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\LoController;
+use App\Http\Controllers\MobilController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProvinsiController;
 use App\Http\Controllers\SkpdController;
@@ -130,12 +131,12 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::group(['prefix' => 'mobil'], function () {
-        Route::get('', [JadwalController::class, 'index'])->name('admin-mobil-index');
-        Route::get('create', [JadwalController::class, 'create'])->name('admin-mobil-create');
-        Route::get('edit/{mobil}', [JadwalController::class, 'edit'])->name('admin-mobil-edit');
-        Route::post('store', [JadwalController::class, 'store'])->name('admin-mobil-store');
-        Route::post('update/{mobil}', [JadwalController::class, 'update'])->name('admin-mobil-update');
-        Route::get('delete/{mobil}', [JadwalController::class, 'destroy'])->name('admin-mobil-delete');
+        Route::get('', [MobilController::class, 'index'])->name('admin-mobil-index');
+        Route::get('create', [MobilController::class, 'create'])->name('admin-mobil-create');
+        Route::get('edit/{mobil}', [MobilController::class, 'edit'])->name('admin-mobil-edit');
+        Route::post('store', [MobilController::class, 'store'])->name('admin-mobil-store');
+        Route::post('update/{mobil}', [MobilController::class, 'update'])->name('admin-mobil-update');
+        Route::get('delete/{mobil}', [MobilController::class, 'destroy'])->name('admin-mobil-delete');
     });
 
     Route::group(['prefix' => 'foto'], function () {

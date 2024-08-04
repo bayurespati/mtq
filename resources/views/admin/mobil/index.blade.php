@@ -1,7 +1,7 @@
 @extends('admin.layout.base')
 
 @push('title')
-<title>Admin View - Berita</title>
+<title>Admin View - Mobil</title>
 @endpush
 
 @push('additional_css')
@@ -16,7 +16,7 @@
         @include('admin.partials.sidebar')
 
         <section role="main" class="content-body">
-            <h2 style="color: black">Halaman Data Berita</h2>
+            <h2 style="color: black">Halaman Data Mobil</h2>
             @if (\Session::has('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {!! \Session::get('success') !!}
@@ -28,12 +28,11 @@
                     <section class="card">
                         <header class="card-header">
                             <div class="card-actions">
-                                <!-- <button class="btn btn-xs btn-primary">Create </button> -->
                                 <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
                             </div>
                             <h2 class="card-title">
-                                Table Berita
-                                <a href="{{ route('admin-berita-create') }}">
+                                Table Mobil
+                                <a href="{{ route('admin-mobil-create') }}">
                                     <span class="btn btn-sm btn-primary">
                                         Create <i class="fas fa-plus"></i>
                                     </span>
@@ -44,21 +43,21 @@
                             <table class="table table-bordered table-striped mb-0" id="datatable-tabletools">
                                 <thead>
                                     <tr>
-                                        <th>Judul</th>
-                                        <th>Penulis</th>
-                                        <th>Tanggal</th>
+                                        <th>Nopol</th>
+                                        <th>Merek</th>
+                                        <th>Tipe</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($berita as $item)
+                                    @foreach($mobil as $item)
                                     <tr>
-                                        <td>{{$item->judul}}</td>
-                                        <td>{{$item->author}}</td>
-                                        <td>{{$item->created_at}}</td>
+                                        <td>{{$item->nopol}}</td>
+                                        <td>{{$item->merek}}</td>
+                                        <td>{{$item->tipe}}</td>
                                         <td class="actions">
-                                            <a <?php echo ("href=/berita/edit/" . $item->id) ?> class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
-                                            <a <?php echo ("href=/berita/delete/" . $item->id) ?> class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                                            <a <?php echo ("href=/mobil/edit/" . $item->id) ?> class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                                            <a <?php echo ("href=/mobil/delete/" . $item->id) ?> class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
                                         </td>
                                     </tr>
                                     @endforeach

@@ -132,7 +132,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="nav-link" href="{{ route('admin-lo-index') }}">
+                                <a class="nav-link" href="{{ route('admin-skpd-index') }}">
                                     SKPD
                                 </a>
                             </li>

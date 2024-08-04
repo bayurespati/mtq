@@ -78,6 +78,6 @@ class BeritaController extends Controller
     public function destroy(Berita $berita)
     {
         $berita->delete();
-        return redirect('admin.berita.index');
+        return redirect()->route('admin.berita.index')->with(['success' => "Berhasil delete data berita"]);
     }
 }

@@ -58,9 +58,10 @@ class JadwalController extends Controller
     public function update(Request $request, Jadwal $jadwal)
     {
         $request->validate((new UpdateJadwalRequest())->rules($jadwal));
+        $date = Carbon::parse($request->tanggal);
         $jadwal->nama = $request->nama;
         $jadwal->lokasi = $request->lokasi;
-        $jadwal->tanggal = $request->tanggal;
+        $jadwal->tanggal = $date;
         $jadwal->jam_mulai = $request->jam_mulai;
         $jadwal->jam_selesai = $request->jam_selesai;
         $jadwal->save();
@@ -73,6 +74,6 @@ class JadwalController extends Controller
     public function destroy(Jadwal $jadwal)
     {
         $jadwal->delete();
-        return redirect('admin.jadwal.index');
+        return redirect()->route('admin-jadwal-index')->with(['success' => 'Berhasil hapus data jadwal']);
     }
 }

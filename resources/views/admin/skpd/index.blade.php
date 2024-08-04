@@ -1,7 +1,7 @@
 @extends('admin.layout.base')
 
 @push('title')
-<title>Admin View - Jadwal</title>
+<title>Admin View - SKPD</title>
 @endpush
 
 @push('additional_css')
@@ -16,7 +16,7 @@
         @include('admin.partials.sidebar')
 
         <section role="main" class="content-body">
-            <h2 style="color: black">Halaman Data Jadwal</h2>
+            <h2 style="color: black">Halaman Data SKPD</h2>
             @if (\Session::has('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {!! \Session::get('success') !!}
@@ -32,8 +32,8 @@
                                 <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
                             </div>
                             <h2 class="card-title">
-                                Table Jadwal
-                                <a href="{{ route('admin-jadwal-create') }}">
+                                Table SKPD
+                                <a href="{{ route('admin-skpd-create') }}">
                                     <span class="btn btn-sm btn-primary">
                                         Create <i class="fas fa-plus"></i>
                                     </span>
@@ -45,20 +45,20 @@
                                 <thead>
                                     <tr>
                                         <th>Nama</th>
-                                        <th>Tanggal</th>
-                                        <th>Lokasi</th>
+                                        <th>Penanggung Jawab</th>
+                                        <th>No Telp</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($jadwal as $item)
+                                    @foreach($skpd as $item)
                                     <tr>
                                         <td>{{$item->nama}}</td>
-                                        <td>{{$item->tanggal}}</td>
-                                        <td>{{$item->lokasi}}</td>
+                                        <td>{{$item->penanggung_jawab}}</td>
+                                        <td>{{$item->phone}}</td>
                                         <td class="actions">
-                                            <a <?php echo ("href=/jadwal/edit/" . $item->id) ?> class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
-                                            <a <?php echo ("href=/jadwal/delete/" . $item->id) ?> class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                                            <a <?php echo ("href=/skpd/edit/" . $item->id) ?> class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                                            <a <?php echo ("href=/skpd/delete/" . $item->id) ?> class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
                                         </td>
                                     </tr>
                                     @endforeach

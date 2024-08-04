@@ -5,6 +5,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\FotoController;
 use App\Http\Controllers\FrontViewController;
 use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\SkpdController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontViewController::class, 'beranda'])->name('beranda');
@@ -81,12 +82,12 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::group(['prefix' => 'skpd'], function () {
-        Route::get('', [JadwalController::class, 'index'])->name('admin-skpd-index');
-        Route::get('create', [JadwalController::class, 'create'])->name('admin-skpd-create');
-        Route::get('edit/{skpd}', [JadwalController::class, 'edit'])->name('admin-skpd-edit');
-        Route::post('store', [JadwalController::class, 'store'])->name('admin-skpd-store');
-        Route::post('update/{skpd}', [JadwalController::class, 'update'])->name('admin-skpd-update');
-        Route::get('delete/{skpd}', [JadwalController::class, 'destroy'])->name('admin-skpd-delete');
+        Route::get('', [SkpdController::class, 'index'])->name('admin-skpd-index');
+        Route::get('create', [SkpdController::class, 'create'])->name('admin-skpd-create');
+        Route::get('edit/{skpd}', [SkpdController::class, 'edit'])->name('admin-skpd-edit');
+        Route::post('store', [SkpdController::class, 'store'])->name('admin-skpd-store');
+        Route::post('update/{skpd}', [SkpdController::class, 'update'])->name('admin-skpd-update');
+        Route::get('delete/{skpd}', [SkpdController::class, 'destroy'])->name('admin-skpd-delete');
     });
 
     Route::group(['prefix' => 'lo'], function () {

@@ -19,10 +19,13 @@ class UpdateLoRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules(): array
+    public function rules($model): array
     {
         return [
-            //
+            'nama' => 'required',
+            'email' => 'required|email|unique:users,email,' . $model->user_id,
+            'phone' => 'required',
+            'skpd_id' => 'required',
         ];
     }
 }

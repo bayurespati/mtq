@@ -6,6 +6,7 @@ use App\Http\Controllers\FotoController;
 use App\Http\Controllers\FrontViewController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\LoController;
+use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProvinsiController;
 use App\Http\Controllers\SkpdController;
 use Illuminate\Support\Facades\Route;
@@ -111,12 +112,12 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::group(['prefix' => 'peserta'], function () {
-        Route::get('', [JadwalController::class, 'index'])->name('admin-peserta-index');
-        Route::get('create', [JadwalController::class, 'create'])->name('admin-peserta-create');
-        Route::get('edit/{peserta}', [JadwalController::class, 'edit'])->name('admin-peserta-edit');
-        Route::post('store', [JadwalController::class, 'store'])->name('admin-peserta-store');
-        Route::post('update/{peserta}', [JadwalController::class, 'update'])->name('admin-peserta-update');
-        Route::get('delete/{peserta}', [JadwalController::class, 'destroy'])->name('admin-peserta-delete');
+        Route::get('', [PesertaController::class, 'index'])->name('admin-peserta-index');
+        Route::get('create', [PesertaController::class, 'create'])->name('admin-peserta-create');
+        Route::get('edit/{peserta}', [PesertaController::class, 'edit'])->name('admin-peserta-edit');
+        Route::post('store', [PesertaController::class, 'store'])->name('admin-peserta-store');
+        Route::post('update/{peserta}', [PesertaController::class, 'update'])->name('admin-peserta-update');
+        Route::get('delete/{peserta}', [PesertaController::class, 'destroy'])->name('admin-peserta-delete');
     });
 
     Route::group(['prefix' => 'sopir'], function () {

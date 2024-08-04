@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreLoRequest extends FormRequest
+class UpdatePesertaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -19,14 +19,13 @@ class StoreLoRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules(): array
+    public function rules($model): array
     {
         return [
             'nama' => 'required',
-            'email' => 'required|email|unique:users,email',
+            'email' => 'required|email|unique:users,email,' . $model->user_id,
             'phone' => 'required',
-            'skpd_id' => 'required',
-            'password' => 'required',
+            'provinsi_id' => 'required',
         ];
     }
 }

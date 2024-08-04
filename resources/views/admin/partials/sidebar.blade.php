@@ -121,6 +121,48 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-parent">
+                        <a class="nav-link" href="#">
+                            <span>Master Data</span>
+                        </a>
+                        <ul class="nav nav-children">
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-jadwal-index') }}">
+                                    Jadwal
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-lo-index') }}">
+                                    SKPD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-lo-index') }}">
+                                    LO
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-provinsi-index') }}">
+                                    Provinsi
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-peserta-index') }}">
+                                    Peserta
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-sopir-index') }}">
+                                    Sopir
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-mobil-index') }}">
+                                    Mobil
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
                 @else
                 <ul class="nav nav-main">

@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\FotoController;
 use App\Http\Controllers\FrontViewController;
+use App\Http\Controllers\JadwalController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontViewController::class, 'beranda'])->name('beranda');
@@ -68,6 +69,69 @@ Route::middleware('auth')->group(function () {
         Route::post('store', [BeritaController::class, 'store'])->name('admin-berita-store');
         Route::post('update/{berita}', [BeritaController::class, 'update'])->name('admin-berita-update');
         Route::get('delete/{berita}', [BeritaController::class, 'destroy'])->name('admin-berita-delete');
+    });
+
+    Route::group(['prefix' => 'jadwal'], function () {
+        Route::get('', [JadwalController::class, 'index'])->name('admin-jadwal-index');
+        Route::get('create', [JadwalController::class, 'create'])->name('admin-jadwal-create');
+        Route::get('edit/{jadwal}', [JadwalController::class, 'edit'])->name('admin-jadwal-edit');
+        Route::post('store', [JadwalController::class, 'store'])->name('admin-jadwal-store');
+        Route::post('update/{jadwal}', [JadwalController::class, 'update'])->name('admin-jadwal-update');
+        Route::get('delete/{jadwal}', [JadwalController::class, 'destroy'])->name('admin-jadwal-delete');
+    });
+
+    Route::group(['prefix' => 'skpd'], function () {
+        Route::get('', [JadwalController::class, 'index'])->name('admin-skpd-index');
+        Route::get('create', [JadwalController::class, 'create'])->name('admin-skpd-create');
+        Route::get('edit/{skpd}', [JadwalController::class, 'edit'])->name('admin-skpd-edit');
+        Route::post('store', [JadwalController::class, 'store'])->name('admin-skpd-store');
+        Route::post('update/{skpd}', [JadwalController::class, 'update'])->name('admin-skpd-update');
+        Route::get('delete/{skpd}', [JadwalController::class, 'destroy'])->name('admin-skpd-delete');
+    });
+
+    Route::group(['prefix' => 'lo'], function () {
+        Route::get('', [JadwalController::class, 'index'])->name('admin-lo-index');
+        Route::get('create', [JadwalController::class, 'create'])->name('admin-lo-create');
+        Route::get('edit/{lo}', [JadwalController::class, 'edit'])->name('admin-lo-edit');
+        Route::post('store', [JadwalController::class, 'store'])->name('admin-lo-store');
+        Route::post('update/{lo}', [JadwalController::class, 'update'])->name('admin-lo-update');
+        Route::get('delete/{lo}', [JadwalController::class, 'destroy'])->name('admin-lo-delete');
+    });
+
+    Route::group(['prefix' => 'provinsi'], function () {
+        Route::get('', [JadwalController::class, 'index'])->name('admin-provinsi-index');
+        Route::get('create', [JadwalController::class, 'create'])->name('admin-provinsi-create');
+        Route::get('edit/{provinsi}', [JadwalController::class, 'edit'])->name('admin-provinsi-edit');
+        Route::post('store', [JadwalController::class, 'store'])->name('admin-provinsi-store');
+        Route::post('update/{provinsi}', [JadwalController::class, 'update'])->name('admin-provinsi-update');
+        Route::get('delete/{provinsi}', [JadwalController::class, 'destroy'])->name('admin-provinsi-delete');
+    });
+
+    Route::group(['prefix' => 'peserta'], function () {
+        Route::get('', [JadwalController::class, 'index'])->name('admin-peserta-index');
+        Route::get('create', [JadwalController::class, 'create'])->name('admin-peserta-create');
+        Route::get('edit/{peserta}', [JadwalController::class, 'edit'])->name('admin-peserta-edit');
+        Route::post('store', [JadwalController::class, 'store'])->name('admin-peserta-store');
+        Route::post('update/{peserta}', [JadwalController::class, 'update'])->name('admin-peserta-update');
+        Route::get('delete/{peserta}', [JadwalController::class, 'destroy'])->name('admin-peserta-delete');
+    });
+
+    Route::group(['prefix' => 'sopir'], function () {
+        Route::get('', [JadwalController::class, 'index'])->name('admin-sopir-index');
+        Route::get('create', [JadwalController::class, 'create'])->name('admin-sopir-create');
+        Route::get('edit/{sopir}', [JadwalController::class, 'edit'])->name('admin-sopir-edit');
+        Route::post('store', [JadwalController::class, 'store'])->name('admin-sopir-store');
+        Route::post('update/{sopir}', [JadwalController::class, 'update'])->name('admin-sopir-update');
+        Route::get('delete/{sopir}', [JadwalController::class, 'destroy'])->name('admin-sopir-delete');
+    });
+
+    Route::group(['prefix' => 'mobil'], function () {
+        Route::get('', [JadwalController::class, 'index'])->name('admin-mobil-index');
+        Route::get('create', [JadwalController::class, 'create'])->name('admin-mobil-create');
+        Route::get('edit/{mobil}', [JadwalController::class, 'edit'])->name('admin-mobil-edit');
+        Route::post('store', [JadwalController::class, 'store'])->name('admin-mobil-store');
+        Route::post('update/{mobil}', [JadwalController::class, 'update'])->name('admin-mobil-update');
+        Route::get('delete/{mobil}', [JadwalController::class, 'destroy'])->name('admin-mobil-delete');
     });
 
     Route::group(['prefix' => 'foto'], function () {

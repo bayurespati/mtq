@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('author');
             $table->text('deskripsi');
             $table->text('image');
-            $table->boolean('is_featured')->default(0);
+            $table->integer('is_featured');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExisls('pengumuman');
+        Schema::dropIfExists('pengumuman');
     }
 };

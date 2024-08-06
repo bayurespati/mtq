@@ -22,11 +22,17 @@ class UpdateJadwalRequest extends FormRequest
     public function rules($model): array
     {
         return [
-            'nama' => 'required|unique:jadwals,nama,' . $model->id,
-            'lokasi' => 'required',
+            'lomba_id' => 'required',
             'tanggal' => 'required',
             'jam_mulai' => 'required',
-            'jam_selesai' => 'required',
+            'jam_selesai' => 'required|date_format:H:i|after:jam_mulai',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'jam_selesai.after' => 'Jam selesai harus lebih besar dari jam mulai.',
         ];
     }
 }

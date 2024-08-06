@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreJadwalRequest;
 use App\Http\Requests\UpdateJadwalRequest;
 use App\Models\Jadwal;
+use App\Models\Lomba;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
@@ -15,7 +16,7 @@ class JadwalController extends Controller
      */
     public function index()
     {
-        $jadwal = Jadwal::all();
+        $jadwal = Jadwal::with('lomba')->get();
         return view('admin.jadwal.index', ['jadwal' => $jadwal]);
     }
 
@@ -24,7 +25,8 @@ class JadwalController extends Controller
      */
     public function create()
     {
-        return view('admin.jadwal.create');
+        $lomba = Lomba::all();
+        return view('admin.jadwal.create', ['lomba' => $lomba]);
     }
 
     /**
@@ -35,8 +37,7 @@ class JadwalController extends Controller
 
         $date = Carbon::parse($request->tanggal);
         $model = new Jadwal();
-        $model->nama = $request->nama;
-        $model->lokasi = $request->lokasi;
+        $model->lomba_id = $request->lomba_id;
         $model->tanggal = $date;
         $model->jam_mulai = $request->jam_mulai;
         $model->jam_selesai = $request->jam_selesai;
@@ -49,7 +50,9 @@ class JadwalController extends Controller
      */
     public function edit(Jadwal $jadwal)
     {
-        return view('admin.jadwal.edit', ['jadwal' => $jadwal]);
+        $lomba = Lomba::all();
+        $jadwal['tanggal_edit'] = Carbon::createFromFormat('Y-m-d', $jadwal->tanggal)->format('m/d/Y');
+        return view('admin.jadwal.edit', ['jadwal' => $jadwal, 'lomba' => $lomba]);
     }
 
     /**
@@ -59,8 +62,7 @@ class JadwalController extends Controller
     {
         $request->validate((new UpdateJadwalRequest())->rules($jadwal));
         $date = Carbon::parse($request->tanggal);
-        $jadwal->nama = $request->nama;
-        $jadwal->lokasi = $request->lokasi;
+        $jadwal->lomba_id = $request->lomba_id;
         $jadwal->tanggal = $date;
         $jadwal->jam_mulai = $request->jam_mulai;
         $jadwal->jam_selesai = $request->jam_selesai;

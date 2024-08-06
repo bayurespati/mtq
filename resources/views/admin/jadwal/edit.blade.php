@@ -18,6 +18,7 @@
         <section role="main" class="content-body">
             <!-- start: page -->
             <div class="row">
+                <!-- <h2 style="color: black">Halaman Data Peserta</h2> -->
                 <div class="col-lg-12">
                     <form id="form" <?php echo ("action=/jadwal/update/" . $jadwal->id) ?> method="POST" enctype="multipart/form-data" class="form-horizontal">
                         @csrf
@@ -32,26 +33,24 @@
 
                             <div class="card-body">
                                 <div class="form-group row pb-3">
-                                    <label class="col-sm-3 control-label text-sm-end pt-2">Nama <span class="required">*</span></label>
-                                    <div class="col-sm-9">
-                                        <input value="{{ old('nama', $jadwal->nama) }}" type="text" name="nama" class="form-control" placeholder="Nama" required />
-                                    </div>
-                                </div>
-                                <div class="form-group row pb-3">
-                                    <label class="col-sm-3 control-label text-sm-end pt-2">Lokasi <span class="required">*</span></label>
-                                    <div class="col-sm-9">
-                                        <input value="{{ old('lokasi', $jadwal->lokasi) }}" type="text" name="lokasi" class="form-control" placeholder="Lokasi" required />
-                                    </div>
-                                </div>
-                                <div class="form-group row pb-3">
-                                    <label class="col-lg-3 control-label text-lg-end pt-2">Default Datepicker <span class="required">*</span></label>
+                                    <label class="col-lg-3 control-label text-lg-end pt-2">Tanggal<span class="required">*</span></label>
                                     <div class="col-lg-9">
                                         <div class="input-group">
                                             <span class="input-group-text">
                                                 <i class="fas fa-calendar-alt"></i>
                                             </span>
-                                            <input value="{{ old('tanggal', $jadwal->tanggal) }}" type="text" name="tanggal" data-plugin-datepicker class="form-control" required>
+                                            <input value="{{ old('tanggal', $jadwal->tanggal_edit) }}" type="text" name="tanggal" data-plugin-datepicker class="form-control" required>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row pb-3">
+                                    <label class="col-lg-3 control-label text-lg-end pt-2">Provinsi<span class="required">*</label>
+                                    <div class="col-lg-9">
+                                        <select data-plugin-selectTwo class="form-control populate" name="lomba_id">
+                                            @foreach($lomba as $item)
+                                            <option value="{{$item->id}}" {{ ($jadwal->lomba_id == $item->id) ? 'selected' : '' }}>{{$item->nama}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group row pb-3">
@@ -66,7 +65,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row pb-3">
-                                    <label class="col-lg-3 control-label text-lg-end pt-2">Jam Mulai <span class="required">*</span></label>
+                                    <label class="col-lg-3 control-label text-lg-end pt-2">Jam Selesai <span class="required">*</span></label>
                                     <div class="col-lg-9">
                                         <div class="input-group">
                                             <span class="input-group-text">

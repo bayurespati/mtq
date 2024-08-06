@@ -32,26 +32,25 @@
 
                             <div class="card-body">
                                 <div class="form-group row pb-3">
-                                    <label class="col-sm-3 control-label text-sm-end pt-2">Nama <span class="required">*</span></label>
-                                    <div class="col-sm-9">
-                                        <input type="text" name="nama" class="form-control" placeholder="Nama" required />
-                                    </div>
-                                </div>
-                                <div class="form-group row pb-3">
-                                    <label class="col-sm-3 control-label text-sm-end pt-2">Lokasi <span class="required">*</span></label>
-                                    <div class="col-sm-9">
-                                        <input type="text" name="lokasi" class="form-control" placeholder="Lokasi" required />
-                                    </div>
-                                </div>
-                                <div class="form-group row pb-3">
-                                    <label class="col-lg-3 control-label text-lg-end pt-2">Default Datepicker <span class="required">*</span></label>
+                                    <label class="col-lg-3 control-label text-lg-end pt-2">Tanggal<span class="required">*</span></label>
                                     <div class="col-lg-9">
                                         <div class="input-group">
                                             <span class="input-group-text">
                                                 <i class="fas fa-calendar-alt"></i>
                                             </span>
-                                            <input type="text" name="tanggal" data-plugin-datepicker class="form-control" required>
+                                            <input type="text" name="tanggal" data-plugin-datepicker data-plugin-skin="primary" class="form-control" required>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row pb-3">
+                                    <label class="col-lg-3 control-label text-lg-end pt-2">Lomba<span class="required">*</label>
+                                    <div class="col-lg-9">
+                                        <select data-plugin-selectTwo class="form-control populate" name="lomba_id">
+                                            <option value="">Pilih Lomba</option>
+                                            @foreach($lomba as $item)
+                                            <option value="{{$item->id}}">{{$item->nama}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group row pb-3">
@@ -66,7 +65,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row pb-3">
-                                    <label class="col-lg-3 control-label text-lg-end pt-2">Jam Mulai <span class="required">*</span></label>
+                                    <label class="col-lg-3 control-label text-lg-end pt-2">Jam Selesai <span class="required">*</span></label>
                                     <div class="col-lg-9">
                                         <div class="input-group">
                                             <span class="input-group-text">
@@ -105,6 +104,4 @@
         </section>
     </div>
 </section>
-<script>
-</script>
 @endsection

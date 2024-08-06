@@ -12,4 +12,9 @@ class Jadwal extends Model
     protected $table = 'jadwals';
 
     protected $guarded = [];
+
+    public function lomba()
+    {
+        return $this->belongsTo(Lomba::class);
+    }
 }

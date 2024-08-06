@@ -44,19 +44,21 @@
                             <table class="table table-bordered table-striped mb-0" id="datatable-tabletools">
                                 <thead>
                                     <tr>
-                                        <th>Nama</th>
-                                        <th>Tanggal</th>
-                                        <th>Lokasi</th>
-                                        <th>Actions</th>
+                                        <th class="text-center">Tanggal</th>
+                                        <th class="text-center">Nama</th>
+                                        <th class="text-center">Lokasi</th>
+                                        <th class="text-center">Jam</th>
+                                        <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($jadwal as $item)
                                     <tr>
-                                        <td>{{$item->nama}}</td>
-                                        <td>{{$item->tanggal}}</td>
-                                        <td>{{$item->lokasi}}</td>
-                                        <td class="actions">
+                                        <td class="text-center">{{$item->tanggal}}</td>
+                                        <td class="col-4">{{$item->lomba->nama}}</td>
+                                        <td class="col-4">{{$item->lomba->lokasi}}</td>
+                                        <td class="text-center">{{$item->jam_mulai}} - {{$item->jam_selesai}}</td>
+                                        <td class="col-1 actions text-center">
                                             <a <?php echo ("href=/jadwal/edit/" . $item->id) ?> class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
                                             <a <?php echo ("href=/jadwal/delete/" . $item->id) ?> class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
                                         </td>

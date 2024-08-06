@@ -54,7 +54,7 @@
                                     <div class="col-lg-9">
                                         <select data-plugin-selectTwo class="form-control populate" name="provinsi_id">
                                             @foreach($provinsi as $item)
-                                            <option value="{{$item->id}}" {{ ($item->provinsi_id == $item->id) ? 'selected' : '' }}>{{$item->nama}}</option>
+                                            <option value="{{$item->id}}" {{ ($peserta->provinsi_id == $item->id) ? 'selected' : '' }}>{{$item->nama}}</option>
                                             @endforeach
                                         </select>
                                     </div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\FotoController;
 use App\Http\Controllers\FrontViewController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\LoController;
+use App\Http\Controllers\LombaController;
 use App\Http\Controllers\MobilController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProvinsiController;
@@ -138,6 +139,15 @@ Route::middleware('auth')->group(function () {
         Route::post('store', [MobilController::class, 'store'])->name('admin-mobil-store');
         Route::post('update/{mobil}', [MobilController::class, 'update'])->name('admin-mobil-update');
         Route::get('delete/{mobil}', [MobilController::class, 'destroy'])->name('admin-mobil-delete');
+    });
+
+    Route::group(['prefix' => 'lomba'], function () {
+        Route::get('', [LombaController::class, 'index'])->name('admin-lomba-index');
+        Route::get('create', [LombaController::class, 'create'])->name('admin-lomba-create');
+        Route::get('edit/{lomba}', [LombaController::class, 'edit'])->name('admin-lomba-edit');
+        Route::post('store', [LombaController::class, 'store'])->name('admin-lomba-store');
+        Route::post('update/{lomba}', [LombaController::class, 'update'])->name('admin-lomba-update');
+        Route::get('delete/{lomba}', [LombaController::class, 'destroy'])->name('admin-lomba-delete');
     });
 
     Route::group(['prefix' => 'foto'], function () {

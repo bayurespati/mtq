@@ -132,6 +132,11 @@
                                 </a>
                             </li>
                             <li>
+                                <a class="nav-link" href="{{ route('admin-lomba-index') }}">
+                                    Lomba
+                                </a>
+                            </li>
+                            <li>
                                 <a class="nav-link" href="{{ route('admin-skpd-index') }}">
                                     SKPD
                                 </a>

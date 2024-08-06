@@ -16,7 +16,7 @@
     <div role="main" class="main">
 
         <section class="section border-0 bg-quaternary m-0">
-            <div class="container py-5" style="margin-top: 500px; margin-bottom: 500px;">
+            <div class="container py-5" style="margin-top: 100px; margin-bottom: 100px;">
                 <div class="row justify-content-center">
                     <div class="col col-lg-9 text-center">
 

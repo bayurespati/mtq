@@ -60,7 +60,7 @@
                                     </div>
                                 </div>
 
-                                <img class="appear-animation img-fluid custom-element-wrapper custom-element-8" data-appear-animation="fadeIn" data-appear-animation-delay="900" src="/img/Home Avatar.png" alt="" style="height:132%;">
+                                <img class="appear-animation img-fluid custom-element-wrapper custom-element-8" data-appear-animation="fadeIn" data-appear-animation-delay="900" src="/img/avatar_kaltim.png" alt="" style="height:122%;">
 
                             </div>
                         </div>
@@ -73,7 +73,6 @@
                                             <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
                                                 <span class="d-flex align-items-center text-color-light text-center" style="height: 100%;">
                                                     <strong class="text-5 negative-ls-05 font-weight-bold">Hari Pertama MTQ, Sejumlah Cabang Perlombaan Digelar Di Lima Lokasi</strong>
-                                                    <!-- <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0">Lorem ipsum dolor sit amet...</p> -->
                                                 </span>
                                             </a>
                                         </div>
@@ -82,7 +81,6 @@
                                             <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
                                                 <span class="d-flex align-items-center text-color-light text-center" style="height: 100%;">
                                                     <strong class="text-5 negative-ls-05 font-weight-bold">Dibuka Gubernur Akmal Malik, MTQ Tingkat Nasional XXX Berlangsung Meriah</strong>
-                                                    <!-- <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0">Lorem ipsum dolor sit amet...</p> -->
                                                 </span>
                                             </a>
                                         </div>
@@ -91,7 +89,6 @@
                                             <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
                                                 <span class="d-flex align-items-center text-color-light text-center" style="height: 100%;">
                                                     <strong class="text-5 negative-ls-05 font-weight-bold">Usai Dilantik, Dewan Hakim Dan Majelis Hakim Siap Jalankan Tugas</strong>
-                                                    <!-- <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0">Lorem ipsum dolor sit amet...</p> -->
                                                 </span>
                                             </a>
                                         </div>

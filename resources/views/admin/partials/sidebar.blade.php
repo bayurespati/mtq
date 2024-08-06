@@ -98,7 +98,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="nav-link" href="{{ route('dewan-majelis') }}">
+                                <a class="nav-link" href="{{ route('admin-pengumuman-index') }}">
                                     Pengumuman
                                 </a>
                             </li>

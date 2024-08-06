@@ -8,6 +8,7 @@ use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\LoController;
 use App\Http\Controllers\LombaController;
 use App\Http\Controllers\MobilController;
+use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProvinsiController;
 use App\Http\Controllers\SkpdController;
@@ -76,6 +77,15 @@ Route::middleware('auth')->group(function () {
         Route::post('store', [BeritaController::class, 'store'])->name('admin-berita-store');
         Route::post('update/{berita}', [BeritaController::class, 'update'])->name('admin-berita-update');
         Route::get('delete/{berita}', [BeritaController::class, 'destroy'])->name('admin-berita-delete');
+    });
+
+    Route::group(['prefix' => 'pengumuman'], function () {
+        Route::get('', [PengumumanController::class, 'index'])->name('admin-pengumuman-index');
+        Route::get('create', [PengumumanController::class, 'create'])->name('admin-pengumuman-create');
+        Route::get('edit/{pengumuman}', [PengumumanController::class, 'edit'])->name('admin-pengumuman-edit');
+        Route::post('store', [PengumumanController::class, 'store'])->name('admin-pengumuman-store');
+        Route::post('update/{pengumuman}', [PengumumanController::class, 'update'])->name('admin-pengumuman-update');
+        Route::get('delete/{pengumuman}', [PengumumanController::class, 'destroy'])->name('admin-pengumuman-delete');
     });
 
     Route::group(['prefix' => 'jadwal'], function () {

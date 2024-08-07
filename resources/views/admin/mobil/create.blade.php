@@ -55,6 +55,12 @@
                                         <input type="text" name="warna" class="form-control" placeholder="Merek" />
                                     </div>
                                 </div>
+                                <div class="form-group row pb-3">
+                                    <label class="col-sm-3 control-label text-sm-end pt-2">Jumlah Seat </label>
+                                    <div class="col-sm-9">
+                                        <input type="number" name="jumlah_seat" class="form-control" />
+                                    </div>
+                                </div>
                             </div>
 
                             <footer class="card-footer">

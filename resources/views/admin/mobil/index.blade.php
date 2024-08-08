@@ -46,6 +46,7 @@
                                         <th>Nopol</th>
                                         <th>Merek</th>
                                         <th>Tipe</th>
+                                        <th>Jumlah Seat</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -55,6 +56,7 @@
                                         <td>{{$item->nopol}}</td>
                                         <td>{{$item->merek}}</td>
                                         <td>{{$item->tipe}}</td>
+                                        <td>{{$item->jumlah_seat}}</td>
                                         <td class="actions">
                                             <a <?php echo ("href=/mobil/edit/" . $item->id) ?> class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
                                             <a <?php echo ("href=/mobil/delete/" . $item->id) ?> class="on-default remove-row"><i class="far fa-trash-alt"></i></a>

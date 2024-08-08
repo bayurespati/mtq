@@ -36,6 +36,7 @@ class MobilController extends Controller
         $model->merek = $request->merek;
         $model->tipe = $request->tipe;
         $model->warna = $request->warna;
+        $model->jumlah_seat = $request->jumlah_seat;
         $model->save();
         return redirect()->route('admin-mobil-index')->with(['success' => 'Berhasil input data Mobil']);
     }
@@ -58,6 +59,7 @@ class MobilController extends Controller
         $mobil->merek = $request->merek;
         $mobil->tipe = $request->tipe;
         $mobil->warna = $request->warna;
+        $mobil->jumlah_seat = $request->jumlah_seat;
         $mobil->save();
         return redirect()->route('admin-mobil-index')->with(['success' => 'Berhasil update data Mobil']);
     }

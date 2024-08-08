@@ -50,15 +50,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group row pb-3">
-                                    <label class="col-sm-3 control-label text-sm-end pt-2">Warna </label>
+                                    <label class="col-sm-3 control-label text-sm-end pt-2">Jumlah Seat </label>
                                     <div class="col-sm-9">
-                                        <input value="{{ old('warna', $mobil->warna) }}" type="text" name="warna" class="form-control" placeholder="Warna" />
+                                        <input value="{{ old('jumlah_seat', $mobil->jumlah_seat)}}" type="number" name="jumlah_seat" class="form-control"  required/>
                                     </div>
                                 </div>
                                 <div class="form-group row pb-3">
-                                    <label class="col-sm-3 control-label text-sm-end pt-2">Jumlah Seat </label>
+                                    <label class="col-sm-3 control-label text-sm-end pt-2">Warna </label>
                                     <div class="col-sm-9">
-                                        <input value="{{ old('jumlah_seat')}}" type="number" name="jumlah_seat" class="form-control" />
+                                        <input value="{{ old('warna', $mobil->warna) }}" type="text" name="warna" class="form-control" placeholder="Warna" />
                                     </div>
                                 </div>
                             </div>

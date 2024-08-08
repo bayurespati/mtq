@@ -25,6 +25,7 @@ class StoreMobilRequest extends FormRequest
             'nopol' => 'required|unique:mobil,nopol',
             'merek' => 'required',
             'tipe' => 'required',
+            'jumlah_seat' => 'required',
         ];
     }
 }

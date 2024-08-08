@@ -25,6 +25,7 @@ class UpdateMobilRequest extends FormRequest
             'nopol' => 'required|unique:mobil,nopol,' . $model->id,
             'merek' => 'required',
             'tipe' => 'required',
+            'jumlah_seat' => 'required',
         ];
     }
 }

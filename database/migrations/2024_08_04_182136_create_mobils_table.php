@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string("merek");
             $table->string("tipe");
             $table->string("warna")->nullable();
+            $table->integer("jumlah_seat")->nullable();
             $table->timestamps();
         });
     }

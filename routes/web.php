@@ -14,6 +14,7 @@ use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProvinsiController;
 use App\Http\Controllers\SkpdController;
 use App\Http\Controllers\SopirController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontViewController::class, 'beranda'])->name('beranda');
@@ -168,6 +169,15 @@ Route::middleware('auth')->group(function () {
         Route::post('store', [FotoController::class, 'store'])->name('admin-foto-store');
         Route::post('update/{foto}', [FotoController::class, 'update'])->name('admin-foto-update');
         Route::get('delete/{foto}', [FotoController::class, 'destroy'])->name('admin-foto-delete');
+    });
+
+    Route::group(['prefix' => 'video'], function () {
+        Route::get('', [VideoController::class, 'index'])->name('admin-video-index');
+        Route::get('create', [VideoController::class, 'create'])->name('admin-video-create');
+        Route::get('edit/{video}', [VideoController::class, 'edit'])->name('admin-video-edit');
+        Route::post('store', [VideoController::class, 'store'])->name('admin-video-store');
+        Route::post('update/{video}', [VideoController::class, 'update'])->name('admin-video-update');
+        Route::get('delete/{video}', [VideoController::class, 'destroy'])->name('admin-video-delete');
     });
 
     Route::group(['prefix' => 'faq'], function () {

@@ -115,8 +115,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="nav-link" href="{{ route('admin-foto-index') }}">
-                                    Vidio
+                                <a class="nav-link" href="{{ route('admin-video-index') }}">
+                                    Video
                                 </a>
                             </li>
                         </ul>

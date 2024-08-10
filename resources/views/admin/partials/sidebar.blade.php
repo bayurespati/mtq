@@ -168,6 +168,11 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a class="nav-link" href="{{ route('admin-faq-index') }}">
+                            <span>FAQ</span>
+                        </a>
+                    </li>
                 </ul>
                 @else
                 <ul class="nav nav-main">

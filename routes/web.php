@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FotoController;
 use App\Http\Controllers\FrontViewController;
 use App\Http\Controllers\JadwalController;
@@ -167,5 +168,14 @@ Route::middleware('auth')->group(function () {
         Route::post('store', [FotoController::class, 'store'])->name('admin-foto-store');
         Route::post('update/{foto}', [FotoController::class, 'update'])->name('admin-foto-update');
         Route::get('delete/{foto}', [FotoController::class, 'destroy'])->name('admin-foto-delete');
+    });
+
+    Route::group(['prefix' => 'faq'], function () {
+        Route::get('', [FaqController::class, 'index'])->name('admin-faq-index');
+        Route::get('create', [FaqController::class, 'create'])->name('admin-faq-create');
+        Route::get('edit/{faq}', [FaqController::class, 'edit'])->name('admin-faq-edit');
+        Route::post('store', [FaqController::class, 'store'])->name('admin-faq-store');
+        Route::post('update/{faq}', [FaqController::class, 'update'])->name('admin-faq-update');
+        Route::get('delete/{faq}', [FaqController::class, 'destroy'])->name('admin-faq-delete');
     });
 });

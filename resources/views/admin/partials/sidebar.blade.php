@@ -173,6 +173,11 @@
                             <span>FAQ</span>
                         </a>
                     </li>
+                    <li>
+                        <a class="nav-link" href="{{ route('admin-pesan-index') }}">
+                            <span>Pesan</span>
+                        </a>
+                    </li>
                 </ul>
                 @else
                 <ul class="nav nav-main">

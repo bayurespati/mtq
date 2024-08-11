@@ -10,6 +10,7 @@ use App\Http\Controllers\LoController;
 use App\Http\Controllers\LombaController;
 use App\Http\Controllers\MobilController;
 use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\PesanController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\ProvinsiController;
 use App\Http\Controllers\SkpdController;
@@ -31,6 +32,9 @@ Route::get('/musabaqadah-center', [FrontViewController::class, 'musabaqadahCente
 Route::get('/hubungi-kami', [FrontViewController::class, 'hubungiKami'])->name('hubungi-kami');
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/login', [AuthController::class, 'index'])->name('login');
+
+// ROUTE POST
+Route::post('/pesan/store', [PesanController::class, 'store'])->name('pesan-store');
 
 Route::middleware('auth')->group(function () {
 
@@ -187,5 +191,12 @@ Route::middleware('auth')->group(function () {
         Route::post('store', [FaqController::class, 'store'])->name('admin-faq-store');
         Route::post('update/{faq}', [FaqController::class, 'update'])->name('admin-faq-update');
         Route::get('delete/{faq}', [FaqController::class, 'destroy'])->name('admin-faq-delete');
+    });
+
+    Route::group(['prefix' => 'pesan'], function () {
+        Route::get('', [PesanController::class, 'index'])->name('admin-pesan-index');
+        Route::get('edit/{pesan}', [PesanController::class, 'edit'])->name('admin-pesan-edit');
+        Route::post('update/{pesan}', [PesanController::class, 'update'])->name('admin-pesan-update');
+        Route::get('delete/{pesan}', [PesanController::class, 'destroy'])->name('admin-pesan-delete');
     });
 });

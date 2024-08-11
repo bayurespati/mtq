@@ -14,30 +14,25 @@
     @include('frontend.partials.header')
 
     <div role="main" class="main">
-
-        <section class="section border-0 bg-quaternary m-0">
-            <div class="container py-5" style="margin-top: 100px; margin-bottom: 100px;">
-                <div class="row justify-content-center">
-                    <div class="col col-lg-9 text-center">
-
-                        <div class="divider divider-small divider-small-lg mt-0 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="0">
-                            <hr class="bg-primary border-radius m-auto">
-                        </div>
-                        <div class="overflow-hidden mb-1">
-                            <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">
-                                Sambutan
-                            </h3>
-                        </div>
-                        <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-                            Konten Halaman
-                            <br>
-                            Sambutan
-                        </h2>
+        <div class="container pt-5">
+            <div class="row py-4 mb-2">
+                <div class="col-md-7 order-2">
+                    <div class="overflow-hidden">
+                        <h2 class="text-color-dark font-weight-bold text-12 mb-2 pt-0 mt-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">Akmal Malik</h2>
                     </div>
+                    <div class="overflow-hidden mb-3">
+                        <p class="font-weight-bold text-uppercase mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="500" style="color: #64B6AC">Pj. Gubernur Provisi Kalimatan Timur</p>
+                    </div>
+                    <p class="lead appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet enim ac sagittis. Curabitur eget leo varius, elementum mauris eget, egestas quam. Donec ante risus, dapibus sed lectus non, lacinia vestibulum nisi. Morbi vitae augue quam. Nullam ac laoreet libero.</p>
+                    <p class="pb-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">Consectetur adipiscing elit. Aliquam iaculis sit amet enim ac sagittis. Curabitur eget leo varius, elementum mauris eget, egestas quam.</p>
+                    <p class="lead appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet enim ac sagittis. Curabitur eget leo varius, elementum mauris eget, egestas quam. Donec ante risus, dapibus sed lectus non, lacinia vestibulum nisi. Morbi vitae augue quam. Nullam ac laoreet libero.</p>
+                    <hr class="solid my-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="900">
+                </div>
+                <div class="col-md-5 order-md-2 mb-4 mb-lg-0 appear-animation" data-appear-animation="fadeInRightShorter">
+                    <img src="/img/akmal_malik.png" class="img-fluid mb-2" alt="">
                 </div>
             </div>
-        </section>
-
+        </div>
     </div>
 
     @include('frontend.partials.footer')

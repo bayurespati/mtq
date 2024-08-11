@@ -1,4 +1,4 @@
-<header id="header" class="header-transparent" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': false, 'stickyStartAt': 53, 'stickySetTop': '-53px'}">
+<header id="header" class="" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': false, 'stickyStartAt': 53, 'stickySetTop': '-53px'}">
     <div class="header-body border-top-0 h-auto box-shadow-none">
         <div class="header-top header-top-borders">
             <div class="container h-100">
@@ -101,13 +101,11 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        @if(Auth::user())
                                         <li>
                                             <a href="{{ route('musabaqadah-center') }}" class="{{ request()->is('musabaqadah-center') ? 'nav-link active' : 'nav-link' }}">
                                                 Musabaqadah Center
                                             </a>
                                         </li>
-                                        @endif
                                         <li>
                                             <a href="{{ route('hubungi-kami') }}" class="{{ request()->is('hubungi-kami') ? 'nav-link active' : 'nav-link' }}">
                                                 Hubungi Kami

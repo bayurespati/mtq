@@ -11,6 +11,15 @@
         left: 42px;
         width: 75%;
     }
+
+    .limited-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        max-width: 400px;
+        /* Adjust width as needed */
+    }
 </style>
 @endpush
 
@@ -38,12 +47,13 @@
                                 <h1 class="text-color-dark font-weight-bold text-9 pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
                                     Musabaqadah Tilawatil Qur'an Tingkat Nasional XXX Resmi Dibuka
                                 </h1>
-                                <div class="d-block appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+                                <div class="d-block appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" style="margin-bottom: 40px;">
                                     <a href="#start" data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms">
                                         Selengkapnya
                                     </a>
                                 </div>
                             </div>
+                            <br>
                             <div class="col-12 col-lg-6 p-relative text-end">
 
                                 <div class="appear-animation custom-element-wrapper custom-element-6" data-appear-animation="expandIn" data-appear-animation-delay="500">
@@ -60,35 +70,47 @@
                                     </div>
                                 </div>
 
-                                <img class="appear-animation img-fluid custom-element-wrapper custom-element-8" data-appear-animation="fadeIn" data-appear-animation-delay="900" src="/img/avatar_kaltim.png" alt="" style="height:122%;">
+                                <img class="appear-animation img-fluid custom-element-wrapper custom-element-8" data-appear-animation="fadeIn" data-appear-animation-delay="900" src="/img/avatar_kaltim_baru.png" alt="" style="height:122%;">
 
                             </div>
                         </div>
-                        <div class="row align-items-end justify-content-end pt-5">
-                            <div class="col-lg-12 text-end pt-5">
+                        <div class="row align-items-center justify-content-center pt-5">
+                            <div class="col-lg-9 text-end pt-5">
                                 <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
-                                    <div class="owl-carousel owl-theme stage-margin rounded-nav nav-dark nav-icon-1 nav-size-md nav-position-1" data-plugin-options="{'responsive': {'0': {'items': 3}, '479': {'items': 3}, '768': {'items': 3}, '979': {'items': 3}, '1199': {'items': 3}}, 'margin': 10, 'loop': false, 'nav': true, 'dots': false, 'stagePadding': 40}">
+                                    <div class="owl-carousel owl-theme stage-margin rounded-nav nav-dark nav-icon-1 nav-size-md nav-position-1" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 2}, '1199': {'items': 2}}, 'margin': 10, 'loop': true, 'nav': true, 'dots': false, 'stagePadding': 40}">
                                         <div class="overlay overlay-color-primary overlay-show overlay-op-8 rounded overflow-hidden">
-                                            <img alt="" class="img-fluid rounded" src="img/frontend/demos/business-consulting-4/generic/generic-2.jpg">
+                                            <img alt="" class="img-fluid rounded" src="/img/frontend/demos/business-consulting-4/generic/generic-2.jpg">
                                             <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
-                                                <span class="d-flex align-items-center text-color-light text-center" style="height: 100%;">
-                                                    <strong class="text-5 negative-ls-05 font-weight-bold">Hari Pertama MTQ, Sejumlah Cabang Perlombaan Digelar Di Lima Lokasi</strong>
+                                                <span class="p-absolute left-0 bottom-0 text-color-light text-start ms-4 mb-3 ps-2 pb-1">
+                                                    <strong class="text-5 negative-ls-05 font-weight-bold limited-text">Dibuka Gubernur Akmal Malik, MTQ Tingkat Nasional XXX Berlangsung Meriah</strong>
+                                                    <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0">Lorem ipsum dolor sit amet...</p>
                                                 </span>
                                             </a>
                                         </div>
                                         <div class="overlay overlay-color-dark overlay-show overlay-op-9 rounded overflow-hidden">
-                                            <img alt="" class="img-fluid rounded" src="img/frontend/demos/business-consulting-4/generic/generic-3.jpg">
+                                            <img alt="" class="img-fluid rounded" src="/img/frontend/demos/business-consulting-4/generic/generic-3.jpg">
                                             <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
-                                                <span class="d-flex align-items-center text-color-light text-center" style="height: 100%;">
-                                                    <strong class="text-5 negative-ls-05 font-weight-bold">Dibuka Gubernur Akmal Malik, MTQ Tingkat Nasional XXX Berlangsung Meriah</strong>
+                                                <span class="p-absolute left-0 bottom-0 text-color-light text-start ms-4 mb-3 ps-2 pb-1">
+                                                    <strong class="text-5 negative-ls-05 font-weight-bold limited-text">Dibuka Gubernur Akmal Malik, MTQ Tingkat Nasional XXX Berlangsung Meriah</strong>
+                                                    <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0">Lorem ipsum dolor sit amet...</p>
                                                 </span>
                                             </a>
                                         </div>
                                         <div class="overlay overlay-color-primary overlay-show overlay-op-8 rounded overflow-hidden">
-                                            <img alt="" class="img-fluid rounded" src="img/frontend/demos/business-consulting-4/generic/generic-4.jpg">
+                                            <img alt="" class="img-fluid rounded" src="/img/frontend/demos/business-consulting-4/generic/generic-4.jpg">
                                             <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
-                                                <span class="d-flex align-items-center text-color-light text-center" style="height: 100%;">
-                                                    <strong class="text-5 negative-ls-05 font-weight-bold">Usai Dilantik, Dewan Hakim Dan Majelis Hakim Siap Jalankan Tugas</strong>
+                                                <span class="p-absolute left-0 bottom-0 text-color-light text-start ms-4 mb-3 ps-2 pb-1">
+                                                    <strong class="text-5 negative-ls-05 font-weight-bold limited-text">Usai Dilantik, Dewan Hakim Dan Majelis Hakim Siap Jalankan Tugas</strong>
+                                                    <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0">Lorem ipsum dolor sit amet...</p>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="overlay overlay-color-dark overlay-show overlay-op-9 rounded overflow-hidden">
+                                            <img alt="" class="img-fluid rounded" src="/img/frontend/demos/business-consulting-4/generic/generic-3.jpg">
+                                            <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
+                                                <span class="p-absolute left-0 bottom-0 text-color-light text-start ms-4 mb-3 ps-2 pb-1">
+                                                    <strong class="text-5 negative-ls-05 font-weight-bold limited-text">Dibuka Gubernur Akmal Malik, MTQ Tingkat Nasional XXX Berlangsung Meriah</strong>
+                                                    <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0">Lorem ipsum dolor sit amet...</p>
                                                 </span>
                                             </a>
                                         </div>
@@ -160,10 +182,6 @@
                             <p class="font-weight-medium text-4-5 line-height-5">
                                 Menyadari bahwa generasi muda adalah generasi penerus bangsa yang akan menjadi sosok-sosok penentu masa depan bangsa Indonesia, sehingga Penyelenggaraan MTQ Tingkat Nasional XXX Tahun 2024 adalah salah satu momentum penting dalam mempersiapkan generasi agar memiliki mental dan spiritual yang kuat guna membentuk generasi yang bermoral serta berakhlak mulia.
                             </p>
-                            <!-- <p class="text-3-5">
-                                
-                            </p> -->
-
                             <ul class="list list-icons list-icons-style-2 list-icons-lg">
                                 <li class="line-height-9 text-3-5 mb-1">
                                     <i class="fas fa-check border-width-2 text-3"></i>KALTIM
@@ -197,23 +215,8 @@
                         <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
                             Keindahan dan Kesiapan Kalimantan Timur
                         </h2>
-
-                        <!-- <p class="font-weight-medium text-4-5 line-height-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
-                            
-                        </p> -->
-
-                    </div>
-                </div>
-
-                <div class="row py-5 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
-                    <div class="col-md-12 mb-4 mb-md-0">
-                        <div class="card card-border card-border-top card-border-hover bg-color-light border-0 box-shadow-6 box-shadow-hover anim-hover-translate-top-10px transition-3ms anim-hover-inner-wrapper" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('img/berau14.JPG'); height: 745px; background-size:cover;">
-                            <div class="card-body p-relative zindex-1 p-5 text-center d-flex justify-content-center align-items-center">
-                                <div class="anim-hover-inner-translate-top-20px transition-3ms">
-                                    <h1 class="card-title mt-4 mb-2 font-weight-bold" style="color: white;">SUKSESKAN MTQ NASIONAL XXX TAHUN 2024</h1>
-                                    <h2 class="card-text" style="color: white;">KALIMANTAN TIMUR - IBUKOTA NUSANTARA</h2>
-                                </div>
-                            </div>
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/mtxFK8b6p0k?si=raz7LG9Zv2qrXRRc?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -232,7 +235,7 @@
                             <hr class="bg-primary border-radius m-auto">
                         </div>
                         <div class="overflow-hidden mb-1">
-                            <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">
+                            <h3 class="font-weight-semi-bold text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">
                                 STATISTIK KEGIATAN
                             </h3>
                         </div>
@@ -258,7 +261,7 @@
                     </div>
                     <div class="col-lg-3 mb-4 mb-sm-0">
                         <div class="counter">
-                            <strong data-to="14">14</strong>
+                            <strong data-to="12">12</strong>
                             <label class="font-weight-semibold text-4 opacity-7">Cabang Lomba</label>
                         </div>
                     </div>
@@ -271,92 +274,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- <section class="section border-0 bg-quaternary m-0">
-            <div class="container py-5">
-                <div class="row justify-content-center">
-                    <div class="col col-lg-9 text-center">
-
-                        <div class="divider divider-small divider-small-lg mt-0 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="0">
-                            <hr class="bg-primary border-radius m-auto">
-                        </div>
-                        <div class="overflow-hidden mb-1"> -->
-        <!-- <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">What They Say About Us</h3> -->
-        <!-- </div>
-                        <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">Peserta MTQ</h2>
-
-                    </div>
-                </div> -->
-
-        <!-- <div class="row mt-4">
-                    <div class="col appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
-
-                        <div class="owl-carousel owl-theme stage-margin rounded-nav nav-dark nav-icon-1 nav-size-md mb-0" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 2}, '1199': {'items': 2}}, 'margin': 0, 'loop': true, 'nav': true, 'dots': false, 'stagePadding': 40}">
-                            <div class="mx-3">
-                                <div class="testimonial testimonial-style-3 testimonial-style-3-light">
-                                    <blockquote class="p-3 before-d-none">
-                                        <p class="font-weight-medium text-4 line-height-5 p-3 m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.</p>
-                                    </blockquote>
-                                    <div class="testimonial-arrow-down p-relative z-index-1"></div>
-                                    <div class="testimonial-author">
-                                        <div class="testimonial-author-thumbnail">
-                                            <img src="img/frontend/clients/client-1.jpg" class="img-fluid rounded-circle" alt="">
-                                        </div>
-                                        <p><strong class="font-weight-extra-bold">John Smith</strong><span>CEO & Founder - Okler</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mx-3">
-                                <div class="testimonial testimonial-style-3 testimonial-style-3-light">
-                                    <blockquote class="p-3 before-d-none">
-                                        <p class="font-weight-medium text-4 line-height-5 p-3 m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.</p>
-                                    </blockquote>
-                                    <div class="testimonial-arrow-down p-relative z-index-1"></div>
-                                    <div class="testimonial-author">
-                                        <div class="testimonial-author-thumbnail">
-                                            <img src="img/frontend/clients/client-1.jpg" class="img-fluid rounded-circle" alt="">
-                                        </div>
-                                        <p><strong class="font-weight-extra-bold">John Smith</strong><span>CEO & Founder - Okler</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mx-3">
-                                <div class="testimonial testimonial-style-3 testimonial-style-3-light">
-                                    <blockquote class="p-3 before-d-none">
-                                        <p class="font-weight-medium text-4 line-height-5 p-3 m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.</p>
-                                    </blockquote>
-                                    <div class="testimonial-arrow-down p-relative z-index-1"></div>
-                                    <div class="testimonial-author">
-                                        <div class="testimonial-author-thumbnail">
-                                            <img src="img/frontend/clients/client-1.jpg" class="img-fluid rounded-circle" alt="">
-                                        </div>
-                                        <p><strong class="font-weight-extra-bold">John Smith</strong><span>CEO & Founder - Okler</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div> -->
-
-        <!-- <div class="row d-flex align-items-center text-center mt-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                    <img src="img/Peserta 1.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
-                    <img src="img/Peserta 2.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
-                    <img src="img/Peserta 3.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
-                    <img src="img/Peserta 4.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
-                    <img src="img/Peserta 5.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
-                    <img src="img/Peserta 6.jpg" alt="" class="img-fluid p-0" style="max-width: 16%; height: 170px;">
-                </div>
-
-                <div class="row">
-                    <div class="d-flex align-items-center justify-content-center mt-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-                        <a href="#start" data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms">
-                            Selengkapnya
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section> -->
 
         <section class="section border-0 bg-light m-0">
             <div class="container py-5">

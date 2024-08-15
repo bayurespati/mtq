@@ -15,54 +15,41 @@
 
     <div role="main" class="main">
         <div class="container pb-5 mb-5" style="padding-top: 220px;">
-
             <div class="row">
                 <div class="col-lg-8 mb-5 mb-lg-0">
-
+                    @foreach($berita as $item)
                     <article class="mb-5">
                         <div class="card bg-transparent border-0">
                             <div class="card-body p-0 z-index-1">
-                                <a href="{{ route('berita-example') }}" data-cursor-effect-hover="plus">
-                                    <img class="card-img-top rounded-0 mb-2" src="/img/frontend/blog/blog-example.jpeg" alt="Card Image">
+                                <a <?php echo ("href='/artikel/berita/example/$item->id'") ?> data-cursor-effect-hover="plus">
+                                    <img class="card-img-top rounded-0 mb-2" src="/{{$item->image}}" alt="Card Image">
                                 </a>
                                 <p class="text-uppercase text-color-default text-1 my-2">
-                                    <time pubdate datetime="2024-06-9">Mei 9, 2024</time>
+                                    @php
+                                    $date = \Carbon\Carbon::parse($item->created_at);
+                                    @endphp
+                                    <time pubdate datetime="2024-06-9">{{$date->format('M d, Y')}}</time>
                                 </p>
                                 <div class="card-body p-0">
-                                    <h4 class="card-title text-5 font-weight-bold pb-1 mb-2"><a class="text-color-dark text-color-hover-primary text-decoration-none" href="{{ route('berita-example') }}">Logo MTQN XXX Kaltim Resmi Dilaunching</a></h4>
-                                    <p class="card-text mb-2">BANTEN - Sekretaris Daerah Provinsi Kaltim Dra Sri Wahyuni MPP yang juga Ketua Umum Lembaga...</p>
-                                    <a href="{{ route('berita-example') }}" class="read-more text-color-primary font-weight-semibold mt-0 text-2">Selengkapnya <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+                                    <h4 class="card-title text-5 font-weight-bold pb-1 mb-2">
+                                        <a class="text-color-dark text-color-hover-primary text-decoration-none" <?php echo ("href='/artikel/berita/example/$item->id'") ?>>
+                                            {{$item->judul}}
+                                        </a>
+                                    </h4>
+                                    <!-- <p class="card-text mb-2">{{$item->deskripsi}}</p> -->
+                                    <a <?php echo ("href='/artikel/berita/example/$item->id'") ?> class="read-more text-color-primary font-weight-semibold mt-0 text-2">Selengkapnya <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
                                 </div>
                             </div>
                         </div>
                     </article>
-
-                    <article class="mb-5">
-                        <div class="card bg-transparent border-0">
-                            <div class="card-body p-0 z-index-1">
-                                <a href="{{ route('berita-example-2') }}" data-cursor-effect-hover="plus">
-                                    <img class="card-img-top rounded-0 mb-2" src="/img/berita2.jpg" alt="Card Image">
-                                </a>
-                                <p class="text-uppercase text-color-default text-1 my-2">
-                                    <time pubdate datetime="2024-06-9">Now 19, 2024</time>
-                                </p>
-                                <div class="card-body p-0">
-                                    <h4 class="card-title text-5 font-weight-bold pb-1 mb-2"><a class="text-color-dark text-color-hover-primary text-decoration-none" href="{{ route('berita-example-2') }}">Logo MTQN XXX Kaltim Resmi Dilaunching</a></h4>
-                                    <p class="card-text mb-2">Gubernur Kaltim Buka Secara Resmi MTQ Ke-30 Tahun 2024</p>
-                                    <a href="{{ route('berita-example-2') }}" class="read-more text-color-primary font-weight-semibold mt-0 text-2">Selengkapnya <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <ul class="pagination pagination-rounded pagination-md justify-content-center">
+                    @endforeach
+                    <!-- <ul class="pagination pagination-rounded pagination-md justify-content-center">
                         <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-left"></i></a></li>
                         <li class="page-item active"><a class="page-link" href="#" data-cursor-effect-hover="fit">1</a></li>
                         <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit">2</a></li>
                         <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit">3</a></li>
                         <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-right"></i></a></li>
-                    </ul>
-
+                    </ul> -->
                 </div>
                 <div class="blog-sidebar col-lg-4 pt-4 pt-lg-0">
                     <aside class="sidebar">
@@ -91,9 +78,7 @@
                     </aside>
                 </div>
             </div>
-
         </div>
-
     </div>
 
     @include('frontend.partials.footer')

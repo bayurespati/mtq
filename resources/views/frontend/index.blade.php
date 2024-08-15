@@ -20,6 +20,23 @@
         max-width: 400px;
         /* Adjust width as needed */
     }
+
+    .limited-text-footer {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        max-width: 400px;
+        /* Adjust width as needed */
+    }
+
+    .limited-text-desc {
+        display: inline-block;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 </style>
 @endpush
 
@@ -45,10 +62,10 @@
                                     </h2>
                                 </div>
                                 <h1 class="text-color-dark font-weight-bold text-9 pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-                                    Musabaqadah Tilawatil Qur'an Tingkat Nasional XXX Resmi Dibuka
+                                    {{$utama->judul}}
                                 </h1>
                                 <div class="d-block appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" style="margin-bottom: 40px;">
-                                    <a href="#start" data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms">
+                                    <a <?php echo ("href='/artikel/pengumuman/example/$utama->id'") ?> data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms">
                                         Selengkapnya
                                     </a>
                                 </div>
@@ -78,42 +95,19 @@
                             <div class="col-lg-9 text-end pt-5">
                                 <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
                                     <div class="owl-carousel owl-theme stage-margin rounded-nav nav-dark nav-icon-1 nav-size-md nav-position-1" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 2}, '1199': {'items': 2}}, 'margin': 10, 'loop': true, 'nav': true, 'dots': false, 'stagePadding': 40}">
-                                        <div class="overlay overlay-color-primary overlay-show overlay-op-8 rounded overflow-hidden">
+                                        @foreach($pengumuman as $key => $item)
+                                        @if($key > 0)
+                                        <div class="overlay {{$key % 2 == 0 ? 'overlay-color-primary' : 'overlay-color-dark'}} overlay-show overlay-op-8 rounded overflow-hidden">
                                             <img alt="" class="img-fluid rounded" src="/img/frontend/demos/business-consulting-4/generic/generic-2.jpg">
                                             <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
                                                 <span class="p-absolute left-0 bottom-0 text-color-light text-start ms-4 mb-3 ps-2 pb-1">
-                                                    <strong class="text-5 negative-ls-05 font-weight-bold limited-text">Dibuka Gubernur Akmal Malik, MTQ Tingkat Nasional XXX Berlangsung Meriah</strong>
-                                                    <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0">Lorem ipsum dolor sit amet...</p>
+                                                    <strong class="text-5 negative-ls-05 font-weight-bold limited-text">{{$item->judul}}</strong>
+                                                    <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0 limited-text-desc">{{$item->deskripsi}}</p>
                                                 </span>
                                             </a>
                                         </div>
-                                        <div class="overlay overlay-color-dark overlay-show overlay-op-9 rounded overflow-hidden">
-                                            <img alt="" class="img-fluid rounded" src="/img/frontend/demos/business-consulting-4/generic/generic-3.jpg">
-                                            <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
-                                                <span class="p-absolute left-0 bottom-0 text-color-light text-start ms-4 mb-3 ps-2 pb-1">
-                                                    <strong class="text-5 negative-ls-05 font-weight-bold limited-text">Dibuka Gubernur Akmal Malik, MTQ Tingkat Nasional XXX Berlangsung Meriah</strong>
-                                                    <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0">Lorem ipsum dolor sit amet...</p>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="overlay overlay-color-primary overlay-show overlay-op-8 rounded overflow-hidden">
-                                            <img alt="" class="img-fluid rounded" src="/img/frontend/demos/business-consulting-4/generic/generic-4.jpg">
-                                            <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
-                                                <span class="p-absolute left-0 bottom-0 text-color-light text-start ms-4 mb-3 ps-2 pb-1">
-                                                    <strong class="text-5 negative-ls-05 font-weight-bold limited-text">Usai Dilantik, Dewan Hakim Dan Majelis Hakim Siap Jalankan Tugas</strong>
-                                                    <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0">Lorem ipsum dolor sit amet...</p>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="overlay overlay-color-dark overlay-show overlay-op-9 rounded overflow-hidden">
-                                            <img alt="" class="img-fluid rounded" src="/img/frontend/demos/business-consulting-4/generic/generic-3.jpg">
-                                            <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
-                                                <span class="p-absolute left-0 bottom-0 text-color-light text-start ms-4 mb-3 ps-2 pb-1">
-                                                    <strong class="text-5 negative-ls-05 font-weight-bold limited-text">Dibuka Gubernur Akmal Malik, MTQ Tingkat Nasional XXX Berlangsung Meriah</strong>
-                                                    <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0">Lorem ipsum dolor sit amet...</p>
-                                                </span>
-                                            </a>
-                                        </div>
+                                        @endif
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -121,6 +115,7 @@
                     </div>
                 </div>
             </div>
+
 
             <div class="appear-animation custom-element-wrapper custom-element-1" data-appear-animation="expandIn" data-appear-animation-delay="200">
                 <div class="w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 2.1, 'transition': true, 'transitionDuration': 500}">
@@ -399,16 +394,15 @@
                                             </span>
                                         </span>
                                     </div>
-                                    <img src="img/berita2.jpg" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                                    <img src="{{$berita_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
                                 </div>
                                 <div class="card-body py-4 px-0">
                                     <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
-                                        Gubernur Kaltim Buka Secara Resmi MTQ Ke-30 Tahun 2024
+                                        {{$berita_latest->judul}}
                                     </h4>
-                                    <span class="d-block text-color-grey font-weight-semibold positive-ls-2 text-2">
-                                        Perhelatan Fahmil Qur'an Beregu pada Musabaqoh Tilawatil Qur'an Nasional berakhir, beregu putra..
+                                    <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
+                                        {{$berita_latest->deskripsi}}
                                     </span>
-                                    <!-- <a href="demo-business-consulting-4-blog-post.html" class="read-more text-color-primary font-weight-semibold mt-0 text-2">Read More <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a> -->
                                 </div>
                             </div>
                         </a>
@@ -425,16 +419,15 @@
                                             </span>
                                         </span>
                                     </div>
-                                    <img src="/img/frontend/blog/blog-example.jpeg" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                                    <img src="{{$pengumuman_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
                                 </div>
                                 <div class="card-body py-4 px-0">
                                     <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
-                                        Logo MTQN XXX Kaltim Resmi Dilaunching, Sekda Sri Wahyuni: Kami Tunggu Di Kaltim
+                                        {{$pengumuman_latest->judul}}
                                     </h4>
-                                    <span class="d-block text-color-grey font-weight-semibold positive-ls-2 text-2">
-                                        BANTEN - Sekretaris Daerah Provinsi Kaltim Dra Sri Wahyuni MPP yang juga Ketua umum Pengembangan..
+                                    <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
+                                        {{$pengumuman_latest->deskripsi}}
                                     </span>
-                                    <!-- <a href="demo-business-consulting-4-blog-post.html" class="read-more text-color-primary font-weight-semibold mt-0 text-2">Read More <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a> -->
                                 </div>
                             </div>
                         </a>

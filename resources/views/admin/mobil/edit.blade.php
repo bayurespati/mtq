@@ -52,7 +52,7 @@
                                 <div class="form-group row pb-3">
                                     <label class="col-sm-3 control-label text-sm-end pt-2">Jumlah Seat </label>
                                     <div class="col-sm-9">
-                                        <input value="{{ old('jumlah_seat', $mobil->jumlah_seat)}}" type="number" name="jumlah_seat" class="form-control"  required/>
+                                        <input value="{{ old('jumlah_seat', $mobil->jumlah_seat)}}" type="number" name="jumlah_seat" class="form-control" required />
                                     </div>
                                 </div>
                                 <div class="form-group row pb-3">
@@ -67,7 +67,7 @@
                                 <div class="row justify-content-end">
                                     <div class="col-sm-9">
                                         <button class="btn btn-primary">Submit</button>
-                                        <button type="reset" class="btn btn-default" onclick="history.back()">Cancel</button>
+                                        <button type="reset" class="btn btn-default" onClick="window.location.href='/mobil'">Cancel</button>
                                     </div>
                                 </div>
                             </footer>

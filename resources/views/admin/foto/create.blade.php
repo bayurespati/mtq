@@ -16,7 +16,6 @@
         @include('admin.partials.sidebar')
 
         <section role="main" class="content-body">
-            <!-- start: page -->
             <div class="row">
                 <div class="col-lg-12">
                     <form id="form" action="{{ route('admin-foto-store') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
@@ -50,7 +49,7 @@
                                 <div class="row justify-content-end">
                                     <div class="col-sm-9">
                                         <button class="btn btn-primary">Submit</button>
-                                        <button type="reset" class="btn btn-default" onclick="history.back()">Cancel</button>
+                                        <button type="reset" class="btn btn-default" onClick="window.location.href='/foto'">Cancel</button>
                                     </div>
                                 </div>
                             </footer>
@@ -69,7 +68,6 @@
                     @endif
                 </div>
             </div>
-            <!-- end: page -->
         </section>
     </div>
 </section>

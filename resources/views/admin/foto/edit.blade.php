@@ -46,7 +46,7 @@
                                 <div class="form-group row pb-3">
                                     <label class="col-sm-3 control-label text-sm-end pt-2">Foto <span class="required">*</span></label>
                                     <div class="col-sm-9">
-                                        <input type="file" name="image" class="form-control"/>
+                                        <input type="file" name="image" class="form-control" />
                                         <a href="/{{$berita->image}}">View Image</a>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@
                                 <div class="row justify-content-end">
                                     <div class="col-sm-9">
                                         <button class="btn btn-primary">Submit</button>
-                                        <button type="reset" class="btn btn-default" onclick="history.back()">Cancel</button>
+                                        <button type="reset" class="btn btn-default" onClick="window.location.href='/foto'">Cancel</button>
                                     </div>
                                 </div>
                             </footer>

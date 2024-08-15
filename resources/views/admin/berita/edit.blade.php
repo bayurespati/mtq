@@ -46,14 +46,14 @@
                                 <div class="form-group row pb-3">
                                     <label class="col-sm-3 control-label text-sm-end pt-2">Foto <span class="required">*</span></label>
                                     <div class="col-sm-9">
-                                        <input type="file" name="image" class="form-control"/>
+                                        <input type="file" name="image" class="form-control" />
                                         <a href="/{{$berita->image}}">View Image</a>
                                     </div>
                                 </div>
                                 <div class="form-group row pb-3">
                                     <label class="col-lg-3 control-label text-lg-end pt-2">Deskripsi<span class="required">*</span></label>
                                     <div class="col-lg-9">
-                                        <textarea value="{{old('deskripsi')}}" name="deskripsi" class="summernote" data-plugin-summernote data-plugin-options='{ "height": 180 }'>{{$berita->deskripsi}}</textarea>
+                                        <textarea name="deskripsi" class="form-control" rows="3" required placeholder="Deskripsi">{{$berita->deskripsi}}</textarea>
                                     </div>
                                 </div>
                             </div>

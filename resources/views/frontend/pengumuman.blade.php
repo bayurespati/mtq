@@ -12,31 +12,73 @@
 @section('content')
 <div class="body">
     @include('frontend.partials.header')
+
     <div role="main" class="main">
-
-        <section class="section border-0 bg-quaternary m-0">
-            <div class="container py-5" style="margin-top: 100px; margin-bottom: 100px;">
-                <div class="row justify-content-center">
-                    <div class="col col-lg-9 text-center">
-
-                        <div class="divider divider-small divider-small-lg mt-0 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="0">
-                            <hr class="bg-primary border-radius m-auto">
+        <div class="container pb-5 mb-5" style="padding-top: 220px;">
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    @foreach($pengumuman as $item)
+                    <article class="mb-5">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body p-0 z-index-1">
+                                <a <?php echo ("href='/artikel/pengumuman/example/$item->id'") ?> data-cursor-effect-hover="plus">
+                                    <img class="card-img-top rounded-0 mb-2" src="/{{$item->image}}" alt="Card Image">
+                                </a>
+                                <p class="text-uppercase text-color-default text-1 my-2">
+                                    @php
+                                    $date = \Carbon\Carbon::parse($item->created_at);
+                                    @endphp
+                                    <time pubdate datetime="2024-06-9">{{$date->format('M d, Y')}}</time>
+                                </p>
+                                <div class="card-body p-0">
+                                    <h4 class="card-title text-5 font-weight-bold pb-1 mb-2">
+                                        <a class="text-color-dark text-color-hover-primary text-decoration-none" <?php echo ("href='/artikel/pengumuman/example/$item->id'") ?>>
+                                            {{$item->judul}}
+                                        </a>
+                                    </h4>
+                                    <!-- <p class="card-text mb-2">{{$item->deskripsi}}</p> -->
+                                    <a <?php echo ("href='/artikel/pengumuman/example/$item->id'") ?> class="read-more text-color-primary font-weight-semibold mt-0 text-2">Selengkapnya <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="overflow-hidden mb-1">
-                            <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">
-                                Berita
-                            </h3>
+                    </article>
+                    @endforeach
+                    <!-- <ul class="pagination pagination-rounded pagination-md justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#" data-cursor-effect-hover="fit">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-right"></i></a></li>
+                    </ul> -->
+                </div>
+                <div class="blog-sidebar col-lg-4 pt-4 pt-lg-0">
+                    <aside class="sidebar">
+                        <div class="px-3">
+                            <form action="page-search-results.html" method="get">
+                                <div class="input-group mb-3 pb-1">
+                                    <input class="form-control box-shadow-none text-1 border-0 bg-color-grey" placeholder="Search..." name="s" id="s" type="text">
+                                    <button type="submit" class="btn bg-color-grey text-1 p-2"><i class="fas fa-search m-2"></i></button>
+                                </div>
+                            </form>
                         </div>
-                        <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-                            Konten Halaman
-                            <br>
-                            Pengumuman
-                        </h2>
-                    </div>
+                        <div class="py-1 clearfix">
+                            <hr class="my-2">
+                        </div>
+                        <div class="px-3 mt-4">
+                            <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Pengumuman Populer</h3>
+                            <div class="pb-2 mb-1">
+                                <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">Juni 10, 2024</a>
+                                <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Lorem ipsum dolor sit amet</a>
+                                <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">Juni 10, 2024</a>
+                                <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Consectetur adipiscing elit</a>
+                                <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">Juni 10, 2024</a>
+                                <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Vivamus sollicitudin nibh luctus</a>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
             </div>
-        </section>
-
+        </div>
     </div>
 
     @include('frontend.partials.footer')

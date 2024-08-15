@@ -81,7 +81,7 @@
                                 <div class="row justify-content-end">
                                     <div class="col-sm-9">
                                         <button class="btn btn-primary">Submit</button>
-                                        <button type="reset" class="btn btn-default" onclick="history.back()">Cancel</button>
+                                        <button type="reset" class="btn btn-default" onClick="window.location.href='/jadwal'">Cancel</button>
                                     </div>
                                 </div>
                             </footer>

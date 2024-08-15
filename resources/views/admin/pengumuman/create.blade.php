@@ -58,7 +58,7 @@
                                 <div class="form-group row pb-3">
                                     <label class="col-lg-3 control-label text-lg-end pt-2">Deskripsi<span class="required">*</span></label>
                                     <div class="col-lg-9">
-                                        <textarea value="{{old('deskripsi')}}" name="deskripsi" class="summernote" data-plugin-summernote data-plugin-options='{ "height": 180 }'></textarea>
+                                        <textarea name="deskripsi" class="form-control" rows="3" required placeholder="Deskripsi"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row pb-3">
@@ -75,7 +75,7 @@
                                 <div class="row justify-content-end">
                                     <div class="col-sm-9">
                                         <button class="btn btn-primary">Submit</button>
-                                        <button type="reset" class="btn btn-default" onclick="history.back()">Cancel</button>
+                                        <button type="reset" class="btn btn-default" onClick="window.location.href='/pengumuman'">Cancel</button>
                                     </div>
                                 </div>
                             </footer>
@@ -89,6 +89,12 @@
                             <li>{{ $error }}</li>
                             @endforeach
                         </ul>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-hidden="true" aria-label="Close"></button>
+                    </div>
+                    @endif
+                    @if (\Session::has('error'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                        {!! \Session::get('error') !!}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-hidden="true" aria-label="Close"></button>
                     </div>
                     @endif

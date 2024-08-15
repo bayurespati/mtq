@@ -32,6 +32,9 @@ class PengumumanController extends Controller
      */
     public function store(StorePengumumanRequest $request)
     {
+        if ($request->is_featured == "on" && $this->countFeatured() >= 5) {
+            return redirect()->back()->with(['error' => 'Pengumuman yang tampil didepan maksimal 5']);
+        }
         $model = new Pengumuman();
         $model->judul = $request->judul;
         $model->author = $request->author;
@@ -55,6 +58,9 @@ class PengumumanController extends Controller
      */
     public function update(Request $request, Pengumuman $pengumuman)
     {
+        if ($request->is_featured == "on" && $this->countFeatured() >= 5) {
+            return redirect()->back()->with(['error' => 'Pengumuman yang tampil didepan maksimal 5']);
+        }
         $request->validate((new UpdatePengumumanRequest())->rules($pengumuman));
         $pengumuman->judul = $request->judul;
         $pengumuman->author = $request->author;
@@ -73,5 +79,10 @@ class PengumumanController extends Controller
     {
         $pengumuman->delete();
         return redirect()->route('admin-pengumuman-index')->with(['success' => "Berhasil delete data pengumuman"]);
+    }
+
+    public function countFeatured()
+    {
+        return Pengumuman::where('is_featured', 1)->get()->count();
     }
 }

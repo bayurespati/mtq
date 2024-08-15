@@ -14,32 +14,29 @@
     @include('frontend.partials.header')
 
     <div role="main" class="main">
-
-        <section class="section border-0 bg-quaternary m-0">
-            <div class="container py-5" style="margin-top: 100px; margin-bottom: 100px;">
-                <div class="row justify-content-center">
-                    <div class="col col-lg-9 text-center">
-
-                        <div class="divider divider-small divider-small-lg mt-0 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="0">
-                            <hr class="bg-primary border-radius m-auto">
+        <div class="container mb-5">
+            <div class="particles-wrapper z-index-1">
+                <div id="particles-1"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4 class="mb-0">Kalimantan Timur</h4>
+                    <p>Foto gallery</p>
+                    <div class="row lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+                        @foreach($foto as $item)
+                        <div class="col-lg-3">
+                            <a class="d-inline-block img-thumbnail img-thumbnail-no-borders img-thumbnail-hover-icon mb-1 me-1" href="/{{$item->url}}" data-plugin-options="{'type':'image'}">
+                                <img class="img-fluid" src="/{{$item->url}}" alt="Project Image">
+                            </a>
                         </div>
-                        <div class="overflow-hidden mb-1">
-                            <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">
-                                Foto
-                            </h3>
-                        </div>
-                        <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-                            Konten Halaman
-                            <br>
-                            Foto
-                        </h2>
+                        @endforeach
                     </div>
                 </div>
             </div>
-        </section>
-
+        </div>
     </div>
+</div>
 
-    @include('frontend.partials.footer')
+@include('frontend.partials.footer')
 </div>
 @endsection

@@ -2,13 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Berita;
+use App\Models\Foto;
+use App\Models\Pengumuman;
+use \Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class FrontViewController extends Controller
 {
     public function beranda()
     {
-        return view('frontend.index');
+        $pengumuman = Pengumuman::where('is_featured', 1)->orderBy('created_at', 'desc')->take(5)->get();
+        $utama = $pengumuman[0];
+        $berita_latest = Berita::latest()->first();
+        $pengumuman_latest = Pengumuman::latest()->first();
+        return view(
+            'frontend.index',
+            [
+                "pengumuman" => $pengumuman,
+                "utama" => $utama,
+                "berita_latest" => $berita_latest,
+                "pengumuman_latest" => $pengumuman_latest,
+            ]
+        );
     }
 
     public function tentangKami()
@@ -23,32 +39,38 @@ class FrontViewController extends Controller
 
     public function berita()
     {
-        return view('frontend.berita');
+        $berita = Berita::all();
+        return view('frontend.berita', ["berita" => $berita]);
     }
 
     public function pengumuman()
     {
-        return view('frontend.pengumuman');
+        $pengumuman = Pengumuman::all();
+        return view('frontend.pengumuman', ["pengumuman" => $pengumuman]);
     }
 
-    public function beritaExample()
+    public function beritaExample(Berita $berita)
     {
-        return view('frontend.berita-example');
+        $show = str_replace("\r\n", '', $berita->deskripsi);
+        $date = \Carbon\Carbon::parse('2024-11-19 17:12:37');
+        $berita["final"] =  explode("<br>", trim($show));
+        $berita["date"] =  $date;
+        return view('frontend.berita-example', ["berita" => $berita]);
     }
 
-    public function beritaExample2()
+    public function pengumumanExample(Pengumuman $pengumuman)
     {
-        return view('frontend.berita-example-2');
-    }
-
-    public function pengumuanExample()
-    {
-        return view('frontend.pengumuman-example');
+        $show = str_replace("\r\n", '', $pengumuman->deskripsi);
+        $date = \Carbon\Carbon::parse('2024-11-19 17:12:37');
+        $pengumuman["final"] =  explode("<br>", trim($show));
+        $pengumuman["date"] =  $date;
+        return view('frontend.pengumuman-example', ["pengumuman" => $pengumuman]);
     }
 
     public function foto()
     {
-        return view('frontend.foto');
+        $foto = Foto::all();
+        return view('frontend.foto', ["foto" => $foto]);
     }
 
     public function video()

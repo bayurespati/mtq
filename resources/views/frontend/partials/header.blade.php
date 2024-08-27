@@ -70,9 +70,9 @@
                                                 <li>
                                                     <a href="{{ route('tentang-kami') }}" class="{{ request()->is('/profil/tentang-kami') ? 'dropdown-item active' : 'dropdown-item' }}">Tentang Kami</a>
                                                 </li>
-                                                <li>
+                                                <!-- <li>
                                                     <a href="{{ route('sambutan') }}" class="{{ request()->is('/profil/sambutan') ? 'dropdown-item active' : 'dropdown-item' }}">Sambutan</a>
-                                                </li>
+                                                </li> -->
                                             </ul>
                                         </li>
                                         <li class="dropdown">

@@ -88,7 +88,7 @@
                                     </div>
                                 </div>
 
-                                <img class="appear-animation img-fluid custom-element-wrapper custom-element-8" data-appear-animation="fadeIn" data-appear-animation-delay="900" src="/img/avatar_kaltim_baru.png" alt="" style="height:122%;">
+                                <img class="appear-animation img-fluid custom-element-wrapper custom-element-8" data-appear-animation="fadeIn" data-appear-animation-delay="900" src="/img/avatar_cewe_dayak.png" alt="" style="height:122%;">
 
                             </div>
                         </div>

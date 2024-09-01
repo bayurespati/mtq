@@ -275,7 +275,6 @@
             <div class="container py-5">
                 <div class="row justify-content-center">
                     <div class="col col-lg-9 text-center">
-
                         <div class="divider divider-small divider-small-lg mt-0 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="0">
                             <hr class="bg-primary border-radius m-auto">
                         </div>
@@ -287,7 +286,6 @@
                         <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
                             Panduan MTQ
                         </h2>
-
                     </div>
 
                     <div class="row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
@@ -295,64 +293,30 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="toggle toggle-primary m-0" data-plugin-toggle>
+                                        @foreach($faqs as $key => $faq)
+                                        @if($key < 4)
                                         <section class="toggle">
-                                            <a class="toggle-title">Bagaimana cara melihat data Peserta?</a>
+                                            <a class="toggle-title">{{$faq->pertanyaan}}</a>
                                             <div class="toggle-content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+                                                <p>{{$faq->jawaban}}</p>
                                             </div>
                                         </section>
-
-                                        <section class="toggle">
-                                            <a class="toggle-title">Di mana lokasi perlombaan?</a>
-                                            <div class="toggle-content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa.</p>
-                                            </div>
-                                        </section>
-
-                                        <section class="toggle">
-                                            <a class="toggle-title">Lewat manakah rute Pawai Taaruf?</a>
-                                            <div class="toggle-content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
-                                            </div>
-                                        </section>
-
-                                        <section class="toggle">
-                                            <a class="toggle-title">Bagaimana cara melihat data peserta?</a>
-                                            <div class="toggle-content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
-                                            </div>
-                                        </section>
+                                        @endif
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="toggle toggle-primary m-0" data-plugin-toggle>
+                                        @foreach($faqs as $key => $faq)
+                                        @if($key >= 4)
                                         <section class="toggle">
-                                            <a class="toggle-title">Apakah peserta disediakan transportasi?</a>
+                                            <a class="toggle-title">{{$faq->pertanyaan}}</a>
                                             <div class="toggle-content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa.</p>
+                                                <p>{{$faq->jawaban}}</p>
                                             </div>
                                         </section>
-
-                                        <section class="toggle">
-                                            <a class="toggle-title">Di mana lokasi penginapan peserta?</a>
-                                            <div class="toggle-content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
-                                            </div>
-                                        </section>
-
-                                        <section class="toggle">
-                                            <a class="toggle-title">Di mana lokasi bazaar?</a>
-                                            <div class="toggle-content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
-                                            </div>
-                                        </section>
-
-                                        <section class="toggle">
-                                            <a class="toggle-title">Bagaimana cara melihat pengumuman?</a>
-                                            <div class="toggle-content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa.</p>
-                                            </div>
-                                        </section>
+                                        @endif
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -384,19 +348,20 @@
 
                 <div class="row justify-content-center appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
                     <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <a href="/artikel/berita/example-2" class="text-decoration-none">
+                        <a href="storage/{{$berita_latest->image}}" class="text-decoration-none">
                             <div class="card border-0 bg-transparent">
                                 <div class="card-img-top position-relative overlay overflow-hidden border-radius">
                                     <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
                                         <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
                                             <span class="position-relative text-6 z-index-2">
-                                                19
-                                                <span class="d-block text-0 positive-ls-2 px-1">NOV</span>
+                                                {{ $berita_latest->created_at->format('d') }}
+                                                <span class="d-block text-0 positive-ls-2 px-1">
+                                                    {{ $berita_latest->created_at->format('M') }}
+                                                </span>
                                             </span>
                                         </span>
                                     </div>
-                                    <img <?php $temp = $berita_latest->image ?? "";
-                                            echo (`src="$temp"`) ?> class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                                    <img src="/storage/{{$berita_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
                                 </div>
                                 <div class="card-body py-4 px-0">
                                     <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
@@ -416,13 +381,12 @@
                                     <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
                                         <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
                                             <span class="position-relative text-6 z-index-2">
-                                                15
-                                                <span class="d-block text-0 positive-ls-2 px-1">FEB</span>
+                                                {{ $pengumuman_latest->created_at->format('d') }}
+                                                <span class="d-block text-0 positive-ls-2 px-1">{{ $pengumuman_latest->created_at->format('M') }}</span>
                                             </span>
                                         </span>
                                     </div>
-                                    <img <?php $temp = $pengumuman_latest->image ?? "";
-                                            echo (`src="$temp"`) ?> class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                                    <img src="/storage/{{$pengumuman_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
                                 </div>
                                 <div class="card-body py-4 px-0">
                                     <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">

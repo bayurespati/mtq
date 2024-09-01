@@ -57,8 +57,8 @@
                                     @foreach($data as $key => $item)
                                     <tr>
                                         <td>{{$key+1}}</td>
-                                        <td>{{$item[0]}}</td>
-                                        <td>{{$item[1]}}</td>
+                                        <td>{{$item->nama}}</td>
+                                        <td>{{$item->lokasi}}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

@@ -31,6 +31,10 @@ class FaqController extends Controller
      */
     public function store(StoreFaqRequest $request)
     {
+        $faqs = Faq::all();
+        if (sizeOf($faqs) >= 8) {
+            return redirect()->route('admin-faq-index')->with(['success' => 'Maksimal FAQ 8']);
+        }
         $model = new Faq();
         $model->pertanyaan = $request->pertanyaan;
         $model->jawaban = $request->jawaban;

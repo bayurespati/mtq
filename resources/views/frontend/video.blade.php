@@ -16,23 +16,24 @@
     <div role="main" class="main">
 
         <section class="section border-0 bg-quaternary m-0">
-            <div class="container py-5" style="margin-top: 100px; margin-bottom: 100px;">
-                <div class="row justify-content-center">
+            <div class="container py-5" style="margin-bottom: 100px;">
+                <div class="row justify-content-center text-center">
+                    <div class="overflow-hidden mb-1">
+                        <h1 class="text-color-grey" data-appear-animation="maskUp" data-appear-animation-delay="100">
+                            VIDIO
+                        </h1>
+                    </div>
                     <div class="col col-lg-9 text-center">
-
-                        <div class="divider divider-small divider-small-lg mt-0 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="0">
-                            <hr class="bg-primary border-radius m-auto">
+                        @foreach($videos as $vidio)
+                        <div class="row" style="margin-bottom: 15px;">
+                            <div class="col pb-4">
+                                <h4>{{$vidio->nama}}</h4>
+                            </div>
+                            <div class="ratio ratio-16x9">
+                                <iframe width="560" height="315" src="{{$vidio->embed}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
                         </div>
-                        <div class="overflow-hidden mb-1">
-                            <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">
-                                Video
-                            </h3>
-                        </div>
-                        <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-                            Konten Halaman
-                            <br>
-                            Video
-                        </h2>
+                        @endforeach
                     </div>
                 </div>
             </div>

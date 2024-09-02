@@ -209,10 +209,10 @@
                             </h3>
                         </div>
                         <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-                            Keindahan dan Kesiapan Kalimantan Timur
+                            Pengukuhan LPTQ MTQN Kalimantan Timur
                         </h2>
                         <div class="ratio ratio-16x9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/mtxFK8b6p0k?si=raz7LG9Zv2qrXRRc?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/OISKG-EjXQ4?si=R-x5Q7tTQH1whGin" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -294,118 +294,117 @@
                                 <div class="col-lg-6">
                                     <div class="toggle toggle-primary m-0" data-plugin-toggle>
                                         @foreach($faqs as $key => $faq)
-                                        @if($key < 4)
-                                        <section class="toggle">
+                                        @if($key < 4) <section class="toggle">
                                             <a class="toggle-title">{{$faq->pertanyaan}}</a>
                                             <div class="toggle-content">
                                                 <p>{{$faq->jawaban}}</p>
                                             </div>
-                                        </section>
-                                        @endif
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="toggle toggle-primary m-0" data-plugin-toggle>
-                                        @foreach($faqs as $key => $faq)
-                                        @if($key >= 4)
-                                        <section class="toggle">
-                                            <a class="toggle-title">{{$faq->pertanyaan}}</a>
-                                            <div class="toggle-content">
-                                                <p>{{$faq->jawaban}}</p>
-                                            </div>
-                                        </section>
-                                        @endif
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </section>
+        @endif
+        @endforeach
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="toggle toggle-primary m-0" data-plugin-toggle>
+        @foreach($faqs as $key => $faq)
+        @if($key >= 4)
+        <section class="toggle">
+            <a class="toggle-title">{{$faq->pertanyaan}}</a>
+            <div class="toggle-content">
+                <p>{{$faq->jawaban}}</p>
             </div>
         </section>
+        @endif
+        @endforeach
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-        <section class="section border-0 bg-quaternary m-0">
-            <div class="container py-5">
-                <div class="row justify-content-center">
-                    <div class="col col-lg-9 text-center">
+<section class="section border-0 bg-quaternary m-0">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col col-lg-9 text-center">
 
-                        <div class="divider divider-small divider-small-lg mt-0 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="0">
-                            <hr class="bg-primary border-radius m-auto">
-                        </div>
-                        <div class="overflow-hidden mb-1">
-                            <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">
-                                Artikel
-                            </h3>
-                        </div>
-                        <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-                            Pengumuman & Berita
-                        </h2>
-
-                    </div>
+                <div class="divider divider-small divider-small-lg mt-0 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="0">
+                    <hr class="bg-primary border-radius m-auto">
                 </div>
-
-                <div class="row justify-content-center appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
-                    <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <a href="storage/{{$berita_latest->image}}" class="text-decoration-none">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-img-top position-relative overlay overflow-hidden border-radius">
-                                    <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
-                                        <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
-                                            <span class="position-relative text-6 z-index-2">
-                                                {{ $berita_latest->created_at->format('d') }}
-                                                <span class="d-block text-0 positive-ls-2 px-1">
-                                                    {{ $berita_latest->created_at->format('M') }}
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <img src="/storage/{{$berita_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
-                                </div>
-                                <div class="card-body py-4 px-0">
-                                    <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
-                                        {{$berita_latest->judul ?? ""}}
-                                    </h4>
-                                    <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
-                                        {{$berita_latest->deskripsi ?? ""}}
-                                    </span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <a href="/artikel/berita/example" class="text-decoration-none">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-img-top position-relative overlay overflow-hidden border-radius">
-                                    <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
-                                        <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
-                                            <span class="position-relative text-6 z-index-2">
-                                                {{ $pengumuman_latest->created_at->format('d') }}
-                                                <span class="d-block text-0 positive-ls-2 px-1">{{ $pengumuman_latest->created_at->format('M') }}</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <img src="/storage/{{$pengumuman_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
-                                </div>
-                                <div class="card-body py-4 px-0">
-                                    <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
-                                        {{$pengumuman_latest->judul ?? ""}}
-                                    </h4>
-                                    <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
-                                        {{$pengumuman_latest->deskripsi ?? ""}}
-                                    </span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                <div class="overflow-hidden mb-1">
+                    <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">
+                        Artikel
+                    </h3>
                 </div>
+                <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+                    Pengumuman & Berita
+                </h2>
 
             </div>
-        </section>
+        </div>
+
+        <div class="row justify-content-center appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
+            <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                <a href="storage/{{$berita_latest->image}}" class="text-decoration-none">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-img-top position-relative overlay overflow-hidden border-radius">
+                            <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
+                                <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
+                                    <span class="position-relative text-6 z-index-2">
+                                        {{ $berita_latest->created_at->format('d') }}
+                                        <span class="d-block text-0 positive-ls-2 px-1">
+                                            {{ $berita_latest->created_at->format('M') }}
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                            <img src="/storage/{{$berita_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                        </div>
+                        <div class="card-body py-4 px-0">
+                            <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
+                                {{$berita_latest->judul ?? ""}}
+                            </h4>
+                            <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
+                                {{$berita_latest->deskripsi ?? ""}}
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                <a href="/artikel/berita/example" class="text-decoration-none">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-img-top position-relative overlay overflow-hidden border-radius">
+                            <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
+                                <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
+                                    <span class="position-relative text-6 z-index-2">
+                                        {{ $pengumuman_latest->created_at->format('d') }}
+                                        <span class="d-block text-0 positive-ls-2 px-1">{{ $pengumuman_latest->created_at->format('M') }}</span>
+                                    </span>
+                                </span>
+                            </div>
+                            <img src="/storage/{{$pengumuman_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                        </div>
+                        <div class="card-body py-4 px-0">
+                            <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
+                                {{$pengumuman_latest->judul ?? ""}}
+                            </h4>
+                            <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
+                                {{$pengumuman_latest->deskripsi ?? ""}}
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
 
     </div>
+</section>
 
-    @include('frontend.partials.footer')
+</div>
+
+@include('frontend.partials.footer')
 </div>
 @endsection

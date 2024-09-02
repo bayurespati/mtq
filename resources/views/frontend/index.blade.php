@@ -346,6 +346,7 @@
         </div>
 
         <div class="row justify-content-center appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
+            @if($berita_latest)
             <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
                 <a href="storage/{{$berita_latest->image}}" class="text-decoration-none">
                     <div class="card border-0 bg-transparent">
@@ -373,6 +374,8 @@
                     </div>
                 </a>
             </div>
+            @endif
+            @if($pengumuman_latest)
             <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
                 <a href="/artikel/berita/example" class="text-decoration-none">
                     <div class="card border-0 bg-transparent">
@@ -398,6 +401,7 @@
                     </div>
                 </a>
             </div>
+            @endif
         </div>
 
     </div>

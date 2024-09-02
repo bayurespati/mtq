@@ -13,6 +13,7 @@
         <div class="nano-content">
             <nav id="menu" class="nav-main" role="navigation">
 
+                @if(auth()->user()->role_id != 3)
                 <ul class="nav nav-main">
                     <li class="d-flex justify-content-center align-items-center">
                         <img src="/img/Logo MTQ White.png" width="180" height="100%" class="img-fluid mb-4" alt="logo" />
@@ -86,6 +87,134 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-parent">
+                        <a class="nav-link" href="#">
+                            <span>Artikel</span>
+                        </a>
+                        <ul class="nav nav-children">
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-berita-index') }}">
+                                    Berita
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-pengumuman-index') }}">
+                                    Pengumuman
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-parent">
+                        <a class="nav-link" href="#">
+                            <span>Media</span>
+                        </a>
+                        <ul class="nav nav-children">
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-foto-index') }}">
+                                    Foto
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-video-index') }}">
+                                    Video
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-parent">
+                        <a class="nav-link" href="#">
+                            <span>Master Data</span>
+                        </a>
+                        <ul class="nav nav-children">
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-jadwal-index') }}">
+                                    Jadwal
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-lomba-index') }}">
+                                    Lomba
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-skpd-index') }}">
+                                    SKPD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-lo-index') }}">
+                                    LO
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-provinsi-index') }}">
+                                    Provinsi
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-peserta-index') }}">
+                                    Peserta
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-sopir-index') }}">
+                                    Sopir
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-mobil-index') }}">
+                                    Mobil
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{ route('admin-faq-index') }}">
+                            <span>FAQ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{ route('admin-pesan-index') }}">
+                            <span>Pesan</span>
+                        </a>
+                    </li>
+                </ul>
+                @else
+                <ul class="nav nav-main">
+                    <li class="d-flex justify-content-center align-items-center">
+                        <a href="/">
+                            <img src="/img/Logo MTQ White.png" width="180" height="100%" class="img-fluid mb-4" alt="logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">
+                            <span>Profil</span>
+                        </a>
+                    </li>
+                    <li class="nav-parent">
+                        <a class="nav-link" href="#">
+                            <!-- <i class="bx bx-cart-alt" aria-hidden="true"></i> -->
+                            <span>Pusat Informasi</span>
+                        </a>
+                        <ul class="nav nav-children">
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-page') }}">
+                                    Hotel
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('tema-mtq') }}">
+                                    Mobil
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('hasil-individu') }}">
+                                    Supir
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    @endif
                 </ul>
             </nav>
         </div>

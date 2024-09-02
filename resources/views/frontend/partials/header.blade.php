@@ -1,4 +1,4 @@
-<header id="header" class="header-transparent" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': false, 'stickyStartAt': 53, 'stickySetTop': '-53px'}">
+<header id="header" class="" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': false, 'stickyStartAt': 53, 'stickySetTop': '-53px'}">
     <div class="header-body border-top-0 h-auto box-shadow-none">
         <div class="header-top header-top-borders">
             <div class="container h-100">
@@ -70,9 +70,9 @@
                                                 <li>
                                                     <a href="{{ route('tentang-kami') }}" class="{{ request()->is('/profil/tentang-kami') ? 'dropdown-item active' : 'dropdown-item' }}">Tentang Kami</a>
                                                 </li>
-                                                <li>
+                                                <!-- <li>
                                                     <a href="{{ route('sambutan') }}" class="{{ request()->is('/profil/sambutan') ? 'dropdown-item active' : 'dropdown-item' }}">Sambutan</a>
-                                                </li>
+                                                </li> -->
                                             </ul>
                                         </li>
                                         <li class="dropdown">
@@ -114,9 +114,15 @@
                                     </ul>
                                 </nav>
                             </div>
+                            @if(Auth::user())
+                            <a href="/admin-view" class="{{ request()->is('login') ? 'btn btn-modern btn-primary btn-outline btn-arrow-effect-1 text-capitalize text-2-5 ms-3 me-2 d-block d-md-none d-xl-block anim-hover-translate-right-5px transition-2ms active' : 'btn btn-modern btn-primary btn-outline btn-arrow-effect-1 text-capitalize text-2-5 ms-3 me-2 d-block d-md-none d-xl-block anim-hover-translate-right-5px transition-2ms' }}">
+                                E-MTQ
+                            </a>
+                            @else
                             <a href="{{ route('login') }}" class="{{ request()->is('login') ? 'btn btn-modern btn-primary btn-outline btn-arrow-effect-1 text-capitalize text-2-5 ms-3 me-2 d-block d-md-none d-xl-block anim-hover-translate-right-5px transition-2ms active' : 'btn btn-modern btn-primary btn-outline btn-arrow-effect-1 text-capitalize text-2-5 ms-3 me-2 d-block d-md-none d-xl-block anim-hover-translate-right-5px transition-2ms' }}">
                                 E-MTQ
                             </a>
+                            @endif
                             <button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
                                 <i class="fas fa-bars"></i>
                             </button>

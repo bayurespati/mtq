@@ -29,6 +29,18 @@
     <link rel="stylesheet" href="/admin/vendor/jquery-ui/jquery-ui.theme.css" />
     <link rel="stylesheet" href="/admin/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" />
     <link rel="stylesheet" href="/admin/vendor/morris/morris.css" />
+    <link rel="stylesheet" href="/admin/vendor/select2/css/select2.css" />
+    <link rel="stylesheet" href="/admin/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" />
+    <link rel="stylesheet" href="/admin/vendor/datatables/media/css/dataTables.bootstrap5.css" />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/admin/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css" />
+    <link rel="stylesheet" href="/admin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" />
+    <link rel="stylesheet" href="/admin/vendor/dropzone/basic.css" />
+    <link rel="stylesheet" href="/admin/vendor/dropzone/dropzone.css" />
+    <link rel="stylesheet" href="/admin/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" />
+    <link rel="stylesheet" href="/admin/vendor/summernote/summernote-bs4.css" />
+
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="/admin/css/theme.css" />
@@ -49,7 +61,8 @@
             z-index: 999999;
         }
 
-        .nav-link:hover, .nav-link:focus {
+        .nav-link:hover,
+        .nav-link:focus {
             color: #64B6AC !important;
         }
 
@@ -110,6 +123,34 @@
     <script src="/admin/vendor/jqvmap/maps/continents/jquery.vmap.north-america.js"></script>
     <script src="/admin/vendor/jqvmap/maps/continents/jquery.vmap.south-america.js"></script>
 
+    <!-- Specific Page Vendor -->
+    <script src="/admin/vendor/select2/js/select2.js"></script>
+    <script src="/admin/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="/admin/vendor/datatables/media/js/dataTables.bootstrap5.min.js"></script>
+    <script src="/admin/vendor/datatables/extras/TableTools/Buttons-1.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="/admin/vendor/datatables/extras/TableTools/Buttons-1.4.2/js/buttons.bootstrap4.min.js"></script>
+    <script src="/admin/vendor/datatables/extras/TableTools/Buttons-1.4.2/js/buttons.html5.min.js"></script>
+    <script src="/admin/vendor/datatables/extras/TableTools/Buttons-1.4.2/js/buttons.print.min.js"></script>
+    <script src="/admin/vendor/datatables/extras/TableTools/JSZip-2.5.0/jszip.min.js"></script>
+    <script src="/admin/vendor/datatables/extras/TableTools/pdfmake-0.1.32/pdfmake.min.js"></script>
+    <script src="/admin/vendor/datatables/extras/TableTools/pdfmake-0.1.32/vfs_fonts.js"></script>
+
+    <!-- Specific Page Vendor -->
+    <script src="/admin/vendor/jquery-maskedinput/jquery.maskedinput.js"></script>
+    <script src="/admin/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+    <script src="/admin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script src="/admin/vendor/fuelux/js/spinner.js"></script>
+    <script src="/admin/vendor/dropzone/dropzone.js"></script>
+    <script src="/admin/vendor/bootstrap-markdown/js/markdown.js"></script>
+    <script src="/admin/vendor/bootstrap-markdown/js/to-markdown.js"></script>
+    <script src="/admin/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+    <script src="/admin/vendor/summernote/summernote-bs4.js"></script>
+    <script src="/admin/vendor/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+    <script src="/admin/vendor/ios7-switch/ios7-switch.js"></script>
+
+    <!-- Specific Page Vendor -->
+    <script src="/admin/vendor/isotope/isotope.js"></script>
+
     <!-- Theme Base, Components and Settings -->
     <script src="/admin/js/theme.js"></script>
 
@@ -120,7 +161,11 @@
     <script src="/admin/js/theme.init.js"></script>
 
     <!-- Examples -->
+    <script src="/admin/js/examples/examples.datatables.default.js"></script>
+    <script src="/admin/js/examples/examples.datatables.row.with.details.js"></script>
+    <script src="/admin/js/examples/examples.datatables.tabletools.js"></script>
     <script src="/admin/js/examples/examples.dashboard.js"></script>
+    <script src="/admin/js/examples/examples.mediagallery.js"></script>
 
     @stack('additional_js')
 </body>

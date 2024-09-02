@@ -156,6 +156,10 @@
     <!-- Theme Initialization Files -->
     <script src="/frontend/js/theme.init.js"></script>
 
+    <!-- Theme Custom -->
+    <script src="/frontend/vendor/bootpag/jquery.bootpag.min.js"></script>
+    <script src="/frontend/js/examples/examples.portfolio.js"></script>
+
     @stack('additional_js')
 
 </body>

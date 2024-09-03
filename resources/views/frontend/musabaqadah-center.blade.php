@@ -35,7 +35,11 @@
                         </h2>
                     </div>
 
-                    <section class="card">
+                    <div class="row d-flex justify-content-center align-items-center mt-5">
+                        <img src="/img/mus_image.jpg" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                    </div>
+
+                    <section class="card" style="margin-top: 20px;">
                         <header class="card-header" style="background: #64B6AC;  color: white">
                             <div class="card-actions">
                                 <a href="#" class="card-action card-action-toggle" data-card-toggle></a>

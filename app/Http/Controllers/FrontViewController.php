@@ -63,7 +63,7 @@ class FrontViewController extends Controller
         $berita["final"] =  explode("<br>", trim($show));
         $berita["date"] =  $date;
         $berita_latest_3 = Berita::orderBy('created_at', 'desc')->take(3)->get();
-        return view('frontend.berita-example', ["berita" => $berita, "berita_lates_3" => $berita_latest_3]);
+        return view('frontend.berita-example', ["berita" => $berita, "berita_latest_3" => $berita_latest_3]);
     }
 
     public function pengumumanExample(Pengumuman $pengumuman)

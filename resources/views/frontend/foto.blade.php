@@ -25,7 +25,7 @@
                     <div class="row lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
                         @foreach($foto as $item)
                         <div class="col-lg-3">
-                            <a class="d-inline-block img-thumbnail img-thumbnail-no-borders img-thumbnail-hover-icon mb-1 me-1" href="/{{$item->url}}" data-plugin-options="{'type':'image'}">
+                            <a class="d-inline-block img-thumbnail img-thumbnail-no-borders img-thumbnail-hover-icon mb-1 me-1" href="/storage/{{$item->url}}" data-plugin-options="{'type':'image'}">
                                 <img class="img-fluid" src="/storage/{{$item->url}}" alt="Project Image">
                             </a>
                         </div>

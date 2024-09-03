@@ -7,6 +7,7 @@ use App\Http\Requests\UpdatePengumumanRequest;
 use App\Models\Pengumuman;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class PengumumanController extends Controller
 {
@@ -37,6 +38,7 @@ class PengumumanController extends Controller
         }
         $model = new Pengumuman();
         $model->judul = $request->judul;
+        $model->tanggal = Carbon::parse($request->tanggal);
         $model->author = $request->author;
         $model->deskripsi = $request->deskripsi;
         $model->image = Storage::disk('public')->put('pengumuman', $request->image);
@@ -50,6 +52,7 @@ class PengumumanController extends Controller
      */
     public function edit(Pengumuman $pengumuman)
     {
+        $pengumuman['tanggal_edit'] = Carbon::createFromFormat('Y-m-d', $pengumuman->tanggal)->format('m/d/Y');
         return view('admin.pengumuman.edit', ['pengumuman' => $pengumuman]);
     }
 
@@ -64,6 +67,7 @@ class PengumumanController extends Controller
         $request->validate((new UpdatePengumumanRequest())->rules($pengumuman));
         $pengumuman->judul = $request->judul;
         $pengumuman->author = $request->author;
+        $pengumuman->tanggal = Carbon::parse($request->tanggal);
         $pengumuman->deskripsi = $request->deskripsi;
         if ($request->image)
             $pengumuman->image = Storage::disk('public')->put('pengumuman', $request->image);

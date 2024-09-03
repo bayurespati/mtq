@@ -134,14 +134,15 @@
                     </div>
 
                     <h4 class="pt-5">Pusat <strong>Informasi</strong></h4>
-                    <p class="lead mb-0 text-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
+                    <p class="lead mb-0 text-4">
+                        Dalam rangka kelancaran pelaksanaan Musabaqah Tilawatil Qur'an Tingkat Nasional XXX Provinsi Kalimantan Timur Tahun 2024 telah dibentuk panitia penyelenggara yang ditunjuk mempersiapkan segala sesuatu yang berhubungan dengan pelaksanaan acara, melakukan koordinasi dengan PIC dari masing-masing provinsi, mengatur agar pelaksanaan menjadi tertib, lancar dan sukses.
+                        <br>
+                        <br>
+                        Jika masih terdapat pertanyaan silahkan hubungi kami melalui kontak dan pada jam operasional yang tertera di atas.
+                    </p>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     @include('frontend.partials.footer')

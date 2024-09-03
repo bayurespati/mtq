@@ -56,7 +56,7 @@
                                     <tr>
                                         <td>{{$item->judul}}</td>
                                         <td class="text-center">{{$item->author}}</td>
-                                        <td class="text-center">{{$item->created_at}}</td>
+                                        <td class="text-center">{{$item->tanggal}}</td>
                                         <td class="text-center">
                                             @if($item->is_featured == 1)
                                             <div class="btn btn-xs btn-info">Featured</div>

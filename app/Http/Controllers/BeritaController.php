@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateBeritaRequest;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Berita;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class BeritaController extends Controller
 {
@@ -34,6 +35,7 @@ class BeritaController extends Controller
     {
         $model = new Berita();
         $model->judul = $request->judul;
+        $model->tanggal = Carbon::parse($request->tanggal);
         $model->author = $request->author;
         $model->deskripsi = $request->deskripsi;
         $model->image = Storage::disk('public')->put('berita', $request->image);
@@ -46,6 +48,7 @@ class BeritaController extends Controller
      */
     public function edit(Berita $berita)
     {
+        $berita['tanggal_edit'] = Carbon::createFromFormat('Y-m-d', $berita->tanggal)->format('m/d/Y');
         return view('admin.berita.edit', ['berita' => $berita]);
     }
 
@@ -58,6 +61,7 @@ class BeritaController extends Controller
         $berita->judul = $request->judul;
         $berita->author = $request->author;
         $berita->deskripsi = $request->deskripsi;
+        $berita->tanggal = Carbon::parse($request->tanggal);
         if ($request->image)
             $berita->image = Storage::disk('public')->put('berita', $request->image);
         $berita->save();

@@ -45,11 +45,9 @@
     @include('frontend.partials.header')
 
     <div role="main" class="main">
-
         <section class="section border-0 m-0 bg-color-quaternary p-relative">
             <div class="container">
                 <div class="row custom-hero-row">
-
                     <div class="col">
                         <div class="row pt-5 mt-5 mb-5 pb-5">
                             <div class="col-12 col-lg-6 p-relative pt-5 mt-5">
@@ -88,7 +86,7 @@
                                     </div>
                                 </div>
 
-                                <img class="appear-animation img-fluid custom-element-wrapper custom-element-8" data-appear-animation="fadeIn" data-appear-animation-delay="900" src="/img/avatar_cewe_dayak.png" alt="" style="height:122%;">
+                                <img class="appear-animation img-fluid custom-element-wrapper custom-element-8" data-appear-animation="fadeIn" data-appear-animation-delay="900" src="/img/new_project.png" alt="" style="height:129%;">
 
                             </div>
                         </div>
@@ -291,124 +289,125 @@
                     <div class="row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
                         <div class="container py-4">
                             <div class="row">
-                                <div class="col-lg-6">
+                                @foreach($faqs as $key => $faq)
+                                @if($key < 4) <div class="col-lg-6">
                                     <div class="toggle toggle-primary m-0" data-plugin-toggle>
-                                        @foreach($faqs as $key => $faq)
-                                        @if($key < 4) <section class="toggle">
+                                        <section class="toggle">
                                             <a class="toggle-title">{{$faq->pertanyaan}}</a>
                                             <div class="toggle-content">
                                                 <p>{{$faq->jawaban}}</p>
                                             </div>
-        </section>
-        @endif
-        @endforeach
-    </div>
-</div>
-<div class="col-lg-6">
-    <div class="toggle toggle-primary m-0" data-plugin-toggle>
-        @foreach($faqs as $key => $faq)
-        @if($key >= 4)
-        <section class="toggle">
-            <a class="toggle-title">{{$faq->pertanyaan}}</a>
-            <div class="toggle-content">
-                <p>{{$faq->jawaban}}</p>
+                                        </section>
+                                    </div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach($faqs as $key => $faq)
+                            @if($key >= 4)
+                            <div class="col-lg-6">
+                                <div class="toggle toggle-primary m-0" data-plugin-toggle>
+                                    <section class="toggle">
+                                        <a class="toggle-title">{{$faq->pertanyaan}}</a>
+                                        <div class="toggle-content">
+                                            <p>{{$faq->jawaban}}</p>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                            @endif
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        @endif
-        @endforeach
-    </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
 
-<section class="section border-0 bg-quaternary m-0">
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col col-lg-9 text-center">
-
-                <div class="divider divider-small divider-small-lg mt-0 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="0">
-                    <hr class="bg-primary border-radius m-auto">
+        <section class="section border-0 bg-quaternary m-0">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col col-lg-9 text-center">
+                        <div class="divider divider-small divider-small-lg mt-0 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="0">
+                            <hr class="bg-primary border-radius m-auto">
+                        </div>
+                        <div class="overflow-hidden mb-1">
+                            <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">
+                                Artikel
+                            </h3>
+                        </div>
+                        <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+                            Pengumuman & Berita
+                        </h2>
+                    </div>
                 </div>
-                <div class="overflow-hidden mb-1">
-                    <h3 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">
-                        Artikel
-                    </h3>
-                </div>
-                <h2 class="text-color-dark font-weight-bold text-8 pb-4 mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
-                    Pengumuman & Berita
-                </h2>
 
-            </div>
-        </div>
-
-        <div class="row justify-content-center appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
-            @if($berita_latest)
-            <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                <a href="storage/{{$berita_latest->image}}" class="text-decoration-none">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-img-top position-relative overlay overflow-hidden border-radius">
-                            <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
-                                <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
-                                    <span class="position-relative text-6 z-index-2">
-                                        {{ $berita_latest->created_at->format('d') }}
-                                        <span class="d-block text-0 positive-ls-2 px-1">
-                                            {{ $berita_latest->created_at->format('M') }}
+                <div class="row justify-content-center appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
+                    @if($berita_latest)
+                    <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                        <a href="storage/{{$berita_latest->image}}" class="text-decoration-none">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-img-top position-relative overlay overflow-hidden border-radius">
+                                    <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
+                                        <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
+                                            <span class="position-relative text-6 z-index-2">
+                                                @php
+                                                $berita_latest_date = \Carbon\Carbon::parse($berita_latest->tanggal);
+                                                @endphp
+                                                {{ $berita_latest_date->format('d') }}
+                                                <span class="d-block text-0 positive-ls-2 px-1">
+                                                    {{ $berita_latest_date->format('M') }}
+                                                </span>
+                                            </span>
                                         </span>
+                                    </div>
+                                    <img src="/storage/{{$berita_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                                </div>
+                                <div class="card-body py-4 px-0">
+                                    <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
+                                        {{$berita_latest->judul ?? ""}}
+                                    </h4>
+                                    <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
+                                        {{$berita_latest->deskripsi ?? ""}}
                                     </span>
-                                </span>
+                                </div>
                             </div>
-                            <img src="/storage/{{$berita_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
-                        </div>
-                        <div class="card-body py-4 px-0">
-                            <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
-                                {{$berita_latest->judul ?? ""}}
-                            </h4>
-                            <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
-                                {{$berita_latest->deskripsi ?? ""}}
-                            </span>
-                        </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-            @endif
-            @if($pengumuman_latest)
-            <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                <a href="/artikel/berita/example" class="text-decoration-none">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-img-top position-relative overlay overflow-hidden border-radius">
-                            <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
-                                <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
-                                    <span class="position-relative text-6 z-index-2">
-                                        {{ $pengumuman_latest->created_at->format('d') }}
-                                        <span class="d-block text-0 positive-ls-2 px-1">{{ $pengumuman_latest->created_at->format('M') }}</span>
+                    @endif
+                    @if($pengumuman_latest)
+                    <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                        <a href="/artikel/berita/example" class="text-decoration-none">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-img-top position-relative overlay overflow-hidden border-radius">
+                                    <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
+                                        <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
+                                            <span class="position-relative text-6 z-index-2">
+                                                @php
+                                                $pengumuman_latest_date = \Carbon\Carbon::parse($pengumuman_latest->tanggal);
+                                                @endphp
+                                                {{ $pengumuman_latest_date->format('d') }}
+                                                <span class="d-block text-0 positive-ls-2 px-1">{{ $pengumuman_latest_date->format('M') }}</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <img src="/storage/{{$pengumuman_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                                </div>
+                                <div class="card-body py-4 px-0">
+                                    <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
+                                        {{$pengumuman_latest->judul ?? ""}}
+                                    </h4>
+                                    <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
+                                        {{$pengumuman_latest->deskripsi ?? ""}}
                                     </span>
-                                </span>
+                                </div>
                             </div>
-                            <img src="/storage/{{$pengumuman_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
-                        </div>
-                        <div class="card-body py-4 px-0">
-                            <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
-                                {{$pengumuman_latest->judul ?? ""}}
-                            </h4>
-                            <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
-                                {{$pengumuman_latest->deskripsi ?? ""}}
-                            </span>
-                        </div>
+                        </a>
                     </div>
-                </a>
+                    @endif
+                </div>
             </div>
-            @endif
-        </div>
-
+        </section>
     </div>
-</section>
 
-</div>
-
-@include('frontend.partials.footer')
+    @include('frontend.partials.footer')
 </div>
 @endsection

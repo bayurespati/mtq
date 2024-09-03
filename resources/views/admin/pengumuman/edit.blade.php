@@ -44,6 +44,17 @@
                                     </div>
                                 </div>
                                 <div class="form-group row pb-3">
+                                    <label class="col-lg-3 control-label text-lg-end pt-2">Tanggal<span class="required">*</span></label>
+                                    <div class="col-lg-9">
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-calendar-alt"></i>
+                                            </span>
+                                            <input value="{{ old('tanggal', $pengumuman->tanggal_edit) }}" type="text" name="tanggal" data-plugin-datepicker class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row pb-3">
                                     <label class="col-sm-3 control-label text-sm-end pt-2">Foto <span class="required">*</span></label>
                                     <div class="col-sm-9">
                                         <input type="file" name="image" class="form-control" />

@@ -26,7 +26,7 @@
                                 </a>
                                 <p class="text-uppercase text-color-default text-1 my-2">
                                     @php
-                                    $date = \Carbon\Carbon::parse($item->created_at);
+                                    $date = \Carbon\Carbon::parse($item->tanggal);
                                     @endphp
                                     <time pubdate datetime="2024-06-9">{{$date->format('M d, Y')}}</time>
                                 </p>
@@ -65,15 +65,14 @@
                             <hr class="my-2">
                         </div>
                         <div class="px-3 mt-4">
-                            <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Berita Populer</h3>
-                            <div class="pb-2 mb-1">
-                                <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">Juni 10, 2024</a>
-                                <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Lorem ipsum dolor sit amet</a>
-                                <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">Juni 10, 2024</a>
-                                <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Consectetur adipiscing elit</a>
-                                <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">Juni 10, 2024</a>
-                                <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Vivamus sollicitudin nibh luctus</a>
-                            </div>
+                            <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Berita Terbaru</h3>
+                            @foreach($berita_latest_3 as $item)
+                            @php
+                            $date = \Carbon\Carbon::parse($item->tanggal);
+                            @endphp
+                            <a <?php echo ("href='/artikel/berita/example/$item->id'") ?> class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">{{$date->format('M d, Y')}}</a>
+                            <a <?php echo ("href='/artikel/berita/example/$item->id'") ?> class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">{{$item->judul}}</a>
+                            @endforeach
                         </div>
                     </aside>
                 </div>

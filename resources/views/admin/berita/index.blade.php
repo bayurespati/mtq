@@ -55,7 +55,7 @@
                                     <tr>
                                         <td>{{$item->judul}}</td>
                                         <td>{{$item->author}}</td>
-                                        <td>{{$item->created_at}}</td>
+                                        <td>{{$item->tanggal}}</td>
                                         <td class="actions">
                                             <a <?php echo ("href=/berita/edit/" . $item->id) ?> class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
                                             <a <?php echo ("href=/berita/delete/" . $item->id) ?> class="on-default remove-row"><i class="far fa-trash-alt"></i></a>

@@ -64,7 +64,7 @@
                                 </h1>
                                 <div class="d-block appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" style="margin-bottom: 40px;">
                                     <a <?php $temp = $utama->id ?? "";
-                                        echo (`href='/artikel/pengumuman/example/$temp'`) ?> data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms">
+                                        echo (`href='/artikel/pengumuman/detail/$temp'`) ?> data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms">
                                         Selengkapnya
                                     </a>
                                 </div>

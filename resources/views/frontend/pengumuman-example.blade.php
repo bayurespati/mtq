@@ -38,7 +38,7 @@
                         <div class="card border-0">
                             <div class="card-body z-index-1 p-0">
                                 <div class="post-image pb-4">
-                                    <img class="card-img-top rounded-0" src="/{{$pengumuman->image}}" alt="Card Image">
+                                    <img class="card-img-top rounded-0" src="/storage/{{$pengumuman->image}}" alt="Card Image">
                                 </div>
 
                                 <div class="card-body p-0">
@@ -66,14 +66,15 @@
                             <hr class="my-2">
                         </div>
                         <div class="px-3 mt-4">
-                            <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Pengumuman Populer</h3>
+                            <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Pengumuman terbaru</h3>
                             <div class="pb-2 mb-1">
-                                <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">Juni 10, 2024</a>
-                            <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Lorem ipsum dolor sit amet</a>
-                                <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">Juni 10, 2024</a>
-                                <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Consectetur adipiscing elit</a>
-                                <a href="#" class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">Juni 10, 2024</a>
-                                <a href="#" class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">Vivamus sollicitudin nibh luctus</a>
+                                @foreach($pengumuman_latest_3 as $item)
+                                @php
+                                $date = \Carbon\Carbon::parse($item->tanggal);
+                                @endphp
+                                <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?> class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">{{$date->format('M d, Y')}}</a>
+                                <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?> class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">{{$item->judul}}</a>
+                                @endforeach
                             </div>
                         </div>
                     </aside>

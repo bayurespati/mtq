@@ -21,8 +21,8 @@
                     <article class="mb-5">
                         <div class="card bg-transparent border-0">
                             <div class="card-body p-0 z-index-1">
-                                <a <?php echo ("href='/artikel/berita/example/$item->id'") ?> data-cursor-effect-hover="plus">
-                                    <img class="card-img-top rounded-0 mb-2" src="/{{$item->image}}" alt="Card Image">
+                                <a <?php echo ("href='/artikel/berita/detail/$item->id'") ?> data-cursor-effect-hover="plus">
+                                    <img class="card-img-top rounded-0 mb-2" src="/storage/{{$item->image}}" alt="Card Image">
                                 </a>
                                 <p class="text-uppercase text-color-default text-1 my-2">
                                     @php
@@ -32,12 +32,12 @@
                                 </p>
                                 <div class="card-body p-0">
                                     <h4 class="card-title text-5 font-weight-bold pb-1 mb-2">
-                                        <a class="text-color-dark text-color-hover-primary text-decoration-none" <?php echo ("href='/artikel/berita/example/$item->id'") ?>>
+                                        <a class="text-color-dark text-color-hover-primary text-decoration-none" <?php echo ("href='/artikel/berita/detail/$item->id'") ?>>
                                             {{$item->judul}}
                                         </a>
                                     </h4>
                                     <!-- <p class="card-text mb-2">{{$item->deskripsi}}</p> -->
-                                    <a <?php echo ("href='/artikel/berita/example/$item->id'") ?> class="read-more text-color-primary font-weight-semibold mt-0 text-2">Selengkapnya <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+                                    <a <?php echo ("href='/artikel/berita/detail/$item->id'") ?> class="read-more text-color-primary font-weight-semibold mt-0 text-2">Selengkapnya <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -70,8 +70,8 @@
                             @php
                             $date = \Carbon\Carbon::parse($item->tanggal);
                             @endphp
-                            <a <?php echo ("href='/artikel/berita/example/$item->id'") ?> class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">{{$date->format('M d, Y')}}</a>
-                            <a <?php echo ("href='/artikel/berita/example/$item->id'") ?> class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">{{$item->judul}}</a>
+                            <a <?php echo ("href='/artikel/berita/detail/$item->id'") ?> class="text-color-default text-uppercase text-1 mb-0 d-block text-decoration-none">{{$date->format('M d, Y')}}</a>
+                            <a <?php echo ("href='/artikel/berita/detail/$item->id'") ?> class="text-color-dark text-hover-primary font-weight-bold text-3 d-block pb-3 line-height-4">{{$item->judul}}</a>
                             @endforeach
                         </div>
                     </aside>

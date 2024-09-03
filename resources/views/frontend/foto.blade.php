@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col">
                     <h4 class="mb-0">Kalimantan Timur</h4>
-                    <p>Foto gallery</p>
+                    <p>Foto galeri</p>
                     <div class="row lightbox" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
                         @foreach($foto as $item)
                         <div class="col-lg-3">

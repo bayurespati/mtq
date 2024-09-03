@@ -20,9 +20,12 @@
                     <h2 class="mb-2" style="font-weight: bold;">{{$pengumuman->judul}}</h2>
                     <div class="d-flex justify-content-start">
                         <p class="text-uppercase text-4 mb-3 text-color-default">
-                            <time pubdate datetime="2024-06-9">
+                            <time>
                                 <i class="fas fa-calendar border-width-2 text-3"></i>
-                                {{$pengumuman['date']->format('M d, Y')}}
+                                @php
+                                $date_tittle = \Carbon\Carbon::parse($pengumuman->tanggal);
+                                @endphp
+                                {{$date_tittle->format('M d, Y')}}
                             </time>
                         </p>
                         <p class="text-4 mb-3 text-color-default ms-4"><i class="fas fa-user border-width-2 text-3"></i> {{$pengumuman->author}}</p>

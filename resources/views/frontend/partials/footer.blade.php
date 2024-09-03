@@ -18,20 +18,17 @@
                 </ul>
                 <ul class="social-icons social-icons-clean social-icons-medium">
                     <li class="social-icons-facebook">
-                        <!-- <a href="https://www.facebook.com/LPTQKabupatenBengkalis/?locale=id_ID" target="_blank" title="Facebook"> -->
-                        <a href="/" target="_blank" title="Facebook">
+                        <a href="https://www.facebook.com/kominfokaltim/?locale=id_ID" target="_blank" title="Facebook">
                             <i class="fab fa-facebook-f text-color-light"></i>
                         </a>
                     </li>
                     <li class="social-icons-twitter">
-                        <!-- <a href="https://x.com/lptqbengkalis" target="_blank" title="Twitter"> -->
-                        <a href="/" target="_blank" title="Twitter">
-                            <i class="fab fa-x-twitter text-color-light"></i>
+                        <a href="https://www.instagram.com/diskominfokaltim/" target="_blank" title="Twitter">
+                            <i class="fab fa-instragram text-color-light"></i>
                         </a>
                     </li>
                     <li class="social-icons-youtube">
-                        <!-- <a href="https://www.youtube.com/watch?v=dQasNuUy-dE&ab_channel=terubuktelevisi" target="_blank" title="Youtube"> -->
-                        <a href="/" target="_blank" title="Youtube">
+                        <a href="https://www.youtube.com/@kominfokaltim6630" target="_blank" title="Youtube">
                             <i class="fab fa-youtube text-color-light"></i>
                         </a>
                     </li>

@@ -95,19 +95,17 @@
                             <div class="col-lg-9 text-end pt-5">
                                 <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
                                     <div class="owl-carousel owl-theme stage-margin rounded-nav nav-dark nav-icon-1 nav-size-md nav-position-1" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 2}, '1199': {'items': 2}}, 'margin': 10, 'loop': true, 'nav': true, 'dots': false, 'stagePadding': 40}">
-                                        @foreach($pengumuman as $key => $item)
-                                        @if($key > 0)
-                                        <div class="overlay {{$key % 2 == 0 ? 'overlay-color-primary' : 'overlay-color-dark'}} overlay-show overlay-op-8 rounded overflow-hidden">
+                                        @for ($i = count($pengumuman)-1; $i >= 1; $i--)
+                                        <div class="overlay {{$i % 2 == 0 ? 'overlay-color-primary' : 'overlay-color-dark'}} overlay-show overlay-op-8 rounded overflow-hidden">
                                             <img alt="" class="img-fluid rounded" src="/img/frontend/demos/business-consulting-4/generic/generic-2.jpg">
                                             <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
                                                 <span class="p-absolute left-0 bottom-0 text-color-light text-start ms-4 mb-3 ps-2 pb-1">
-                                                    <strong class="text-5 negative-ls-05 font-weight-bold limited-text">{{$item->judul}}</strong>
-                                                    <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0 limited-text-desc">{{$item->deskripsi}}</p>
+                                                    <strong class="text-5 negative-ls-05 font-weight-bold limited-text">{{$pengumuman[$i]->judul}}</strong>
+                                                    <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0 limited-text-desc">{{$pengumuman[$i]->deskripsi}}</p>
                                                 </span>
                                             </a>
                                         </div>
-                                        @endif
-                                        @endforeach
+                                        @endfor
                                     </div>
                                 </div>
                             </div>
@@ -115,7 +113,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="appear-animation custom-element-wrapper custom-element-1" data-appear-animation="expandIn" data-appear-animation-delay="200">
                 <div class="w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 2.1, 'transition': true, 'transitionDuration': 500}">
@@ -134,7 +131,6 @@
                     <div class="custom-element rotate-r-45"></div>
                 </div>
             </div>
-
         </section>
 
         <section class="section border-0 bg-transparent m-0" id="start">

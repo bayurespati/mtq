@@ -36,7 +36,7 @@
                             <div class="thumbnail">
                                 <div class="thumb-preview">
                                     <a class="thumb-image" href="{{$item->url}}">
-                                        <img src="{{$item->url}}" class="img-fluid" alt="Project">
+                                        <img src="/storage/{{$item->url}}" class="img-fluid" alt="Project">
                                     </a>
                                     <div class="mg-thumb-options">
                                         <div class="mg-zoom"><i class="bx bx-search"></i></div>

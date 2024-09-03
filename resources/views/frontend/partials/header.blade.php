@@ -25,16 +25,13 @@
                             <nav class="header-nav-top">
                                 <ul class="nav nav-pills p-relative bottom-2">
                                     <li class="nav-item py-2 d-none d-lg-inline-flex">
-                                        <!-- <a href="https://www.facebook.com/LPTQKabupatenBengkalis/?locale=id_ID" target="_blank" title="Facebook" class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms"><i class="fab fa-facebook-f text-3 p-relative top-1"></i></a> -->
-                                        <a href="#" target="_blank" title="Facebook" class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms"><i class="fab fa-facebook-f text-3 p-relative top-1"></i></a>
+                                        <a href="https://www.facebook.com/kominfokaltim/?locale=id_ID" target="_blank" title="Facebook" class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms"><i class="fab fa-facebook-f text-3 p-relative top-1"></i></a>
                                     </li>
                                     <li class="nav-item py-2 d-none d-lg-inline-flex">
-                                        <!-- <a href="https://x.com/lptqbengkalis" target="_blank" title="Twitter" class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms"><i class="fab fa-x-twitter text-3 p-relative top-1"></i></a> -->
-                                        <a href="#" target="_blank" title="Twitter" class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms"><i class="fab fa-x-twitter text-3 p-relative top-1"></i></a>
+                                        <a href="https://www.instagram.com/diskominfokaltim/" target="_blank" title="Instagran" class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms"><i class="fab fa-instagram text-3 p-relative top-1"></i></a>
                                     </li>
                                     <li class="nav-item py-2 d-none d-lg-inline-flex">
-                                        <!-- <a href="https://www.youtube.com/watch?v=dQasNuUy-dE&ab_channel=terubuktelevisi" target="_blank" title="Youtube" class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms"><i class="fab fa-youtube text-3 p-relative top-1"></i></a> -->
-                                        <a href="#" target="_blank" title="Youtube" class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms"><i class="fab fa-youtube text-3 p-relative top-1"></i></a>
+                                        <a href="https://www.youtube.com/@kominfokaltim6630" target="_blank" title="Youtube" class="text-color-dark text-color-hover-primary text-3 anim-hover-translate-top-5px transition-2ms"><i class="fab fa-youtube text-3 p-relative top-1"></i></a>
                                     </li>
                                 </ul>
                             </nav>

@@ -15,7 +15,7 @@ class FrontViewController extends Controller
 {
     public function beranda()
     {
-        $pengumuman = Pengumuman::where('is_featured', 1)->orderBy('created_at', 'desc')->take(5)->get();
+        $pengumuman = Pengumuman::where('is_featured', 1)->orderBy('tanggal', 'desc')->take(5)->get();
         $utama = $pengumuman[0] ?? [];
         $berita_latest = Berita::latest()->first();
         $pengumuman_latest = Pengumuman::latest()->first();

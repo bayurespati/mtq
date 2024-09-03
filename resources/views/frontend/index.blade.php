@@ -62,12 +62,13 @@
                                 <h1 class="text-color-dark font-weight-bold text-9 pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
                                     {{$utama->judul ?? ""}}
                                 </h1>
-                                <div class="d-block appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" style="margin-bottom: 40px;">
-                                    <a <?php $temp = $utama->id ?? "";
-                                        echo (`href='/artikel/pengumuman/detail/$temp'`) ?> data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms">
-                                        Selengkapnya
-                                    </a>
-                                </div>
+                                <a <?php echo ("href='/artikel/pengumuman/detail/$utama->id'") ?>>
+                                    <div class="d-block appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300" style="margin-bottom: 40px;">
+                                        <a <?php echo ("href='/artikel/pengumuman/detail/$pengumuman_latest->id'") ?> data-hash data-hash-offset="0" data-hash-offset-lg="100" class="btn btn-modern btn-primary btn-arrow-effect-1 text-capitalize text-2-5 px-5 py-3 anim-hover-translate-top-5px transition-2ms">
+                                            Selengkapnya
+                                        </a>
+                                    </div>
+                                </a>
                             </div>
                             <br>
                             <div class="col-12 col-lg-6 p-relative text-end">
@@ -343,7 +344,7 @@
                 <div class="row justify-content-center appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
                     @if($berita_latest)
                     <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <a href="storage/{{$berita_latest->image}}" class="text-decoration-none">
+                        <a <?php echo ("href='/artikel/berita/detail/$berita_latest->id'") ?> class="text-decoration-none">
                             <div class="card border-0 bg-transparent">
                                 <div class="card-img-top position-relative overlay overflow-hidden border-radius">
                                     <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
@@ -375,7 +376,7 @@
                     @endif
                     @if($pengumuman_latest)
                     <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <a href="/artikel/berita/example" class="text-decoration-none">
+                        <a <?php echo ("href='/artikel/pengumuman/detail/$pengumuman_latest->id'") ?> class="text-decoration-none">
                             <div class="card border-0 bg-transparent">
                                 <div class="card-img-top position-relative overlay overflow-hidden border-radius">
                                     <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">

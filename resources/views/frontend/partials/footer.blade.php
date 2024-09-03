@@ -22,9 +22,9 @@
                             <i class="fab fa-facebook-f text-color-light"></i>
                         </a>
                     </li>
-                    <li class="social-icons-twitter">
-                        <a href="https://www.instagram.com/diskominfokaltim/" target="_blank" title="Twitter">
-                            <i class="fab fa-instragram text-color-light"></i>
+                    <li class="social-icons-instagram">
+                        <a href="https://www.instagram.com/diskominfokaltim/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram text-color-light"></i>
                         </a>
                     </li>
                     <li class="social-icons-youtube">

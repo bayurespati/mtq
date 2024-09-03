@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="overflow-hidden mb-1">
                                     <h2 class="font-weight-semi-bold text-color-grey text-uppercase positive-ls-3 text-4-5 line-height-2 line-height-sm-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">
-                                        Musabaqadah Center Kalimantan Timur
+                                        PENGUMUMAN PILIHAN
                                     </h2>
                                 </div>
                                 <h1 class="text-color-dark font-weight-bold text-9 pb-2 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
@@ -98,7 +98,10 @@
                                         @for ($i = count($pengumuman)-1; $i >= 1; $i--)
                                         <div class="overlay {{$i % 2 == 0 ? 'overlay-color-primary' : 'overlay-color-dark'}} overlay-show overlay-op-8 rounded overflow-hidden">
                                             <img alt="" class="img-fluid rounded" src="/img/frontend/demos/business-consulting-4/generic/generic-2.jpg">
-                                            <a href="#" class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
+                                            @php
+                                            $id_show = $pengumuman[$i]->id;
+                                            @endphp
+                                            <a <?php echo ("href='/artikel/pengumuman/detail/$id_show'") ?> class="p-absolute z-index-2 top-0 left-0 w-100 h-100 anim-hover-translate-top-5px transition-2ms">
                                                 <span class="p-absolute left-0 bottom-0 text-color-light text-start ms-4 mb-3 ps-2 pb-1">
                                                     <strong class="text-5 negative-ls-05 font-weight-bold limited-text">{{$pengumuman[$i]->judul}}</strong>
                                                     <p class="font-weight-medium text-color-light opacity-7 p-relative bottom-4 mb-0 limited-text-desc">{{$pengumuman[$i]->deskripsi}}</p>

@@ -62,7 +62,7 @@ class FrontViewController extends Controller
         $date = \Carbon\Carbon::parse('2024-11-19 17:12:37');
         $berita["final"] =  explode("<br>", trim($show));
         $berita["date"] =  $date;
-        $berita_latest_3 = Berita::orderBy('created_at', 'desc')->take(3)->get();
+        $berita_latest_3 = Berita::orderBy('created_at', 'desc')->take(10)->get();
         return view('frontend.berita-example', ["berita" => $berita, "berita_latest_3" => $berita_latest_3]);
     }
 
@@ -72,7 +72,7 @@ class FrontViewController extends Controller
         $date = \Carbon\Carbon::parse('2024-11-19 17:12:37');
         $pengumuman["final"] =  explode("<br>", trim($show));
         $pengumuman["date"] =  $date;
-        $pengumuman_latest_3 = Pengumuman::orderBy('created_at', 'desc')->take(3)->get();
+        $pengumuman_latest_3 = Pengumuman::orderBy('created_at', 'desc')->take(10)->get();
         return view('frontend.pengumuman-example', ["pengumuman" => $pengumuman, "pengumuman_latest_3" => $pengumuman_latest_3]);
     }
 

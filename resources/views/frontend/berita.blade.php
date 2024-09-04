@@ -38,13 +38,13 @@
                         <div class="col-md-4">
                             <article class="post post-medium border-0 pb-0 mb-5">
                                 <div class="post-image" style="height: 220px; border: 1px solid rgba(38, 70, 83, 0.4);">
-                                    <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?>>
+                                    <a <?php echo ("href='/artikel/berita/detail/$item->id'") ?>>
                                         <img src="/storage/{{$item->image}}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" style="height: 100%; width: 100%; object-fit: cover;" />
                                     </a>
                                 </div>
                                 <div class="post-content">
                                     <h2 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2 limited-text-title">
-                                        <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?>>
+                                        <a <?php echo ("href='/artikel/berita/detail/$item->id'") ?>>
                                             {{$item->judul}}
                                         </a>
                                     </h2>
@@ -52,14 +52,14 @@
                                         {{$item->deskripsi}}
                                     </p>
                                     <div class="post-meta">
-                                        <span><i class="far fa-user"></i><a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?>>{{$item->author}}</a> </span>
+                                        <span><i class="far fa-user"></i><a <?php echo ("href='/artikel/berita/detail/$item->id'") ?>>{{$item->author}}</a> </span>
                                         <span>
                                             @php
                                             $date = \Carbon\Carbon::parse($item->tanggal);
                                             @endphp
                                             {{$date->format('M d, Y')}}
                                         </span>
-                                        <span class="d-block mt-2"><a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?> class="btn btn-xs btn-light text-1 text-uppercase">SELENGKAPNYA</a></span>
+                                        <span class="d-block mt-2"><a <?php echo ("href='/artikel/berita/detail/$item->id'") ?> class="btn btn-xs btn-light text-1 text-uppercase">SELENGKAPNYA</a></span>
                                     </div>
                                 </div>
                             </article>

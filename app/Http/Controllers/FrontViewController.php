@@ -51,7 +51,7 @@ class FrontViewController extends Controller
 
     public function pengumuman()
     {
-        $pengumuman = Pengumuman::all();
+        $pengumuman = Pengumuman::paginate(3);
         $pengumuman_latest_3 = Pengumuman::orderBy('created_at', 'desc')->take(3)->get();
         return view('frontend.pengumuman', ["pengumuman" => $pengumuman, "pengumuman_latest_3" => $pengumuman_latest_3]);
     }

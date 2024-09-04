@@ -6,6 +6,22 @@
 
 @push('additional_css')
 <style>
+    .limited-text-footer {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        max-width: 400px;
+        height: 100px;
+    }
+
+    .limited-text-title {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        max-width: 400px;
+        -webkit-line-clamp: 2;
+        height: 70px;
+    }
 </style>
 @endpush
 

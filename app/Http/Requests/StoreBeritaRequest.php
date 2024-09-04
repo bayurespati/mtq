@@ -23,7 +23,7 @@ class StoreBeritaRequest extends FormRequest
     {
         return [
             'judul' => 'required|unique:berita,judul',
-            'author' => 'required',
+            'author' => 'required|string|max:14',
             'deskripsi' => 'required',
             'image' => 'required',
         ];

@@ -23,7 +23,7 @@ class StorePengumumanRequest extends FormRequest
     {
         return [
             'judul' => 'required|unique:pengumuman,judul',
-            'author' => 'required',
+            'author' => 'required|string|max:14',
             'deskripsi' => 'required',
             'image' => 'required',
         ];

@@ -37,7 +37,7 @@
                         @foreach($berita as $item)
                         <div class="col-md-4">
                             <article class="post post-medium border-0 pb-0 mb-5">
-                                <div class="post-image" style="height: 220px;">
+                                <div class="post-image" style="height: 220px; border: 1px solid #264653; padding: 1px">
                                     <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?>>
                                         <img src="/storage/{{$item->image}}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" style="height: 100%; width: 100%; object-fit: cover;" />
                                     </a>
@@ -52,12 +52,12 @@
                                         {{$item->deskripsi}}
                                     </p>
                                     <div class="post-meta">
-                                        <span><i class="far fa-user"></i> By <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?>>{{$item->author}}</a> </span>
+                                        <span><i class="far fa-user"></i><a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?>>{{$item->author}}</a> </span>
                                         <span>
                                             @php
                                             $date = \Carbon\Carbon::parse($item->tanggal);
                                             @endphp
-                                            <time pubdate datetime="2024-06-9">{{$date->format('M d, Y')}}</time>
+                                            {{$date->format('M d, Y')}}
                                         </span>
                                         <span class="d-block mt-2"><a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?> class="btn btn-xs btn-light text-1 text-uppercase">Read More</a></span>
                                     </div>

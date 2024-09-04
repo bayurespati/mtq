@@ -13,6 +13,15 @@
         max-width: 400px;
         height: 100px;
     }
+
+    .limited-text-title {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        max-width: 400px;
+        -webkit-line-clamp: 2;
+        height: 70px;
+    }
 </style>
 @endpush
 
@@ -34,7 +43,7 @@
                                     </a>
                                 </div>
                                 <div class="post-content">
-                                    <h2 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2">
+                                    <h2 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2 limited-text-title">
                                         <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?>>
                                             {{$item->judul}}
                                         </a>

@@ -21,29 +21,63 @@
         </div>
     </article>
 </div>
-                    @foreach($pengumuman as $item)
-                    <article class="mb-5">
-                        <div class="card bg-transparent border-0">
-                            <div class="card-body p-0 z-index-1">
-                                <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?> data-cursor-effect-hover="plus">
-                                    <img class="card-img-top rounded-0 mb-2" src="/storage/{{$item->image}}" alt="Card Image">
-                                </a>
-                                <p class="text-uppercase text-color-default text-1 my-2">
-                                    @php
-                                    $date = \Carbon\Carbon::parse($item->tanggal);
-                                    @endphp
-                                    <time pubdate datetime="2024-06-9">{{$date->format('M d, Y')}}</time>
-                                </p>
-                                <div class="card-body p-0">
-                                    <h4 class="card-title text-5 font-weight-bold pb-1 mb-2">
-                                        <a class="text-color-dark text-color-hover-primary text-decoration-none" <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?>>
-                                            {{$item->judul}}
-                                        </a>
-                                    </h4>
-                                    <!-- <p class="card-text mb-2">{{$item->deskripsi}}</p> -->
-                                    <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?> class="read-more text-color-primary font-weight-semibold mt-0 text-2">Selengkapnya <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    @endforeach
+@foreach($pengumuman as $item)
+<article class="mb-5">
+    <div class="card bg-transparent border-0">
+        <div class="card-body p-0 z-index-1">
+            <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?> data-cursor-effect-hover="plus">
+                <img class="card-img-top rounded-0 mb-2" src="/storage/{{$item->image}}" alt="Card Image">
+            </a>
+            <p class="text-uppercase text-color-default text-1 my-2">
+                @php
+                $date = \Carbon\Carbon::parse($item->tanggal);
+                @endphp
+                <time pubdate datetime="2024-06-9">{{$date->format('M d, Y')}}</time>
+            </p>
+            <div class="card-body p-0">
+                <h4 class="card-title text-5 font-weight-bold pb-1 mb-2">
+                    <a class="text-color-dark text-color-hover-primary text-decoration-none" <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?>>
+                        {{$item->judul}}
+                    </a>
+                </h4>
+                <!-- <p class="card-text mb-2">{{$item->deskripsi}}</p> -->
+                <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?> class="read-more text-color-primary font-weight-semibold mt-0 text-2">Selengkapnya <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+            </div>
+        </div>
+    </div>
+</article>
+@endforeach
+
+@foreach($berita as $item)
+<article class="mb-5">
+    <div class="card bg-transparent border-0">
+        <div class="card-body p-0 z-index-1">
+            <a <?php echo ("href='/artikel/berita/detail/$item->id'") ?> data-cursor-effect-hover="plus">
+                <img class="card-img-top rounded-0 mb-2" src="/storage/{{$item->image}}" alt="Card Image">
+            </a>
+            <p class="text-uppercase text-color-default text-1 my-2">
+                @php
+                $date = \Carbon\Carbon::parse($item->tanggal);
+                @endphp
+                <time pubdate datetime="2024-06-9">{{$date->format('M d, Y')}}</time>
+            </p>
+            <div class="card-body p-0">
+                <h4 class="card-title text-5 font-weight-bold pb-1 mb-2">
+                    <a class="text-color-dark text-color-hover-primary text-decoration-none" <?php echo ("href='/artikel/berita/detail/$item->id'") ?>>
+                        {{$item->judul}}
+                    </a>
+                </h4>
+                <!-- <p class="card-text mb-2">{{$item->deskripsi}}</p> -->
+                <a <?php echo ("href='/artikel/berita/detail/$item->id'") ?> class="read-more text-color-primary font-weight-semibold mt-0 text-2">Selengkapnya <i class="fas fa-angle-right position-relative top-1 ms-1"></i></a>
+            </div>
+        </div>
+    </div>
+</article>
+@endforeach
+<!-- <ul class="pagination pagination-rounded pagination-md justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#" data-cursor-effect-hover="fit">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-right"></i></a></li>
+                    </ul> -->

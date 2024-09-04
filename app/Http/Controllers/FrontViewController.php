@@ -44,7 +44,7 @@ class FrontViewController extends Controller
 
     public function berita()
     {
-        $berita = Berita::all();
+        $berita = Berita::paginate(9);
         $berita_latest_3 = Berita::orderBy('created_at', 'desc')->take(3)->get();
         return view('frontend.berita', ["berita" => $berita, "berita_latest_3" => $berita_latest_3]);
     }

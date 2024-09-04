@@ -52,7 +52,7 @@
                                         {{$item->deskripsi}}
                                     </p>
                                     <div class="post-meta">
-                                        <span><i class="far fa-user"></i> By <a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?>>{{$item->author}}</a> </span>
+                                        <span><i class="far fa-user"></i><a <?php echo ("href='/artikel/pengumuman/detail/$item->id'") ?>>{{$item->author}}</a> </span>
                                         <span>
                                             @php
                                             $date = \Carbon\Carbon::parse($item->tanggal);

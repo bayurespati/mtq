@@ -101,13 +101,13 @@
                 <div class="row pt-4 pb-3 counters text-light appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="300">
                     <div class="col-lg-3 mb-4 mb-lg-0">
                         <div class="counter">
-                            <strong data-to="6826">6,826</strong>
+                            <strong data-to="1998">1,998</strong>
                             <label class="font-weight-semibold text-4 opacity-7">Total Partisipan</label>
                         </div>
                     </div>
                     <div class="col-lg-3 mb-4 mb-lg-0">
                         <div class="counter">
-                            <strong data-to="38">38</strong>
+                            <strong data-to="35">35</strong>
                             <label class="font-weight-semibold text-4 opacity-7">Provinsi</label>
                         </div>
                     </div>
@@ -119,8 +119,8 @@
                     </div>
                     <div class="col-lg-3 mb-4 mb-sm-0">
                         <div class="counter">
-                            <strong data-to="1836">1,836</strong>
-                            <label class="font-weight-semibold text-4 opacity-7">Peserta</label>
+                            <strong data-to="1567">1,567</strong>
+                            <label class="font-weight-semibold text-4 opacity-7">Peserta Inti</label>
                         </div>
                     </div>
                 </div>

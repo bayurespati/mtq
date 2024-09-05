@@ -6,6 +6,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FotoController;
 use App\Http\Controllers\FrontViewController;
 use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\LivestreamController;
 use App\Http\Controllers\LoController;
 use App\Http\Controllers\LombaController;
 use App\Http\Controllers\MobilController;
@@ -27,6 +28,7 @@ Route::get('/artikel/pengumuman', [FrontViewController::class, 'pengumuman'])->n
 Route::get('/artikel/pengumuman/detail/{pengumuman}', [FrontViewController::class, 'pengumumanExample'])->name('pengumuman-example');
 Route::get('/media/foto', [FrontViewController::class, 'foto'])->name('foto');
 Route::get('/media/video', [FrontViewController::class, 'video'])->name('video');
+Route::get('/media/livestream', [FrontViewController::class, 'livestream'])->name('livestream');
 Route::get('/musabaqadah-center', [FrontViewController::class, 'musabaqadahCenter'])->name('musabaqadah-center');
 Route::get('/hubungi-kami', [FrontViewController::class, 'hubungiKami'])->name('hubungi-kami');
 Route::post('/login', [AuthController::class, 'login']);
@@ -181,6 +183,14 @@ Route::middleware('auth')->group(function () {
         Route::post('store', [VideoController::class, 'store'])->name('admin-video-store');
         Route::post('update/{video}', [VideoController::class, 'update'])->name('admin-video-update');
         Route::get('delete/{video}', [VideoController::class, 'destroy'])->name('admin-video-delete');
+    });
+
+    Route::group(['prefix' => 'livestream'], function () {
+        Route::get('', [LivestreamController::class, 'index'])->name('admin-livestream-index');
+        Route::get('create', [LivestreamController::class, 'create'])->name('admin-livestream-create');
+        Route::get('edit/{livestream}', [LivestreamController::class, 'edit'])->name('admin-livestream-edit');
+        Route::post('store', [LivestreamController::class, 'store'])->name('admin-livestream-store');
+        Route::post('update/{livestream}', [LivestreamController::class, 'update'])->name('admin-livestream-update');
     });
 
     Route::group(['prefix' => 'faq'], function () {

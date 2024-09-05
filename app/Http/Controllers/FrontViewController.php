@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Berita;
 use App\Models\Faq;
 use App\Models\Foto;
+use App\Models\Livestream;
 use App\Models\Lomba;
 use App\Models\Pengumuman;
 use App\Models\Video;
@@ -103,6 +104,12 @@ class FrontViewController extends Controller
     {
         $videos = Video::all();
         return view('frontend.video', ["videos" => $videos]);
+    }
+
+    public function livestream()
+    {
+        $livestream = Livestream::all();
+        return view('frontend.livestream', ["livestream" => $livestream]);
     }
 
     public function musabaqadahCenter()

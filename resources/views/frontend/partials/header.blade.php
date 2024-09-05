@@ -99,6 +99,9 @@
                                                 <li>
                                                     <a href="{{ route('video') }}" class="{{ request()->is('/media/video') ? 'dropdown-item active' : 'dropdown-item' }}">Video</a>
                                                 </li>
+                                                <li>
+                                                    <a href="{{ route('livestream') }}" class="{{ request()->is('/media/livestream') ? 'dropdown-item active' : 'dropdown-item' }}">Livestream</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li>

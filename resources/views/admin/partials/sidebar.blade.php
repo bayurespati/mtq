@@ -119,6 +119,11 @@
                                     Video
                                 </a>
                             </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-livestream-index') }}">
+                                    Livestream 
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-parent">

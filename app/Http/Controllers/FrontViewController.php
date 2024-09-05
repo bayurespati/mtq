@@ -45,14 +45,14 @@ class FrontViewController extends Controller
     public function berita()
     {
         $berita = Berita::orderBy('tanggal', 'DESC')->paginate(9);
-        $berita_latest_3 = Berita::orderBy('tanggal', 'desc')->take(10)->get();
+        $berita_latest_3 = Berita::orderBy('views', 'desc')->take(10)->get();
         return view('frontend.berita', ["berita" => $berita, "berita_latest_3" => $berita_latest_3]);
     }
 
     public function pengumuman()
     {
         $pengumuman = Pengumuman::orderBy('tanggal', 'DESC')->paginate(9);
-        $pengumuman_latest_3 = Pengumuman::orderBy('tanggal', 'desc')->take(10)->get();
+        $pengumuman_latest_3 = Pengumuman::orderBy('views', 'desc')->take(10)->get();
         return view('frontend.pengumuman', ["pengumuman" => $pengumuman, "pengumuman_latest_3" => $pengumuman_latest_3]);
     }
 
@@ -62,7 +62,15 @@ class FrontViewController extends Controller
         $date = \Carbon\Carbon::parse('2024-11-19 17:12:37');
         $berita["final"] =  explode("<br>", trim($show));
         $berita["date"] =  $date;
-        $berita_latest_3 = Berita::orderBy('created_at', 'desc')->take(10)->get();
+        // Check if the user has already viewed this article during this session
+        $sessionKey = 'pengumuman_' . $berita->id . '_viewed';
+        if (!session()->has($sessionKey)) {
+            // Increment the view count
+            $berita->increment('views');
+            // Store the flag in the session
+            session([$sessionKey => true]);
+        }
+        $berita_latest_3 = Berita::orderBy('views', 'desc')->take(10)->get();
         return view('frontend.berita-example', ["berita" => $berita, "berita_latest_3" => $berita_latest_3]);
     }
 
@@ -72,7 +80,16 @@ class FrontViewController extends Controller
         $date = \Carbon\Carbon::parse('2024-11-19 17:12:37');
         $pengumuman["final"] =  explode("<br>", trim($show));
         $pengumuman["date"] =  $date;
-        $pengumuman_latest_3 = Pengumuman::orderBy('created_at', 'desc')->take(10)->get();
+        $pengumuman->increment('views');
+        // Check if the user has already viewed this article during this session
+        $sessionKey = 'pengumuman_' . $pengumuman->id . '_viewed';
+        if (!session()->has($sessionKey)) {
+            // Increment the view count
+            $pengumuman->increment('views');
+            // Store the flag in the session
+            session([$sessionKey => true]);
+        }
+        $pengumuman_latest_3 = Pengumuman::orderBy('views', 'desc')->take(10)->get();
         return view('frontend.pengumuman-example', ["pengumuman" => $pengumuman, "pengumuman_latest_3" => $pengumuman_latest_3]);
     }
 

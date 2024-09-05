@@ -48,6 +48,7 @@
                                         <th class="text-center">Penulis</th>
                                         <th class="text-center">Tanggal</th>
                                         <th class="text-center">Status</th>
+                                        <th class="text-center">Views</th>
                                         <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
@@ -64,6 +65,7 @@
                                             <div class="btn btn-xs btn-danger">Not Featured</div>
                                             @endif
                                         </td>
+                                        <td class="text-center">{{$item->views}}</td>
                                         <td class="text-center actions">
                                             <a <?php echo ("href=/pengumuman/edit/" . $item->id) ?> class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
                                             <a <?php echo ("href=/pengumuman/delete/" . $item->id) ?> class="on-default remove-row"><i class="far fa-trash-alt"></i></a>

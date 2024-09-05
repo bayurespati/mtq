@@ -49,7 +49,7 @@
                                         </a>
                                     </h2>
                                     <p class="limited-text-footer">
-                                        {{$item->deskripsi}}
+                                        {{ strip_tags($item->deskripsi)}}
                                     </p>
                                     <div class="post-meta">
                                         <span><i class="far fa-user"></i><a <?php echo ("href='/artikel/berita/detail/$item->id'") ?>>{{$item->author}}</a> </span>

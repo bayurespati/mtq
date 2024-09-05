@@ -345,7 +345,7 @@
                     <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
                         <a <?php echo ("href='/artikel/berita/detail/$berita_latest->id'") ?> class="text-decoration-none">
                             <div class="card border-0 bg-transparent">
-                                <div class="card-img-top position-relative overlay overflow-hidden border-radius">
+                                <div class="card-img-top position-relative overlay overflow-hidden border-radius" style="height: 220px; border: 1px solid rgba(38, 70, 83, 0.4);">
                                     <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
                                         <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
                                             <span class="position-relative text-6 z-index-2">
@@ -359,7 +359,7 @@
                                             </span>
                                         </span>
                                     </div>
-                                    <img src="/storage/{{$berita_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                                    <img src="/storage/{{$berita_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" style="height: 100%; width: 100%; object-fit: cover;" />
                                 </div>
                                 <div class="card-body py-4 px-0">
                                     <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
@@ -377,7 +377,7 @@
                     <div class="col-9 col-md-6 col-lg-4 mb-4 mb-lg-0">
                         <a <?php echo ("href='/artikel/pengumuman/detail/$pengumuman_latest->id'") ?> class="text-decoration-none">
                             <div class="card border-0 bg-transparent">
-                                <div class="card-img-top position-relative overlay overflow-hidden border-radius">
+                                <div class="card-img-top position-relative overlay overflow-hidden border-radius" style="height: 220px; border: 1px solid rgba(38, 70, 83, 0.4);">
                                     <div class="position-absolute bottom-10 right-0 d-flex justify-content-end w-100 py-3 px-4 z-index-3">
                                         <span class="text-center bg-primary text-color-light border-radius font-weight-semibold line-height-2 px-3 py-2">
                                             <span class="position-relative text-6 z-index-2">
@@ -389,7 +389,7 @@
                                             </span>
                                         </span>
                                     </div>
-                                    <img src="/storage/{{$pengumuman_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" />
+                                    <img src="/storage/{{$pengumuman_latest->image}}" class="img-fluid border-radius" alt="Lorem Ipsum Dolor" style="height: 100%; width: 100%; object-fit: cover;" />
                                 </div>
                                 <div class="card-body py-4 px-0">
                                     <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">

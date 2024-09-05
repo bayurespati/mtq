@@ -74,10 +74,33 @@
     </div>
 </article>
 @endforeach
-<!-- <ul class="pagination pagination-rounded pagination-md justify-content-center">
-                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-left"></i></a></li>
-                        <li class="page-item active"><a class="page-link" href="#" data-cursor-effect-hover="fit">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#" data-cursor-effect-hover="fit"><i class="fas fa-angle-right"></i></a></li>
-                    </ul> -->
+<script>
+    $(document).ready(function() {
+        $('.summernote').summernote({
+            height: 400, // Set editor height
+            toolbar: [
+                // Style buttons
+                ['style', ['style']],
+
+                // Font options
+                ['font', ['bold', 'italic', 'underline', 'clear']],
+                ['fontname', ['fontname']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+
+                // Paragraph options
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']],
+
+                // Table insertions
+                ['table', ['table']],
+
+                // Media (images, links, videos)
+                ['insert', ['link', 'picture', 'video']],
+
+                // Miscellaneous
+                ['view', ['fullscreen', 'codeview', 'help']],
+            ]
+        });
+    });
+</script>

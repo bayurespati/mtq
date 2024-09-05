@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('image');
             $table->integer('is_featured');
             $table->date('tanggal');
+            $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
         });
     }

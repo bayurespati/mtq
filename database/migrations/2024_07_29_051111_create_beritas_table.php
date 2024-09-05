@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('deskripsi');
             $table->text('image');
             $table->date('tanggal');
+            $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
         });
     }

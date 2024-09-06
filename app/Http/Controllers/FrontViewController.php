@@ -71,7 +71,7 @@ class FrontViewController extends Controller
             // Store the flag in the session
             session([$sessionKey => true]);
         }
-        $berita_latest_3 = Berita::orderBy('views', 'desc')->take(10)->get();
+        $berita_latest_3 = Berita::orderBy('tanggal', 'desc')->take(10)->get();
         return view('frontend.berita-example', ["berita" => $berita, "berita_latest_3" => $berita_latest_3]);
     }
 
@@ -90,7 +90,7 @@ class FrontViewController extends Controller
             // Store the flag in the session
             session([$sessionKey => true]);
         }
-        $pengumuman_latest_3 = Pengumuman::orderBy('views', 'desc')->take(10)->get();
+        $pengumuman_latest_3 = Pengumuman::orderBy('tanggal', 'desc')->take(10)->get();
         return view('frontend.pengumuman-example', ["pengumuman" => $pengumuman, "pengumuman_latest_3" => $pengumuman_latest_3]);
     }
 

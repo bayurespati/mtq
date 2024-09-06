@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreLivestreamRequest;
 use App\Http\Requests\UpdateLivestreamRequest;
 use App\Models\Livestream;
+use Illuminate\Http\Request;
 
 class LivestreamController extends Controller
 {

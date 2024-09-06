@@ -73,7 +73,7 @@
                             <hr class="my-2">
                         </div>
                         <div class="px-3 mt-4">
-                            <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Berita Terpopuler</h3>
+                            <h3 class="text-color-dark text-capitalize font-weight-bold text-5 m-0 mb-3">Berita Terbaru</h3>
                             @foreach($berita_latest_3 as $item)
                             @php
                             $date = \Carbon\Carbon::parse($item->tanggal);

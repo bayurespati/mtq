@@ -49,7 +49,7 @@
                         <div class="card border-0">
                             <div class="card-body z-index-1 p-0">
                                 <div class="post-image pb-4">
-                                    <!-- <img class="card-img-top rounded-0" src="/storage/{{$berita->image}}" alt="Card Image"> -->
+                                    <img class="card-img-top rounded-0" src="/storage/{{$berita->image}}" alt="Card Image">
                                 </div>
 
                                 <div class="card-body p-0">

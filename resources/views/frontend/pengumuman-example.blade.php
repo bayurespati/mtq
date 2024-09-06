@@ -31,7 +31,7 @@
                         <p class="text-4 mb-3 text-color-default ms-4"><i class="fas fa-user border-width-2 text-3"></i> {{$pengumuman->author}}</p>
                         <p class="text-4 mb-3 text-color-default ms-4">
                             <i class="fas fa-eye border-width-2 text-3"></i>
-                            {{$berita->views}}
+                            {{$pengumuman->views}}
                         </p>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                         <div class="card border-0">
                             <div class="card-body z-index-1 p-0">
                                 <div class="post-image pb-4">
-                                    <!-- <img class="card-img-top rounded-0" src="/storage/{{$pengumuman->image}}" alt="Card Image"> -->
+                                    <img class="card-img-top rounded-0" src="/storage/{{$pengumuman->image}}" alt="Card Image">
                                 </div>
 
                                 <div class="card-body p-0">

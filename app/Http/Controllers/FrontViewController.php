@@ -43,16 +43,34 @@ class FrontViewController extends Controller
         return view('frontend.sambutan');
     }
 
-    public function berita()
+    public function berita(Request $request)
     {
-        $berita = Berita::orderBy('tanggal', 'DESC')->paginate(9);
+        $query = $request->input('query');
+        if ($request->query != null) {
+            $berita = Berita::where('judul', 'like', '%' . $query . '%')
+                ->orWhere('author', 'like', '%' . $query . '%')
+                ->orderBy('tanggal', 'DESC')
+                ->paginate(9)
+                ->appends(['query' => $query]);
+        } else
+            $berita = Berita::orderBy('tanggal', 'DESC')->paginate(9);
+
         $berita_latest_3 = Berita::orderBy('views', 'desc')->take(10)->get();
         return view('frontend.berita', ["berita" => $berita, "berita_latest_3" => $berita_latest_3]);
     }
 
-    public function pengumuman()
+    public function pengumuman(Request $request)
     {
-        $pengumuman = Pengumuman::orderBy('tanggal', 'DESC')->paginate(9);
+        $query = $request->input('query');
+        if ($request->query != null) {
+            $pengumuman = Pengumuman::where('judul', 'like', '%' . $query . '%')
+                ->orWhere('author', 'like', '%' . $query . '%')
+                ->orderBy('tanggal', 'DESC')
+                ->paginate(9)
+                ->appends(['query' => $query]);
+        } else
+            $pengumuman = Pengumuman::orderBy('tanggal', 'DESC')->paginate(9);
+
         $pengumuman_latest_3 = Pengumuman::orderBy('views', 'desc')->take(10)->get();
         return view('frontend.pengumuman', ["pengumuman" => $pengumuman, "pengumuman_latest_3" => $pengumuman_latest_3]);
     }

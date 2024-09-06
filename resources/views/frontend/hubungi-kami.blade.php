@@ -33,9 +33,6 @@
     @include('frontend.partials.header')
 
     <div role="main" class="main">
-        <div class="particles-wrapper z-index-1">
-            <div id="particles-1"></div>
-        </div>
         <!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
         <section class="map map-2">
             <div class="container">

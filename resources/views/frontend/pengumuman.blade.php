@@ -71,9 +71,9 @@
                 <div class="blog-sidebar col-lg-4 pt-4 pt-lg-0">
                     <aside class="sidebar">
                         <div class="px-3">
-                            <form action="page-search-results.html" method="get">
+                            <form action="{{ route('pengumuman') }}" method="get">
                                 <div class="input-group mb-3 pb-1">
-                                    <input class="form-control box-shadow-none text-1 border-0 bg-color-grey" placeholder="Search..." name="search" id="search" type="text">
+                                    <input value="{{ old('query') }}" class="form-control box-shadow-none text-1 border-0 bg-color-grey" placeholder="Search..." name="query" id="query" type="text">
                                     <button type="submit" class="btn bg-color-grey text-1 p-2"><i class="fas fa-search m-2"></i></button>
                                 </div>
                             </form>

@@ -10,8 +10,7 @@
     @stack('title')
 
     <meta name="keywords" content="WebSite Template" />
-    <meta name="description" content="Porto - Multipurpose Website Template">
-    <meta name="author" content="okler.net">
+    <meta name="description" content="MTQ Nasional XXX Kalimantan Timur Tahun 2024">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />

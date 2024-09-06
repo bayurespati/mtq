@@ -1,7 +1,7 @@
 @extends('frontend.layout.base')
 
 @push('title')
-<title>Beranda</title>
+<title>Login</title>
 @endpush
 
 @push('additional_css')

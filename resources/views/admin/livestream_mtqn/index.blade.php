@@ -1,7 +1,7 @@
 @extends('admin.layout.base')
 
 @push('title')
-<title>Admin View - Livestream</title>
+<title>Admin View - Livestream MTQN</title>
 @endpush
 
 @push('additional_css')
@@ -16,7 +16,7 @@
         @include('admin.partials.sidebar')
 
         <section role="main" class="content-body">
-            <h2 style="color: black">Halaman Data Livestream</h2>
+            <h2 style="color: black">Halaman Data Livestream MTQN</h2>
             @if (\Session::has('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {!! \Session::get('success') !!}
@@ -32,8 +32,8 @@
                                 <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
                             </div>
                             <h2 class="card-title">
-                                Table Livestream
-                                <a href="{{ route('admin-livestream-create') }}">
+                                Table Livestream MTQN
+                                <a href="{{ route('admin-livestream-mtqn-create') }}">
                                     <span class="btn btn-sm btn-primary">
                                         Create <i class="fas fa-plus"></i>
                                     </span>
@@ -51,14 +51,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($livestream as $item)
+                                    @foreach($livestream_mtqn as $item)
                                     <tr>
                                         <td>{{$item->nama}}</td>
                                         <td class="col-6">{{$item->embed}}</td>
                                         <td class="actions">{{$item->created_at}}</td>
                                         <td class="actions">
-                                            <a <?php echo ("href=/livestream/edit/" . $item->id) ?> class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
-                                            <a <?php echo ("href=/livestream/delete/" . $item->id) ?> class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
+                                            <a <?php echo ("href=/livestream-mtqn/edit/" . $item->id) ?> class="on-default edit-row"><i class="fas fa-pencil-alt"></i></a>
+                                            <a <?php echo ("href=/livestream-mtqn/delete/" . $item->id) ?> class="on-default remove-row"><i class="far fa-trash-alt"></i></a>
                                         </td>
                                     </tr>
                                     @endforeach

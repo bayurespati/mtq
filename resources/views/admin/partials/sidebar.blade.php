@@ -121,7 +121,12 @@
                             </li>
                             <li>
                                 <a class="nav-link" href="{{ route('admin-livestream-index') }}">
-                                    Livestream 
+                                    Livestream Lomba
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('admin-livestream-mtqn-index') }}">
+                                    Livestream MTQN
                                 </a>
                             </li>
                         </ul>

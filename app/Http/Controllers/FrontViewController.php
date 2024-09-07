@@ -6,6 +6,7 @@ use App\Models\Berita;
 use App\Models\Faq;
 use App\Models\Foto;
 use App\Models\Livestream;
+use App\Models\LivestreamMtqn;
 use App\Models\Lomba;
 use App\Models\Pengumuman;
 use App\Models\Video;
@@ -128,6 +129,12 @@ class FrontViewController extends Controller
     {
         $livestream = Livestream::all();
         return view('frontend.livestream', ["livestream" => $livestream]);
+    }
+
+    public function livestreamMtqn()
+    {
+        $livestream_mtqn = LivestreamMtqn::all();
+        return view('frontend.livestream-mtqn', ["livestream_mtqn" => $livestream_mtqn]);
     }
 
     public function musabaqadahCenter()

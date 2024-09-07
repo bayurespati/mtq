@@ -22,7 +22,7 @@ class UpdateLivestreamRequest extends FormRequest
     public function rules($model): array
     {
         return [
-            'nama' => 'required|unique:video,nama,' . $model->id,
+            'nama' => 'required|unique:livestream,nama,' . $model->id,
             'embed' => 'required',
         ];
     }

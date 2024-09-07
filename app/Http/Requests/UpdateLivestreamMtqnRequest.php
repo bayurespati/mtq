@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreLivestreamRequest extends FormRequest
+class UpdateLivestreamMtqnRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -19,10 +19,10 @@ class StoreLivestreamRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules(): array
+    public function rules($model): array
     {
         return [
-            'nama' => 'required|unique:livestream,nama',
+            'nama' => 'required|unique:livestream_mtqn,nama,' . $model->id,
             'embed' => 'required',
         ];
     }

@@ -100,7 +100,10 @@
                                                     <a href="{{ route('video') }}" class="{{ request()->is('/media/video') ? 'dropdown-item active' : 'dropdown-item' }}">Video</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ route('livestream') }}" class="{{ request()->is('/media/livestream') ? 'dropdown-item active' : 'dropdown-item' }}">Livestream</a>
+                                                    <a href="{{ route('livestream') }}" class="{{ request()->is('/media/livestream') ? 'dropdown-item active' : 'dropdown-item' }}">Livestream Lomba</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ route('livestream-mtqn') }}" class="{{ request()->is('/media/livestream') ? 'dropdown-item active' : 'dropdown-item' }}">Livestream MQTN</a>
                                                 </li>
                                             </ul>
                                         </li>

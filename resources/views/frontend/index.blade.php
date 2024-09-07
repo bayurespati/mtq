@@ -363,10 +363,10 @@
                                 </div>
                                 <div class="card-body py-4 px-0">
                                     <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
-                                        {{$berita_latest->judul ?? ""}}
+                                        {{ $berita_latest->judul ?? "" }}
                                     </h4>
                                     <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
-                                        {{$berita_latest->deskripsi ?? ""}}
+                                        {{ strip_tags($berita_latest->deskripsi) ?? "" }}
                                     </span>
                                 </div>
                             </div>
@@ -393,10 +393,10 @@
                                 </div>
                                 <div class="card-body py-4 px-0">
                                     <h4 class="font-weight-bold text-5 text-color-hover-primary mb-2">
-                                        {{$pengumuman_latest->judul ?? ""}}
+                                        {{ $pengumuman_latest->judul ?? "" }}
                                     </h4>
                                     <span class="text-color-grey font-weight-semibold positive-ls-2 text-2 limited-text-footer">
-                                        {{$pengumuman_latest->deskripsi ?? ""}}
+                                        {{ strip_tags($pengumuman_latest->deskripsi) ?? "" }}
                                     </span>
                                 </div>
                             </div>

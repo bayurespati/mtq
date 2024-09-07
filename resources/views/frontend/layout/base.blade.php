@@ -10,7 +10,7 @@
     @stack('title')
 
     <meta name="keywords" content="WebSite Template" />
-    <title>Home - Pemprov Kaltim</title>
+    <title>MTQ Nasional Tahun 2024</title>
     <meta name="description" content="MTQ Nasional XXX Kalimantan Timur Tahun 2024">
 
     <!-- Favicon -->

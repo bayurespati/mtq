@@ -10,6 +10,7 @@
 
     <meta name="keywords" content="HTML5 Admin Template" />
     <meta name="description" content="Porto Admin - Responsive HTML5 Template">
+    <title>Home - Pemprov Kaltim</title>
     <meta name="author" content="okler.net">
 
     <!-- Mobile Metas -->

@@ -1,7 +1,7 @@
 @extends('frontend.layout.base')
 
 @push('title')
-<title>Home</title>
+<title>MTQ Nasional Tahun 2024</title>
 @endpush
 
 @push('additional_css')

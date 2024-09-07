@@ -6,6 +6,11 @@
 
 @push('additional_css')
 <style>
+    .limited-text-title {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        height: 70px;
+    }
 </style>
 @endpush
 
@@ -27,7 +32,7 @@
                             <div class="col-md-4" style="padding: 3px;">
                                 <article class="post post-medium border-0 pb-0 mb-5">
                                     <div class="row" style="margin-bottom: 15px;">
-                                        <div class="col pb-4">
+                                        <div class="col pb-4 limited-text-title">
                                             <h4>{{$vidio->nama}}</h4>
                                         </div>
                                         <div class="ratio ratio-16x9" style="width: 90%;">

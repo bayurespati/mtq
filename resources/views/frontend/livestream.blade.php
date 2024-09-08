@@ -11,6 +11,16 @@
         -webkit-box-orient: vertical;
         height: 70px;
     }
+
+    .responsive-video {
+        width: 90%;
+    }
+
+    @media (max-width: 768px) {
+        .responsive-video {
+            width: 100%;
+        }
+    }
 </style>
 @endpush
 
@@ -29,13 +39,13 @@
                     <div class="col-lg-12 mb-5 mb-lg-0">
                         <div class=" row">
                             @foreach($livestream as $item)
-                            <div class="col-md-4" style="padding: 3px;">
+                            <div class="col-md-4">
                                 <article class="post post-medium border-0 pb-0 mb-5">
                                     <div class="row" style="margin-bottom: 15px;">
                                         <div class="col pb-4 limited-text-title">
                                             <h4>{{$item->nama}}</h4>
                                         </div>
-                                        <div class="ratio ratio-16x9" style="width: 90%;">
+                                        <div class="ratio ratio-16x9 responsive-video">
                                             <iframe width="560" height="315" src="{{$item->embed}}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                         </div>
                                     </div>

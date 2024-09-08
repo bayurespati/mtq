@@ -5,8 +5,6 @@
 @endpush
 
 @push('additional_css')
-<style>
-</style>
 @endpush
 
 @section('content')

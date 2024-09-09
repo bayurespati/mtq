@@ -33,7 +33,7 @@
                 <div class="row justify-content-center text-center">
                     <div class="overflow-hidden mb-1">
                         <h1 class="text-color-grey" data-appear-animation="maskUp" data-appear-animation-delay="100">
-                            Livestream
+                            Livestream Lomba
                         </h1>
                     </div>
                     <div class="col-lg-12 mb-5 mb-lg-0">

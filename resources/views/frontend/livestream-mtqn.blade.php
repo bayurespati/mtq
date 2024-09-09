@@ -23,7 +23,7 @@
                     </div>
                     <div class="col col-lg-9 text-center">
                         @foreach($livestream_mtqn as $item)
-                        <div class="row" style="margin-bottom: 15px;">
+                        <div class="row" style="margin-bottom: 150px !important; margin-top: 50px">
                             <div class="col pb-4">
                                 <h4>{{$item->nama}}</h4>
                             </div>

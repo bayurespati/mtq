@@ -49,7 +49,7 @@
                                 </div>
 
                                 <div class="card-body p-0">
-                                    {{!! $pengumuman->deskripsi !!}}
+                                    {!! $pengumuman->deskripsi !!}
                                 </div>
                             </div>
                         </div>

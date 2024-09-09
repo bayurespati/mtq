@@ -133,7 +133,7 @@ class FrontViewController extends Controller
 
     public function livestreamMtqn()
     {
-        $livestream_mtqn = LivestreamMtqn::all();
+        $livestream_mtqn = LivestreamMtqn::orderBy('created_at', 'DESC')->get();
         return view('frontend.livestream-mtqn', ["livestream_mtqn" => $livestream_mtqn]);
     }
 

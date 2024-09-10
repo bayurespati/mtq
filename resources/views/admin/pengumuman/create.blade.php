@@ -69,7 +69,7 @@
                                 <div class="form-group row pb-3">
                                     <label class="col-lg-3 control-label text-lg-end pt-2">Deskripsi<span class="required">*</span></label>
                                     <div class="col-lg-9">
-                                        <textarea name="deskripsi" class="form-control" rows="3" required placeholder="Deskripsi"></textarea>
+                                        <textarea value="{{old('deskripsi')}}" name="deskripsi" class="summernote" data-plugin-summernote data-plugin-options='{ "height": 180 }'></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row pb-3">

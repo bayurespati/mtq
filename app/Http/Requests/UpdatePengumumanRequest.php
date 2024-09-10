@@ -22,7 +22,7 @@ class UpdatePengumumanRequest extends FormRequest
     public function rules($model): array
     {
         return [
-            'judul' => 'required|unique:berita,judul,' . $model->id,
+            'judul' => 'required|unique:pengumuman,judul,' . $model->id,
             'author' => 'required|string|max:14',
             'deskripsi' => 'required',
         ];

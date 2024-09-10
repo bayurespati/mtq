@@ -1,7 +1,7 @@
 @extends('frontend.layout.base')
 
 @push('title')
-<title>Vidio</title>
+<title>Video</title>
 @endpush
 
 @push('additional_css')
@@ -28,15 +28,15 @@
                     </div>
                     <div class="col-lg-12 mb-5 mb-lg-0">
                         <div class=" row">
-                            @foreach($videos as $vidio)
+                            @foreach($videos as $video)
                             <div class="col-md-4" style="padding: 3px;">
                                 <article class="post post-medium border-0 pb-0 mb-5">
                                     <div class="row" style="margin-bottom: 15px;">
                                         <div class="col pb-4 limited-text-title">
-                                            <h4>{{$vidio->nama}}</h4>
+                                            <h4>{{$video->nama}}</h4>
                                         </div>
                                         <div class="ratio ratio-16x9" style="width: 90%;">
-                                            <iframe width="560" height="315" src="{{$vidio->embed}}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="{{$video->embed}}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </article>

@@ -5,6 +5,7 @@
 
     <!-- Basic -->
     <meta charset="UTF-8">
+    <link rel="icon" href="icon_16x16.svg" type="image/x-icon">
 
     <title>Default Layout | Porto Admin - Responsive HTML5 Template</title>
 

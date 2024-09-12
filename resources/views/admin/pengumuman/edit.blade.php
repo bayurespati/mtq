@@ -9,12 +9,9 @@
 
 @section('content')
 <section class="body">
-
     @include('admin.partials.header')
-
     <div class="inner-wrapper">
         @include('admin.partials.sidebar')
-
         <section role="main" class="content-body">
             <!-- start: page -->
             <div class="row">
@@ -29,7 +26,6 @@
                                 </div>
                                 <h2 class="card-title">Form Input Pengumuman</h2>
                             </header>
-
                             <div class="card-body">
                                 <div class="form-group row pb-3">
                                     <label class="col-sm-3 control-label text-sm-end pt-2">Judul <span class="required">*</span></label>

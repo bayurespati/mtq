@@ -37,6 +37,31 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
+    .custom-element-wrapper.custom-element-5 {
+        top: 27%;
+        left: 48%;
+    }
+
+    .custom-element-wrapper.custom-element-8 {
+        top: 3%;
+        left: 34.5%;
+        z-index: 999;
+    }
+
+    @media (max-width: 575px) {
+        .custom-element-wrapper.custom-element-5 {
+            top: 27%;
+            left: 20%;
+        }
+
+        /* Mobile landscape styles */
+        .custom-element-wrapper.custom-element-8 {
+            top: 3% !important;
+            left: 0 !important;
+            z-index: 999;
+        }
+    }
 </style>
 @endpush
 
@@ -72,23 +97,13 @@
                             </div>
                             <br>
                             <div class="col-12 col-lg-6 p-relative text-end">
-
-                                <div class="appear-animation custom-element-wrapper custom-element-6" data-appear-animation="expandIn" data-appear-animation-delay="500">
-                                    <div class="bg-color-primary particle particle-dots w-100 h-100 opacity-3"></div>
-                                </div>
-
-                                <div class="appear-animation custom-element-wrapper custom-element-7" data-appear-animation="expandIn" data-appear-animation-delay="700">
-                                    <div class="bg-color-primary particle particle-dots w-100 h-100 opacity-3"></div>
-                                </div>
-
                                 <div class="appear-animation custom-element-wrapper p-relative custom-element-5" data-appear-animation="expandIn" data-appear-animation-delay="0">
                                     <div class="w-100 h-100">
                                         <div class="custom-element rotate-r-45"></div>
                                     </div>
                                 </div>
-
-                                <img class="appear-animation img-fluid custom-element-wrapper custom-element-8" data-appear-animation="fadeIn" data-appear-animation-delay="900" src="/img/new_project.png" alt="" style="height:125%;">
-
+                                <img class="appear-animation img-fluid custom-element-wrapper custom-element-8" data-appear-animation="fadeIn" data-appear-animation-delay="900" src="/img/avatar_3_0.png" alt="" style="height:120%; clip-path:none !important">
+                                <!-- <img class="appear-animation img-fluid custom-element-wrapper custom-element-8" data-appear-animation="fadeIn" data-appear-animation-delay="900" src="/img/avatar_baru_updated.png" alt="" style="clip-path:none !important"> -->
                             </div>
                         </div>
                         <div class="row align-items-center justify-content-center pt-5">
@@ -123,17 +138,17 @@
                 </div>
             </div>
 
-            <div class="appear-animation custom-element-wrapper custom-element-2" data-appear-animation="expandIn" data-appear-animation-delay="200">
+            <!-- <div class="appear-animation custom-element-wrapper custom-element-2" data-appear-animation="expandIn" data-appear-animation-delay="200">
                 <div class="w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 2.2, 'transition': true, 'transitionDuration': 500}">
                     <div class="custom-element rotate-r-45"></div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="appear-animation custom-element-wrapper custom-element-3" data-appear-animation="expandIn" data-appear-animation-delay="200">
+            <!-- <div class="appear-animation custom-element-wrapper custom-element-3" data-appear-animation="expandIn" data-appear-animation-delay="200">
                 <div class="w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 2.3, 'transition': true, 'transitionDuration': 500}">
                     <div class="custom-element rotate-r-45"></div>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <section class="section border-0 bg-transparent m-0" id="start">

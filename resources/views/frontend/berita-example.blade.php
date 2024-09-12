@@ -1,7 +1,7 @@
 @extends('frontend.layout.base')
 
 @push('title')
-<title>Berita Detail</title>
+<title>Berita Terkini Detail</title>
 @endpush
 
 @push('additional_css')

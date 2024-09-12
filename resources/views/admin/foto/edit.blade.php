@@ -27,7 +27,7 @@
                                     <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
                                     <a href="#" class="card-action card-action-dismiss" data-card-dismiss></a>
                                 </div>
-                                <h2 class="card-title">Form Input Berita</h2>
+                                <h2 class="card-title">Form Input Berita Terkini</h2>
                             </header>
 
                             <div class="card-body">

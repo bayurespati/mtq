@@ -77,11 +77,11 @@
                                         </li>
                                         <li class="dropdown">
                                             <a class="{{ request()->is('artikel/*') ? 'dropdown-item dropdown-toggle active' : 'dropdown-item dropdown-toggle' }}">
-                                                Artikel
+                                                Berita
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a href="{{ route('berita') }}" class="{{ request()->is('/artikel/berita') ? 'dropdown-item active' : 'dropdown-item' }}">Berita</a>
+                                                    <a href="{{ route('berita') }}" class="{{ request()->is('/artikel/berita') ? 'dropdown-item active' : 'dropdown-item' }}">Berita Terkini</a>
                                                 </li>
                                                 <li>
                                                     <a href="{{ route('pengumuman') }}" class="{{ request()->is('/artikel/pengumuman') ? 'dropdown-item active' : 'dropdown-item' }}">Pengumuman</a>

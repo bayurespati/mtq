@@ -89,12 +89,12 @@
                     </li>
                     <li class="nav-parent">
                         <a class="nav-link" href="#">
-                            <span>Artikel</span>
+                            <span>Berita</span>
                         </a>
                         <ul class="nav nav-children">
                             <li>
                                 <a class="nav-link" href="{{ route('admin-berita-index') }}">
-                                    Berita
+                                    Berita Terkini
                                 </a>
                             </li>
                             <li>

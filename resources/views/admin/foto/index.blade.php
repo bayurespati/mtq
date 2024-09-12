@@ -1,7 +1,7 @@
 @extends('admin.layout.base')
 
 @push('title')
-<title>Admin View - Berita</title>
+<title>Admin View - Berita Terkini</title>
 @endpush
 
 @push('additional_css')
@@ -16,7 +16,7 @@
         @include('admin.partials.sidebar')
 
         <section role="main" class="content-body">
-            <h2 style="color: black">Halaman Data Berita</h2>
+            <h2 style="color: black">Halaman Data Berita Terkini</h2>
             @if (\Session::has('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {!! \Session::get('success') !!}
